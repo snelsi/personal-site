@@ -25,6 +25,14 @@ export const Footer: React.FC<FooterProps> = () => {
           </ButtonText>
           <ButtonText
             as="a"
+            href="https://www.linkedin.com/in/roman-zhuravlov/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </ButtonText>
+          <ButtonText
+            as="a"
             href="https://www.facebook.com/Snelsi"
             target="_blank"
             rel="noopener noreferrer"
@@ -34,22 +42,7 @@ export const Footer: React.FC<FooterProps> = () => {
           <ButtonText as="a" href="http://t.me/snelsi" target="_blank" rel="noopener noreferrer">
             Telegram
           </ButtonText>
-          <ButtonText
-            as="a"
-            href="https://www.linkedin.com/in/roman-zhuravlov/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
-          </ButtonText>
-          <ButtonText
-            as="a"
-            href="https://mykp.ru/snelsi"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Kinopoisk
-          </ButtonText>
+
           <ButtonText
             as="a"
             href="https://habr.com/ru/users/snelsi/"
@@ -68,6 +61,23 @@ export const Footer: React.FC<FooterProps> = () => {
           </ButtonText>
           <ButtonText
             as="a"
+            href="https://career.habr.com/snelsi"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Habr Карьера
+          </ButtonText>
+
+          <ButtonText
+            as="a"
+            href="https://mykp.ru/snelsi"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Kinopoisk
+          </ButtonText>
+          <ButtonText
+            as="a"
             href="https://www.twitch.tv/snelsi"
             target="_blank"
             rel="noopener noreferrer"
@@ -81,14 +91,6 @@ export const Footer: React.FC<FooterProps> = () => {
             rel="noopener noreferrer"
           >
             Steam
-          </ButtonText>
-          <ButtonText
-            as="a"
-            href="https://career.habr.com/snelsi"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Habr Карьера
           </ButtonText>
         </Links>
         <div className="copyright">
@@ -124,7 +126,7 @@ const Content = styled.div`
 
 const Links = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   line-height: 1.5;
   grid-gap: 0.5em;
   margin: 1.25em 0;
