@@ -57,7 +57,7 @@ export const GithubProjectsGallery: React.FC<GithubProjectsGalleryProps> = () =>
         data.user.repositories.nodes.map(
           ({ name, description, openGraphImageUrl, url, stargazers }) => (
             <Card
-              key={name}
+              inner={false}
               tag="GitHub"
               img={openGraphImageUrl}
               title={name}

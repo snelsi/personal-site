@@ -5,6 +5,7 @@ import { EyeIcon } from "components/Icons";
 
 interface CardProps {
   url: string;
+  inner?: boolean;
   img: string;
   title: string;
   description?: string;
@@ -18,6 +19,7 @@ interface CardProps {
 
 export const Card: React.FC<CardProps> = ({
   url,
+  inner = true,
   tag,
   img,
   title,
@@ -26,49 +28,47 @@ export const Card: React.FC<CardProps> = ({
   words,
   views,
   stars,
-}) => {
-  return (
-    <CardBase href={url} target="_blank" rel="noopener noreferrer">
-      <div className="imageContainer">
-        <img src={img} alt="Article" />
-        <span>{tag}</span>
+}) => (
+  <CardBase href={url} target={inner ? "_self" : "_blank"} rel="noopener noreferrer">
+    <div className="imageContainer">
+      <img src={img} alt="Article" />
+      <span>{tag}</span>
+    </div>
+    <div className="textContainer">
+      <div className="cardMain">
+        <div className="cardTitle">{title}</div>
+        {description && <p>{description}</p>}
       </div>
-      <div className="textContainer">
-        <div className="cardMain">
-          <div className="cardTitle">{title}</div>
-          {description && <p>{description}</p>}
-        </div>
-        <div className="cardFooter footnote">
-          {minutesToRead && <span>{minutesToRead} min</span>}
-          {words && <span>{words} words</span>}
-          {views && (
-            <span>
-              <EyeIcon size="small" />
-              {views}
-            </span>
-          )}
-          {stars && (
-            <span>
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-              </svg>
-              {stars}
-            </span>
-          )}
-        </div>
+      <div className="cardFooter footnote">
+        {minutesToRead && <span>{minutesToRead} min</span>}
+        {words && <span>{words} words</span>}
+        {views && (
+          <span>
+            <EyeIcon size="small" />
+            {views}
+          </span>
+        )}
+        {stars && (
+          <span>
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            {stars}
+          </span>
+        )}
       </div>
-    </CardBase>
-  );
-};
+    </div>
+  </CardBase>
+);
 
 const CardBase = styled.a`
   background: #ffffff;
