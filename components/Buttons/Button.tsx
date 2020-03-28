@@ -8,6 +8,10 @@ export const Button = styled(ButtonBase)`
   font-size: 1.25em;
   padding: 0.5em 2em;
 
+  @media (max-width: 640px) {
+    font-size: 1.125em;
+  }
+
   &:hover,
   &:focus {
     transform: scale(1.04);
