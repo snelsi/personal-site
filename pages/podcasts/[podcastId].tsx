@@ -14,8 +14,8 @@ const Podcast: NextPage<PodcastProps> = ({ podcastId }) => {
 
   return (
     <>
-      <Link href="/articles">
-        <a href="/articles">Назад</a>
+      <Link href="/podcasts">
+        <a href="/podcasts">Назад</a>
       </Link>
       <div>Подкаст {podcastId}</div>
     </>
