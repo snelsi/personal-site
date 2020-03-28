@@ -16,6 +16,7 @@
     "next-with-apollo": "^5.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-headroom": "^3.0.0",
     "react-is": "^16.13.1",
     "styled-components": "^5.0.1",
     "use-dencrypt-effect": "^1.0.2"

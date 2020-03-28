@@ -4,6 +4,8 @@ import { Background } from "components";
 import { BottomLink, FadingTitles, Links } from "components/LandingHeader";
 import Link from "next/link";
 
+import { Header } from "components/LandingHeader/Header";
+
 const LandingPage = styled.header`
   align-items: center;
   background: url(/images/HeroImage.jpg) center center / cover, #111;
@@ -29,32 +31,35 @@ const Block = styled.div`
 interface LandingHeaderProps {}
 
 export const LandingHeader: React.FC<LandingHeaderProps> = () => (
-  <LandingPage>
-    <Background>
-      <Block>
-        <h2 className="name">Roman Zhuravlov</h2>
-        <FadingTitles />
-      </Block>
-      {/* <Links /> */}
-      <BottomLinks>
-        <Link href="/about">
-          <BottomLink as="a" href="/about">
-            Про Меня
-          </BottomLink>
-        </Link>
-        <Link href="/about">
-          <BottomLink as="a" href="/about">
-            Мои Работы
-          </BottomLink>
-        </Link>
-        <Link href="/about">
-          <BottomLink as="a" href="/about">
-            Контакты
-          </BottomLink>
-        </Link>
-      </BottomLinks>
-    </Background>
-  </LandingPage>
+  <>
+    <Header />
+    <LandingPage>
+      <Background>
+        <Block>
+          <h2 className="name">Roman Zhuravlov</h2>
+          <FadingTitles />
+        </Block>
+        {/* <Links /> */}
+        <BottomLinks>
+          <Link href="/about">
+            <BottomLink as="a" href="/about">
+              Про Меня
+            </BottomLink>
+          </Link>
+          {/* <Link href="/about">
+            <BottomLink as="a" href="/about">
+              Мои Работы
+            </BottomLink>
+          </Link>
+          <Link href="/about">
+            <BottomLink as="a" href="/about">
+              Контакты
+            </BottomLink>
+          </Link> */}
+        </BottomLinks>
+      </Background>
+    </LandingPage>
+  </>
 );
 
 const BottomLinks = styled.div`
