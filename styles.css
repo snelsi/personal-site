@@ -1,0 +1,177 @@
+@font-face {
+  font-family: "Inter";
+  src: url("/Inter-Variable.ttf");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --block-inner-padding: 1.25em;
+  --transition-ease: 0.15s ease;
+}
+
+body {
+  color: var(--color-text-main, #111);
+  font-family: -apple-system, "Segoe UI", BlinkMacSystemFont, "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
+  font-style: normal;
+  font-weight: normal;
+
+  font-size: 16px;
+  line-height: 1.25;
+
+  overflow-x: hidden;
+  min-width: 320px;
+  width: 100%;
+}
+
+@media (max-width: 320px) {
+  body {
+    overflow-x: auto;
+  }
+}
+
+button {
+  font-family: inherit;
+}
+
+a {
+  color: var(--color-blue-5);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--color-blue-6);
+}
+a:active {
+  color: var(--color-blue-7);
+}
+
+/* Huge Title [60] */
+h1 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 3.75rem;
+  line-height: 1.06em;
+}
+
+/* Large Title [40] */
+h2 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.5rem;
+  line-height: 1.1em;
+}
+
+/* Section Title [32] */
+h3 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1.125em;
+}
+
+/* Title 1 [28] */
+h4 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.75rem;
+  line-height: 1.2em;
+}
+
+/* Title 2 [24] */
+h5 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 1.2em;
+}
+
+/* Title 3 [20] */
+h6 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.25rem;
+  line-height: 1.2em;
+}
+
+@media (max-width: 1080px) {
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.8em;
+  }
+  h3 {
+    font-size: 1.6em;
+  }
+  h4 {
+    font-size: 1.4em;
+  }
+  h5 {
+    font-size: 1.3em;
+  }
+}
+
+/* Headline [18] */
+.headline {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.125rem;
+  line-height: 1.22em;
+}
+
+/* Subheadline [14] */
+.subheadline {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.875rem;
+  line-height: 1.28em;
+}
+
+/* Footnote [13] */
+.footnote {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.8125rem;
+  line-height: 1.3em;
+  letter-spacing: -0.08px;
+}
+
+/* Caption 1 [12] */
+.caption-1 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.75rem;
+  line-height: 1.33em;
+}
+
+/* Caption 2 [11] */
+.caption-2 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.6875rem;
+  line-height: 1.33em;
+}
+
+.light {
+  font-weight: 300;
+}
+.regular {
+  font-weight: 400;
+}
+.medium {
+  font-weight: 500;
+}
+.semi-bold {
+  font-weight: 600;
+}
+.bold {
+  font-weight: 700;
+}
