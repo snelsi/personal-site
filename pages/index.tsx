@@ -10,7 +10,7 @@ import {
   PodcastsCatalog,
 } from "components";
 import { AboutExpress } from "components/About";
-import { GitHubPromo, GithubProjectsGallery } from "components/GitHubGallery";
+import { GithubProjectsGallery } from "components/GitHubGallery";
 import withApollo from "utils/withApollo";
 import { TimestampCard } from "components/Timestamp";
 import { ArticlesCatalog } from "components/Articles";
@@ -42,9 +42,6 @@ const IndexPage: NextPage = () => {
           <HireMeBanner />
         </Block>
 
-        <Block>
-          <GitHubPromo />
-        </Block>
         <GithubProjectsGallery />
 
         <Block>
