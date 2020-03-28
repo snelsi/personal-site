@@ -5,7 +5,8 @@ export const Button = styled(ButtonBase)`
   background-color: var(--color-blue-6);
   color: var(--color-text-white);
 
-  padding: 0.625em 1.25em;
+  font-size: 1.25em;
+  padding: 0.5em 2em;
 
   &:hover,
   &:focus {
