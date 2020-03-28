@@ -1,14 +1,13 @@
 import * as React from "react";
 import styled from "styled-components";
-import { ArticleBlock } from "components";
-import { articles } from "components/Article";
+import { ArticleBlock, myArticles } from "components/Articles";
 
 interface ArticlesListProps {}
 
 export const ArticlesList: React.FC<ArticlesListProps> = () => (
   <Grid>
-    {articles.map(article => (
-      <ArticleBlock key={article.url} article={article} />
+    {myArticles.map(article => (
+      <ArticleBlock key={article.id} article={article} />
     ))}
   </Grid>
 );

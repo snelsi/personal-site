@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import Link from "next/link";
-import { IArticle } from "components/Article";
+import { IArticle } from "components/Articles";
 import { EyeIcon } from "components/Icons";
 import { ButtonOutlined, Tag } from "components";
 
@@ -15,7 +15,9 @@ export const ArticleBlock: React.FC<ArticleBlogProps> = ({ article }) => {
       <div className="main-text">
         <Head>
           <h3>
-            <a href={article.url}>{article.title}</a>
+            <Link href={`articles/${article.id}`}>
+              <a href={`articles/${article.id}`}>{article.title}</a>
+            </Link>
           </h3>
 
           <div className="tags">
@@ -25,8 +27,8 @@ export const ArticleBlock: React.FC<ArticleBlogProps> = ({ article }) => {
           </div>
         </Head>
         <p>{article.textPreview}</p>
-        <Link href={article.url}>
-          <ButtonOutlined as="a" href={article.url} className="showMore">
+        <Link href={`articles/${article.id}`}>
+          <ButtonOutlined as="a" href={`articles/${article.id}`} className="showMore">
             Читать Дальше
           </ButtonOutlined>
         </Link>

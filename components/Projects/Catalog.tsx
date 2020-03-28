@@ -1,15 +1,21 @@
 import * as React from "react";
 import styled from "styled-components";
 
+import Link from "next/link";
+import { ButtonText, Header } from "components";
 import { projects, ProjectCard } from "components/Projects";
-import { Header } from "components/Header";
 
 interface CatalogProps {}
 
 export const Catalog: React.FC<CatalogProps> = () => (
   <>
     <Header>
-      <h4>Больше всякого</h4>
+      <h4>Полистать Проекты</h4>
+      <Link href="/projects">
+        <ButtonText as="a" href="/projects">
+          See All
+        </ButtonText>
+      </Link>
     </Header>
     <Grid>
       {projects.map(project => (

@@ -9,10 +9,10 @@ export * from "./Icons";
 export * from "./Plate";
 export * from "./Tag";
 
-export * from "./Article";
+export * from "./Articles";
 export * from "./Banners";
 export * from "./Buttons";
 export * from "./GitHubGallery";
-export * from "./LandingPage";
+export * from "./LandingHeader";
 export * from "./Podcasts";
 export * from "./Projects";

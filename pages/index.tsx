@@ -13,7 +13,7 @@ import { AboutExpress } from "components/About";
 import { GitHubPromo, GithubProjectsGallery } from "components/GitHubGallery";
 import withApollo from "utils/withApollo";
 import { TimestampCard } from "components/Timestamp";
-import { ArticlesCatalog } from "components/Article";
+import { ArticlesCatalog } from "components/Articles";
 
 import { NextPage } from "next";
 
@@ -28,13 +28,15 @@ const IndexPage: NextPage = () => {
       <Main>
         <ArticlesCatalog />
 
-        <Block>
-          <TimestampCard />
-        </Block>
+        <PodcastsCatalog />
 
-        <Block>
+        {/* <Block>
+          <TimestampCard />
+        </Block> */}
+
+        {/* <Block>
           <AboutExpress />
-        </Block>
+        </Block> */}
 
         <Block>
           <HireMeBanner />
@@ -45,11 +47,9 @@ const IndexPage: NextPage = () => {
         </Block>
         <GithubProjectsGallery />
 
-        <section>
-          <Block>
-            <Catalog />
-          </Block>
-        </section>
+        <Block>
+          <Catalog />
+        </Block>
 
         <section>
           <Block>

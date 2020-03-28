@@ -4,7 +4,7 @@ import { NextPage } from "next";
 import Link from "next/link";
 import { MinuteOverview, Weeks, Years, YearOverview } from "components/Timestamp";
 
-const Articles: NextPage = () => {
+const Timestamp: NextPage = () => {
   React.useEffect(() => {
     document.title = "Life to live";
   }, []);
@@ -38,4 +38,4 @@ const Container = styled.div`
   grid-gap: 2.5em;
   margin: 1.25em;
 `;
-export default Articles;
+export default Timestamp;

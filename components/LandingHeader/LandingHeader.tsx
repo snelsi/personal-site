@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import { Background } from "components";
-import { BottomLink, FadingTitles, Links } from "components/LandingPage";
+import { BottomLink, FadingTitles, Links } from "components/LandingHeader";
 import Link from "next/link";
 
 const LandingPage = styled.header`
@@ -35,11 +35,21 @@ export const LandingHeader: React.FC<LandingHeaderProps> = () => (
         <h2 className="name">Roman Zhuravlov</h2>
         <FadingTitles />
       </Block>
-      <Links />
+      {/* <Links /> */}
       <BottomLinks>
         <Link href="/about">
           <BottomLink as="a" href="/about">
-            About
+            Про Меня
+          </BottomLink>
+        </Link>
+        <Link href="/about">
+          <BottomLink as="a" href="/about">
+            Мои Работы
+          </BottomLink>
+        </Link>
+        <Link href="/about">
+          <BottomLink as="a" href="/about">
+            Контакты
           </BottomLink>
         </Link>
       </BottomLinks>
@@ -49,6 +59,10 @@ export const LandingHeader: React.FC<LandingHeaderProps> = () => (
 
 const BottomLinks = styled.div`
   bottom: 24px;
+
+  display: flex;
+  justify-content: center;
+
   position: absolute;
   left: auto;
   right: auto;
