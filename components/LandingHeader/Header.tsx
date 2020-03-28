@@ -8,7 +8,7 @@ import StickyHeader from "react-headroom";
 interface HeaderProps {}
 
 export const Header: React.FC<HeaderProps> = () => (
-  <StickyHeader style={{ zIndex: 100 }} upTolerance={20} downTolerance={20}>
+  <StickyHeader style={{ zIndex: 100 }} upTolerance={20} downTolerance={20} pinStart={62}>
     <Container>
       <div className="logo">
         <img src="favicon-32x32.png" alt="My logo" />
