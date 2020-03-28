@@ -40,7 +40,7 @@ export const About: React.FC<AboutProps> = () => (
       <AboutMyself />
     </Content>
     <footer>
-      <Button>Написать</Button>
+      <Button>Написать мне</Button>
     </footer>
   </Container>
 );
