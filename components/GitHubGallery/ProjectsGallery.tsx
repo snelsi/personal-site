@@ -55,15 +55,16 @@ export const GithubProjectsGallery: React.FC<GithubProjectsGalleryProps> = () =>
     <Gallery anchor="github" title="Покопаться в Коде" url="https://github.com/snelsi">
       {data &&
         data.user.repositories.nodes.map(
-          ({ name, description, openGraphImageUrl, url, stargazers }) => (
+          ({ name, description, openGraphImageUrl, url, stargazers, id }) => (
             <Card
+              url={url}
               inner={false}
               tag="GitHub"
               img={openGraphImageUrl}
               title={name}
               description={description}
-              url={url}
               stars={stargazers.totalCount}
+              key={id}
             />
           ),
         )}
