@@ -72,7 +72,7 @@ const Container = styled.div`
     display: flex;
     & > a {
       color: var(--color-text-white);
-      font-size: 1.15em;
+      font-size: 1.125em;
       white-space: nowrap;
 
       &:not(:last-child) {
