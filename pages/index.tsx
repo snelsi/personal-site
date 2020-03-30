@@ -31,30 +31,36 @@ const IndexPage: NextPage = () => {
       </Head>
       <LandingHeader />
       <Main>
+        <div>
         <ArticlesCatalog />
+        </div>
 
+        <div>
         <PodcastsCatalog />
+        </div>
 
         {/* <Block>
           <TimestampCard />
         </Block> */}
 
 
-        <Block>
+        <div>
           <HireMeBanner />
-        </Block>
+        </div>
 
+        <div>
         <GithubProjectsGallery />
+        </div>
 
-        <Block>
+        <div>
           <Catalog />
-        </Block>
+        </div>
 
+        <div>
         <section>
-          <Block>
             <GitHubBanner />
-          </Block>
         </section>
+        </div>
       </Main>
       <Footer />
       <ContactButton />
@@ -63,18 +69,21 @@ const IndexPage: NextPage = () => {
 };
 
 const Main = styled.main`
-  padding: 1.25em 0;
+  display: grid;
+  grid-gap: 1em;
+
+  & > div {
+    padding: 0 var(--block-inner-padding);
+    & > div {
+      margin: auto;
+      max-width: 1080px;
+    }
+  }
 
   & section {
     padding-top: 0.75em;
     padding-bottom: 6.5em;
   }
-`;
-
-const Block = styled.div`
-  margin: auto;
-  max-width: 1080px;
-  padding: var(--block-inner-padding);
 `;
 
 export default withApollo(IndexPage);
