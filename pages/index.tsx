@@ -69,11 +69,8 @@ const IndexPage: NextPage = () => {
 };
 
 const Main = styled.main`
-  display: grid;
-  grid-gap: 1em;
-
   & > div {
-    padding: 0 var(--block-inner-padding);
+    padding: var(--block-inner-padding);
     & > div {
       margin: auto;
       max-width: 1080px;
