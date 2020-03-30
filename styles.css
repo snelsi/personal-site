@@ -12,7 +12,7 @@
 }
 
 :root {
-  --block-inner-padding: 1.25em;
+  --block-inner-padding: 20px;
   --transition-ease: 0.15s ease;
 }
 
