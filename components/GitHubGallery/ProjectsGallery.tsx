@@ -52,7 +52,7 @@ export const GithubProjectsGallery: React.FC<GithubProjectsGalleryProps> = () =>
   const { data } = useQuery<GET_MY_REPOSITORIES_DATA>(GET_MY_REPOSITORIES);
 
   return (
-    <Gallery anchor="github" title="Покопаться в Коде" url="https://github.com/snelsi">
+    <Gallery anchor="github" title="Покопаться в Коде" url="https://github.com/snelsi" fullScreen>
       {data &&
         data.user.repositories.nodes.map(
           ({ name, description, openGraphImageUrl, url, stargazers, id }) => (

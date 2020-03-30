@@ -10,6 +10,7 @@ interface GalleryProps {
   title: string;
   url?: string;
   inner?: boolean;
+  fullScreen?: boolean;
 }
 
 export const Gallery: React.FC<GalleryProps> = ({
@@ -18,6 +19,7 @@ export const Gallery: React.FC<GalleryProps> = ({
   url,
   inner = false,
   children,
+  fullScreen = false,
 }) => (
   <Block id={anchor}>
     <GalleryHeader>
@@ -44,7 +46,9 @@ export const Gallery: React.FC<GalleryProps> = ({
         </ButtonText>
       )}
     </GalleryHeader>
-    <Conveyor>{children}</Conveyor>
+    <Frame data-mode={fullScreen ? "fullScreen" : "normal"}>
+      <div className="conveyor">{children}</div>
+    </Frame>
   </Block>
 );
 
@@ -53,10 +57,6 @@ const Block = styled.div`
 `;
 
 const GalleryHeader = styled(Header)`
-  @media (max-width: 1120px) {
-    margin: 0 var(--block-inner-padding, 1.25em);
-  }
-
   & h4 {
     align-items: baseline;
     display: flex;
@@ -79,11 +79,36 @@ const GalleryHeader = styled(Header)`
   }
 `;
 
-const Conveyor = styled.div`
-  display: grid;
-  grid-gap: 20px;
-  grid-auto-flow: column;
+const Frame = styled.div`
+  overflow-x: auto;
+  width: 100%;
 
-  padding: 20px var(--block-inner-padding);
-  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x proximity;
+
+  & > .conveyor {
+    display: grid;
+    grid-gap: 20px;
+    grid-auto-flow: column;
+
+    padding: 20px 0;
+    width: fit-content;
+
+    & > * {
+      scroll-snap-align: center;
+    }
+  }
+
+  &[data-mode="fullScreen"] {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+
+    & > .conveyor {
+      padding: 20px var(--block-inner-padding);
+    }
+  }
 `;
