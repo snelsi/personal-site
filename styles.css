@@ -30,6 +30,8 @@ body {
   overflow-x: hidden;
   min-width: 320px;
   width: 100%;
+
+  -webkit-text-size-adjust: none;
 }
 
 @media (max-width: 320px) {
