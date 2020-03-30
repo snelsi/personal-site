@@ -71,10 +71,11 @@ const Container = styled.div`
 `;
 
 const Grid = styled.div`
-  --cell-size: 20px;
+  --cell-size: 24px;
   display: grid;
   grid-template-columns: repeat(auto-fit, var(--cell-size));
   grid-gap: 2px;
+  justify-content: center;
 
   & span:nth-last-child(9) {
     opacity: 0.7;

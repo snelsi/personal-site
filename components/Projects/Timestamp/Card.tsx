@@ -6,8 +6,8 @@ interface TimestampCardProps {}
 
 export const TimestampCard: React.FC<TimestampCardProps> = () => {
   return (
-    <Link href="/timestamp">
-      <Card href="/timestamp">Memento Mortem</Card>
+    <Link href="/projects/timestamp">
+      <Card href="/projects/timestamp">Memento Mortem</Card>
     </Link>
   );
 };

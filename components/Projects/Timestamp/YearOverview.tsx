@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 
-import { Month } from "components/Timestamp";
+import { Month } from "components/Projects/Timestamp";
 
 const leapYear = (year: number) => (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
 
