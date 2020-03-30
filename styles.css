@@ -175,3 +175,15 @@ h6 {
 .bold {
   font-weight: 700;
 }
+
+/* iOS css reset */
+input[type="text"],
+input[type="submit"],
+textarea {
+  -webkit-appearance: none;
+}
+
+a,
+label {
+  -webkit-tap-highlight-color: transparent;
+}
