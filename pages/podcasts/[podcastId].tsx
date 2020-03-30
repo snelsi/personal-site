@@ -1,19 +1,19 @@
 import * as React from "react";
 import { NextPage, NextPageContext } from "next";
-
 import Link from "next/link";
+import Head from "next/head";
+
 import {} from "components";
 
 interface PodcastProps {
   podcastId: string;
 }
 const Podcast: NextPage<PodcastProps> = ({ podcastId }) => {
-  React.useEffect(() => {
-    document.title = "Podcast";
-  }, []);
-
   return (
     <>
+      <Head>
+        <title>Podcast {podcastId}</title>
+      </Head>
       <Link href="/podcasts">
         <a href="/podcasts">Назад</a>
       </Link>

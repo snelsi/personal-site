@@ -1,14 +1,12 @@
 import * as React from "react";
-import styled from "styled-components";
 import { NextPage } from "next";
 import Link from "next/link";
-import { MinuteOverview, Weeks, Years, YearOverview } from "components/Timestamp";
+import Head from "next/head";
+import styled from "styled-components";
+
+import { MinuteOverview, Weeks, Years, YearOverview } from "components/Projects/Timestamp";
 
 const Timestamp: NextPage = () => {
-  React.useEffect(() => {
-    document.title = "Life to live";
-  }, []);
-
   const myBirthday = new Date("April 22 2000");
   const [now, setNow] = React.useState(new Date());
 
@@ -22,6 +20,9 @@ const Timestamp: NextPage = () => {
 
   return (
     <Container>
+      <Head>
+        <title>Life to live</title>
+      </Head>
       <Link href="/">
         <a href="/">На главную</a>
       </Link>

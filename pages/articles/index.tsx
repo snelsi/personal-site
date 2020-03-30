@@ -1,16 +1,16 @@
 import * as React from "react";
 import { NextPage } from "next";
-
 import Link from "next/link";
+import Head from "next/head";
+
 import { ArticlesList } from "components";
 
 const Articles: NextPage = () => {
-  React.useEffect(() => {
-    document.title = "Articles";
-  }, []);
-
   return (
     <>
+      <Head>
+        <title>Articles</title>
+      </Head>
       <Link href="/">
         <a href="/">Назад</a>
       </Link>

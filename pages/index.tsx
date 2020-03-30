@@ -1,4 +1,7 @@
 import * as React from "react";
+import { NextPage } from "next";
+import Head from "next/head";
+
 import styled from "styled-components";
 import {
   Catalog,
@@ -9,21 +12,23 @@ import {
   HireMeBanner,
   PodcastsCatalog,
 } from "components";
-import { AboutExpress } from "components/About";
+
 import { GithubProjectsGallery } from "components/GitHubGallery";
 import withApollo from "utils/withApollo";
-import { TimestampCard } from "components/Timestamp";
+
 import { ArticlesCatalog } from "components/Articles";
 
-import { NextPage } from "next";
-
 const IndexPage: NextPage = () => {
-  React.useEffect(() => {
-    document.title = "Roman Zhuravlov - Personal Web Site";
-  }, []);
-
   return (
     <>
+      <Head>
+        <title>Roman Zhuravlov - Personal Web Site</title>
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
+        />
+        <meta name="theme-color" content="#262626" />
+      </Head>
       <LandingHeader />
       <Main>
         <ArticlesCatalog />
@@ -34,9 +39,6 @@ const IndexPage: NextPage = () => {
           <TimestampCard />
         </Block> */}
 
-        {/* <Block>
-          <AboutExpress />
-        </Block> */}
 
         <Block>
           <HireMeBanner />
