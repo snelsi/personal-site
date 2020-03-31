@@ -6,6 +6,7 @@ export * from "./Footer";
 export * from "./Gallery";
 export * from "./Header";
 export * from "./Icons";
+export * from "./LinksBlock";
 export * from "./Plate";
 export * from "./Tag";
 

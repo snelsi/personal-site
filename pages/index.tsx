@@ -10,6 +10,7 @@ import {
   Footer,
   GitHubBanner,
   HireMeBanner,
+  LinksBlock,
   PodcastsCatalog,
 } from "components";
 
@@ -60,6 +61,10 @@ const IndexPage: NextPage = () => {
         <section>
             <GitHubBanner />
         </section>
+        </div>
+
+        <div>
+          <LinksBlock />
         </div>
       </Main>
       <Footer />
