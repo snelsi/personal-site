@@ -2,6 +2,7 @@ export * from "./About";
 export * from "./Background";
 export * from "./Card";
 export * from "./ContactButton";
+export * from "./Divider";
 export * from "./Footer";
 export * from "./Gallery";
 export * from "./Header";

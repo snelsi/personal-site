@@ -6,6 +6,7 @@ import styled from "styled-components";
 import {
   Catalog,
   ContactButton,
+  Divider,
   LandingHeader,
   Footer,
   GitHubBanner,
@@ -33,34 +34,35 @@ const IndexPage: NextPage = () => {
       <LandingHeader />
       <Main>
         <div>
-        <ArticlesCatalog />
+          <ArticlesCatalog />
         </div>
 
-        <div>
-        <PodcastsCatalog />
-        </div>
-
-        {/* <Block>
-          <TimestampCard />
-        </Block> */}
-
-
-        <div>
-          <HireMeBanner />
-        </div>
-
-        <div>
-        <GithubProjectsGallery />
-        </div>
+        <Divider />
 
         <div>
           <Catalog />
         </div>
 
         <div>
-        <section>
+          <PodcastsCatalog />
+        </div>
+
+        <Divider />
+
+        <div>
+          <HireMeBanner />
+        </div>
+
+        <Divider />
+
+        <div>
+          <GithubProjectsGallery />
+        </div>
+
+        <div>
+          <section>
             <GitHubBanner />
-        </section>
+          </section>
         </div>
 
         <div>
@@ -74,17 +76,22 @@ const IndexPage: NextPage = () => {
 };
 
 const Main = styled.main`
+  padding: 20px 0;
+
   & > div {
-    padding: var(--block-inner-padding);
+    padding: 0 var(--block-inner-padding);
     & > div {
       margin: auto;
-      max-width: 1080px;
+      max-width: 1200px;
     }
   }
 
   & section {
-    padding-top: 0.75em;
-    padding-bottom: 6.5em;
+    padding: 1em 0;
+
+    @media (min-width: 720px) {
+      padding-bottom: 6.5em;
+    }
   }
 `;
 

@@ -9,7 +9,6 @@ export const Header = styled.div`
   white-space: nowrap;
   min-height: 3em;
   margin: auto;
-  max-width: 1080px;
-  padding: 0.25em 0;
+  padding: 0.5em 0;
   line-height: 2.5em;
 `;
