@@ -5,16 +5,28 @@ import { ButtonText } from "components";
 
 import StickyHeader from "react-headroom";
 
+const wrapperStyle: React.CSSProperties = {
+  backgroundColor: "var(--color-gray-9)",
+};
+
 interface HeaderProps {}
 
 export const Header: React.FC<HeaderProps> = () => (
-  <StickyHeader style={{ zIndex: 100 }} upTolerance={20} downTolerance={20} pinStart={62}>
+  <StickyHeader
+    style={{ zIndex: 100 }}
+    upTolerance={20}
+    downTolerance={20}
+    pinStart={62}
+    wrapperStyle={wrapperStyle}
+  >
     <Container>
-      <div className="logo">
-        <img src="favicon-32x32.png" alt="My logo" />
-        <h5>Roman Zhuravlov</h5>
-      </div>
-      <div className="links">
+      <div>
+        <h5 className="name">
+          <Link href="/">
+            <a href="/">Roman Zhuravlov</a>
+          </Link>
+        </h5>
+
         <Link href="/about">
           <StyledButtonText as="a" href="/about">
             Про меня
@@ -37,43 +49,40 @@ export const Header: React.FC<HeaderProps> = () => (
 
 const Container = styled.div`
   background-color: var(--color-gray-9);
-  color: var(--color-text-white);
-  padding: 0.5em 1em;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
+  overflow: auto;
+  padding: 0 20px;
+  width: 100%;
   z-index: 100;
 
-  overflow: auto;
-
-  & .logo {
+  & > div {
+    color: var(--color-text-white);
+    margin: auto;
+    padding: 0.5em 0;
+    max-width: 1200px;
     display: flex;
     align-items: center;
-    margin-right: 2em;
+    justify-content: center;
 
-    h5 {
-      font-weight: 400;
-    }
-    & img {
-      /* cursor: pointer; */
-      margin-right: 1em;
-      transition: var(--transition-ease);
+    width: 100%;
 
-      &:hover {
-        transform: scale(1.1);
-      }
-      &:active {
-        transform: scale(0.9);
+    & h5.name {
+      font-weight: 600;
+      margin-right: auto;
+      & a {
+        color: var(--color-text-white);
       }
     }
-  }
-  & .links {
-    display: flex;
+
     & > a {
       color: var(--color-text-white);
       font-size: 1.125em;
+      font-weight: 400;
       white-space: nowrap;
+      &:hover,
+      &:focus,
+      &:active {
+        color: var(--color-text-white);
+      }
 
       &:not(:last-child) {
         margin-right: 4px;
@@ -82,15 +91,13 @@ const Container = styled.div`
   }
 
   @media (max-width: 720px) {
-    /* position: sticky; */
-    justify-content: center;
+    padding: 0;
 
-    & .logo {
-      display: none;
-    }
-    & .links {
-      & > a {
-        width: auto;
+    & > div {
+      width: fit-content;
+
+      & .name {
+        display: none;
       }
     }
   }
