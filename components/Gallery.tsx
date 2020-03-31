@@ -21,7 +21,7 @@ export const Gallery: React.FC<GalleryProps> = ({
   children,
   fullScreen = false,
 }) => (
-  <Block id={anchor}>
+  <div id={anchor}>
     <GalleryHeader>
       <h4 data-anchor={anchor}>
         {title}
@@ -49,12 +49,8 @@ export const Gallery: React.FC<GalleryProps> = ({
     <Frame data-mode={fullScreen ? "fullScreen" : "normal"}>
       <div className="conveyor">{children}</div>
     </Frame>
-  </Block>
+  </div>
 );
-
-const Block = styled.div`
-  margin-bottom: 20px;
-`;
 
 const GalleryHeader = styled(Header)`
   & h4 {
@@ -84,7 +80,6 @@ const Frame = styled.div`
   width: 100%;
 
   -webkit-overflow-scrolling: touch;
-  scroll-snap-type: x proximity;
 
   & > .conveyor {
     display: grid;
@@ -93,10 +88,6 @@ const Frame = styled.div`
 
     padding: 20px 0;
     width: fit-content;
-
-    & > * {
-      scroll-snap-align: center;
-    }
   }
 
   &[data-mode="fullScreen"] {
@@ -109,6 +100,25 @@ const Frame = styled.div`
 
     & > .conveyor {
       padding: 20px var(--block-inner-padding);
+
+      /* Hide  overflowind cards on desktop */
+      @media (min-width: 1070px) {
+        @media (max-width: 1590px) {
+          & > .content-card:nth-child(6) {
+            display: none;
+          }
+        }
+        @media (max-width: 1590px) {
+          & > .content-card:nth-child(6) {
+            display: none;
+          }
+        }
+        @media (max-width: 1330px) {
+          & > .content-card:nth-child(5) {
+            display: none;
+          }
+        }
+      }
     }
   }
 `;

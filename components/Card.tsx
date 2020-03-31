@@ -29,7 +29,12 @@ export const Card: React.FC<CardProps> = ({
   views,
   stars,
 }) => (
-  <CardBase href={url} target={inner ? "_self" : "_blank"} rel="noopener noreferrer">
+  <CardBase
+    className="content-card"
+    href={url}
+    target={inner ? "_self" : "_blank"}
+    rel="noopener noreferrer"
+  >
     <div className="imageContainer">
       <img src={img} alt="Article" />
       <span>{tag}</span>
