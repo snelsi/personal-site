@@ -36,7 +36,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 
 const Image = styled.img`
   border-radius: 0.5em;
-  height: 280px;
+  min-height: 280px;
+  height: 100%;
   margin: auto;
   width: 100%;
   object-fit: cover;
@@ -58,10 +59,10 @@ const Container = styled.div`
   overflow: hidden;
 
   display: grid;
-  grid-template-columns: 1fr 360px;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 1.25em;
 
-  @media (min-width: 1080px) {
+  @media (min-width: 1200px) {
     min-height: 415px;
     padding: 2.5em 3.75em;
   }
