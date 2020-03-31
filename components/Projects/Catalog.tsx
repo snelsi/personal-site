@@ -28,6 +28,6 @@ export const Catalog: React.FC<CatalogProps> = () => (
 const Grid = styled.div`
   display: grid;
   grid-gap: 1.25em;
-  padding: 1.25em 0;
+  padding: 2em 0;
   width: 100%;
 `;
