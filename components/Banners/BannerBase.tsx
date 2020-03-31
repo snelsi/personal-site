@@ -14,7 +14,7 @@ const Banner = styled.div`
   padding: 12px 24px;
   position: relative;
 
-  max-width: 1080px;
+  max-width: 1200px;
   margin: auto;
 
   & .main {

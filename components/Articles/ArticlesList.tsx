@@ -14,6 +14,6 @@ export const ArticlesList: React.FC<ArticlesListProps> = () => (
 
 const Grid = styled.div`
   display: grid;
-  max-width: 1080px;
+  max-width: 1200px;
   margin: auto;
 `;

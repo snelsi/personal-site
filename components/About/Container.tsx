@@ -7,7 +7,7 @@ export const Container = styled.div`
   position: relative;
   overflow: hidden;
 
-  max-width: 1080px;
+  max-width: 1200px;
   margin: auto;
 
   & header,
