@@ -91,7 +91,7 @@ const Content = styled.div`
   }
 
   & p {
-    color: #333;
+    color: var(--color-text-main);
     margin: 0.8em 0;
   }
 `;

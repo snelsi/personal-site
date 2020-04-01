@@ -81,13 +81,13 @@
 
   --color-teal-1: rgba(233, 255, 245, 1);
   --color-teal-2: rgba(209, 255, 233, 1);
-  --color-teal-9: rgba(47, 159, 104, 1);
   --color-teal-3: rgba(183, 255, 221, 1);
   --color-teal-4: rgba(154, 255, 206, 1);
   --color-teal-5: rgba(118, 255, 188, 1);
   --color-teal-6: rgba(72, 255, 165, 1);
   --color-teal-7: rgba(64, 227, 147, 1);
   --color-teal-8: rgba(56, 196, 127, 1);
+  --color-teal-9: rgba(47, 159, 104, 1);
   --color-teal-10: rgba(35, 112, 74, 1);
 
   --color-cool-gray-1: rgba(242, 244, 248, 1);
@@ -123,8 +123,9 @@
   --color-gray-9: rgba(38, 38, 38, 1);
   --color-gray-10: rgba(22, 22, 22, 1);
 
-  --color-text-black: var(--color-gray-10);
-  --color-text-white: var(--color-gray-1);
+  --color-text-black: var(--color-cool-gray-10);
+  --color-text-white: var(--color-cool-gray-1);
 
-  --color-text-main: var(--color-text-black);
+  --color-text-main: rgba(0, 0, 0, 0.87);
+  --color-text-secondary: rgba(40, 40, 40, 0.6);
 }

@@ -1,122 +1,103 @@
 import * as React from "react";
-import styled from "styled-components";
 import Link from "next/link";
+import styled from "styled-components";
 import { IArticle } from "components/Articles";
-import { EyeIcon } from "components/Icons";
 import { ButtonOutlined, Tag } from "components";
 
 interface ArticleBlogProps {
   article: IArticle;
 }
 
-export const ArticleBlock: React.FC<ArticleBlogProps> = ({ article }) => {
-  return (
-    <Block>
-      <div className="main-text">
-        <Head>
-          <h3>
-            <Link href={`articles/${article.id}`}>
-              <a href={`articles/${article.id}`}>{article.title}</a>
-            </Link>
-          </h3>
+export const ArticleBlock: React.FC<ArticleBlogProps> = ({ article }) => (
+  <Block>
+    <MainContent>
+      <Head>
+        <h3>
+          <Link href={`articles/${article.id}`}>
+            <a href={`articles/${article.id}`}>{article.title}</a>
+          </Link>
+        </h3>
 
-          <div className="tags">
-            {article.tags.map(tag => (
-              <Tag key={tag}>{tag}</Tag>
-            ))}
-          </div>
-        </Head>
-        <p>{article.textPreview}</p>
-        <Link href={`articles/${article.id}`}>
-          <ButtonOutlined as="a" href={`articles/${article.id}`} className="showMore">
-            Читать Дальше
-          </ButtonOutlined>
-        </Link>
-      </div>
+        <div className="tags">
+          {article.tags.map(tag => (
+            <Tag key={tag}>{tag}</Tag>
+          ))}
+        </div>
+      </Head>
 
-      <img src={article.img} alt="article preview" />
+      <p>{article.textPreview}</p>
 
-      <div>
-        <span>
-          <EyeIcon size="small" />
-          {article.views}
-        </span>
-      </div>
+      <Link href={`articles/${article.id}`}>
+        <ButtonOutlined as="a" href={`articles/${article.id}`} className="showMore">
+          Читать Дальше
+        </ButtonOutlined>
+      </Link>
+    </MainContent>
 
-      <div>more</div>
-    </Block>
-  );
-};
+    <Link href={`articles/${article.id}`}>
+      <AsideImage href={`articles/${article.id}`}>
+        <img src={article.img} alt="article preview" />
+      </AsideImage>
+    </Link>
+  </Block>
+);
 
 const Block = styled.div`
   border-bottom: 1px solid #e7e9f5;
   border-top: 1px solid #e7e9f5;
   display: grid;
 
-  font-size: 18px;
+  font-size: 1.125rem;
 
-  & .main-text {
-    margin: 20px 0;
-    & p {
-      -webkit-line-clamp: 10;
-      -webkit-box-orient: vertical;
-      display: -webkit-box;
-      overflow: hidden;
-      color: #333;
-      line-height: 1.4;
-
-      letter-spacing: 0.018em;
-      max-width: 600px;
-    }
-  }
-
-  & a.showMore {
-    margin-top: 1em;
-  }
+  max-width: 1200px;
+  margin: auto;
+  width: 100%;
 
   @media (min-width: 720px) {
-    grid-template-columns: 1fr 340px;
-    grid-template-rows: 1fr 40px;
-    grid-gap: 40px;
+    grid-template-columns: 1fr 400px;
+    grid-gap: 2.5rem;
     transition: var(--transition-ease);
-
-    & img {
-      border-radius: 12px;
-      margin: auto 20px;
-      height: 300px;
-      width: 300px;
-
-      &:hover,
-      &:focus {
-        transform: scale(1.05);
-      }
-      &:focus {
-        box-shadow: 0 0 1px 2px var(--color-blue-4);
-      }
-      &:active {
-        transform: scale(0.98);
-      }
-    }
   }
 
   @media (max-width: 720px) {
-    font-size: 16px;
+    font-size: 1rem;
     grid-template-columns: 1fr;
+  }
+`;
 
-    & img {
-      border-radius: 0px;
-      height: 300px;
-      width: 100%;
-    }
+const MainContent = styled.div`
+  padding: 20px 0;
+  & p {
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+    color: var(--color-text-main);
+    line-height: 1.4;
+
+    letter-spacing: 0.018em;
+    max-width: 600px;
+  }
+
+  @media (max-width: 720px) {
+    padding: 1.25rem;
+  }
+
+  & a.showMore {
+    margin: 1em 0;
   }
 `;
 
 const Head = styled.div`
-  margin: 20px 0;
+  margin-bottom: 1.25rem;
+  @media (min-width: 720px) {
+    margin-top: 1.25rem;
+  }
+
   & h3 {
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
     & a {
-      color: #111;
+      color: var(--color-text-main);
       transition: var(--transition-ease);
 
       &:hover {
@@ -129,6 +110,40 @@ const Head = styled.div`
   }
   & .tags {
     display: flex;
-    margin-top: 1em;
+    margin-top: 1.5rem;
+  }
+`;
+
+const AsideImage = styled.a`
+  & > img {
+    border-radius: 12px;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  @media (min-width: 720px) {
+    margin: auto 20px;
+    height: 360px;
+    width: 360px;
+    transition: var(--transition-ease);
+
+    &:hover,
+    &:focus {
+      transform: scale(1.04);
+    }
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+
+  @media (max-width: 720px) {
+    grid-row-start: 1;
+
+    height: 300px;
+    width: 100%;
+    & > img {
+      border-radius: 0px;
+    }
   }
 `;

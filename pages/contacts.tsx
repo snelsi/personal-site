@@ -3,18 +3,18 @@ import { NextPage } from "next";
 import Head from "next/head";
 
 import styled from "styled-components";
-import { About } from "components/About";
+import { LinksBlock } from "components";
 import { Header } from "components/LandingHeader/Header";
 
 const AboutPage: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Roman Zhuravlov - Bio</title>
+        <title>Contacts</title>
       </Head>
       <Header />
       <Container>
-        <About />
+        <LinksBlock />
       </Container>
     </>
   );

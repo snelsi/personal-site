@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Banner = styled.div`
   align-items: center;
-  background-color: var(--cool-gray-9, #21272a);
+  background-color: var(--cool-gray-9);
   border-radius: 8px;
   color: white;
   cursor: pointer;

@@ -41,7 +41,7 @@ export const Container = styled.div`
   }
 
   & ul {
-    color: #333;
+    color: var(--color-text-main);
     list-style: outside;
     padding-inline-start: 1.2em;
     & li {

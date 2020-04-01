@@ -1,8 +1,3 @@
-@font-face {
-  font-family: "Inter";
-  src: url("/Inter-Variable.ttf");
-}
-
 *,
 *::before,
 *::after {
@@ -17,9 +12,9 @@
 }
 
 body {
-  color: var(--color-text-main, #111);
-  font-family: -apple-system, "Segoe UI", BlinkMacSystemFont, "Roboto", "Oxygen", "Ubuntu",
-    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: var(--color-text-main);
+  font-family: "Montserrat", -apple-system, "Segoe UI", BlinkMacSystemFont, "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 
   font-style: normal;
   font-weight: normal;
@@ -62,6 +57,9 @@ h4,
 h5,
 h6 {
   letter-spacing: -0.025em;
+  font-family: "Montserrat", "Roboto", "Poppins", -apple-system, "Segoe UI", BlinkMacSystemFont,
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
 }
 
 /* Huge Title [60] */

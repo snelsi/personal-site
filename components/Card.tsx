@@ -2,6 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 
 import { EyeIcon } from "components/Icons";
+import { Tag } from "components";
 
 interface CardProps {
   url: string;
@@ -10,6 +11,7 @@ interface CardProps {
   title: string;
   description?: string;
   tag: "Article" | "Podcast" | "GitHub";
+  date?: string;
 
   minutesToRead?: number;
   words?: number;
@@ -20,6 +22,7 @@ interface CardProps {
 export const Card: React.FC<CardProps> = ({
   url,
   inner = true,
+  date = "",
   tag,
   img,
   title,
@@ -39,12 +42,19 @@ export const Card: React.FC<CardProps> = ({
       <img src={img} alt="Article" />
       <span>{tag}</span>
     </div>
+
     <div className="textContainer">
+      <div className="cardHeader">
+        <span className="tag">React</span>
+        <span className="time">{date}</span>
+      </div>
+
       <div className="cardMain">
         <div className="cardTitle">{title}</div>
         {description && <p>{description}</p>}
       </div>
-      <div className="cardFooter footnote">
+
+      <div className="cardFooter">
         {minutesToRead && <span>{minutesToRead} min</span>}
         {words && <span>{words} words</span>}
         {views && (
@@ -78,20 +88,28 @@ export const Card: React.FC<CardProps> = ({
 const CardBase = styled.a`
   background: #ffffff;
   box-shadow: 0px 6px 12px rgba(0, 0, 100, 0.1);
-  border-radius: 8px;
+  border-radius: 0.5rem;
   display: grid;
   grid-template-rows: 148px 1fr;
   overflow: hidden;
-  font-size: 1rem;
-  min-height: 240px;
-  min-width: 200px;
+  font-size: 1.25rem;
   text-decoration: none;
   transition: var(--transition-ease);
   outline: none;
 
   grid-template-rows: 200px 1fr;
   min-height: 320px;
-  min-width: 240px;
+  min-width: 280px;
+
+  &:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 100, 0.1);
+  }
+
+  @media (min-width: 1200px) {
+    box-shadow: none;
+    min-height: 360px;
+    min-width: 300px;
+  }
 
   &:hover,
   &:focus {
@@ -106,8 +124,8 @@ const CardBase = styled.a`
 
   & .imageContainer {
     background: var(--color-cool-gray-2, #dde1e6);
-    border-radius: 8px;
-    margin: 4px;
+    border-radius: 0.5rem;
+    margin: 0.25rem;
     overflow: hidden;
     position: relative;
 
@@ -131,6 +149,7 @@ const CardBase = styled.a`
 
   & .textContainer {
     padding: 8px 12px 18px;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -140,6 +159,7 @@ const CardBase = styled.a`
       transition: all var(--transition-ease);
       font-size: 1em;
       color: var(--color-cool-gray-10, #121619);
+      margin: 1.5em 0;
 
       & .cardTitle {
         -webkit-line-clamp: 2;
@@ -160,11 +180,42 @@ const CardBase = styled.a`
         overflow: hidden;
       }
     }
+
+    & .cardHeader {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+
+      & .tag {
+        text-transform: uppercase;
+        display: inline-block;
+        width: auto;
+        height: 24px;
+        font-size: 1em;
+        line-height: 1;
+        font-weight: 500;
+        text-align: center;
+        border-radius: 20px;
+        min-width: 70px;
+        background: #e7fbf1;
+        color: #001732;
+        padding: 5px 10px;
+      }
+      & .time {
+        text-transform: uppercase;
+      }
+    }
+    & .cardFooter,
+    & .cardHeader {
+      color: var(--color-cool-gray-5);
+      font-size: 0.875rem;
+    }
+
     & .cardFooter {
       align-items: center;
       display: flex;
-      color: var(--color-cool-gray-6, #697077);
-      margin-top: 8px;
+
+      margin-bottom: 1.5rem;
 
       & span {
         align-items: center;

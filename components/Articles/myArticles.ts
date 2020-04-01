@@ -2,6 +2,7 @@ export interface IArticle {
   id: string;
   img: string;
   title: string;
+  date: string;
   minutesToRead: number;
   words?: number;
   views: number;
@@ -13,6 +14,7 @@ export const myArticles: IArticle[] = [
   {
     id: "enchant-brand-with-giant",
     tags: ["React", "Typescript", "Tutorial"],
+    date: "20 Mar 2020",
     img:
       "https://images.unsplash.com/photo-1559139011-7723d22cb0de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80",
     title: "Enchance Your Brand Potential With Giant",
@@ -25,6 +27,7 @@ export const myArticles: IArticle[] = [
   {
     id: "navernyaka-kazhdomu-dovodilos",
     tags: ["React", "Typescript", "Tutorial"],
+    date: "20 Mar 2020",
     img:
       "https://images.unsplash.com/photo-1500856311637-fc0249e33e4c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
     title: "Grids are cool! And here's why.",
@@ -41,6 +44,7 @@ export const myArticles: IArticle[] = [
       "https://images.unsplash.com/photo-1503259901638-6bf44a4cd670?ixlib=rb-1.2.1&auto=format&fit=crop&w=1294&q=80",
     title: "Do we really need unit testing?",
     minutesToRead: 11,
+    date: "20 Mar 2020",
     // words: 1120,
     views: 18,
     textPreview:
@@ -53,6 +57,7 @@ export const myArticles: IArticle[] = [
       "https://images.unsplash.com/photo-1490535004195-099bc723fa1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjI5MzI0fQ&auto=format&fit=crop&w=1480&q=80",
     title: "Enchance Your Brand Potential With Giant",
     minutesToRead: 11,
+    date: "20 Mar 2020",
     // words: 1120,
     views: 18,
     textPreview:
@@ -65,6 +70,7 @@ export const myArticles: IArticle[] = [
       "https://images.unsplash.com/photo-1580928489654-a2095c6e28a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
     title: "Enchance Your Brand Potential With Giant",
     minutesToRead: 11,
+    date: "20 Mar 2020",
     // words: 1120,
     views: 18,
     textPreview:
@@ -79,6 +85,7 @@ export const myArticles: IArticle[] = [
     minutesToRead: 11,
     // words: 1120,
     views: 18,
+    date: "20 Mar 2020",
     textPreview:
       "Наверняка каждому доводилось летать в полупустом самолете или встречаться с переносом рейса, возможно вы задумывались об оптимальности затрат и эффективности такого рейса. Сколько потенциальной прибыли недополучает авиакомпания? Действительно, рейсы бывают малоприбыльными, а иногда даже убыточными. Могут ли быть такого рода решения объяснимы с точки зрения оптимального поведения авиаперевозчика? Например, в текущей ситуации с отменой рейсов из-за COVID-19: как распределяется парк самолетов по другим направлениям, что обеспечивает локальную норму прибыли? Давайте попробуем построить динамическую модель, которая будет реагировать на внешние изменения и стремиться прийти к состоянию равновесия. В данной статье возьмем лишь небольшой набор параметров, попробуем спрогнозировать спрос, отправлять самолеты меньшей вместимости, снижать частоту рейсов когда это невыгодно.",
   },
