@@ -7,7 +7,7 @@ interface PodcastsCatalogProps {}
 
 export const PodcastsCatalog: React.FC<PodcastsCatalogProps> = () => (
   <Gallery anchor="articles" title="Послушать" url="podcasts" inner fullScreen>
-    {myPodcasts.map(podcast => (
+    {myPodcasts.map((podcast) => (
       <Card {...podcast} key={podcast.id} tag="Podcast" url={`podcasts/${podcast.id}`} />
     ))}
   </Gallery>

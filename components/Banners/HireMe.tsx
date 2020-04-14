@@ -22,7 +22,7 @@ interface HireMeBannerProps {}
 export const HireMeBanner: React.FC<HireMeBannerProps> = () => (
   <Banner href="http://t.me/snelsi" target="_blank" rel="noopener noreferrer">
     <BannerBase title="Let's work together!" label="Contact me in one click.">
-      <img src="static/icons/searchingIcon.svg" alt="Searching for a employee" />
+      <img src="static/searchingIllustration.svg" alt="Searching for a employee" />
     </BannerBase>
   </Banner>
 );

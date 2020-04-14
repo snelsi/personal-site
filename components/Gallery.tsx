@@ -2,6 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import Link from "next/link";
 
+import { FiPaperclip } from "react-icons/fi";
 import { ButtonText, IconButton } from "components";
 import { Header } from "components/Header";
 
@@ -28,20 +29,20 @@ export const Gallery: React.FC<GalleryProps> = ({
         <IconButton
           className="clip"
           type="button"
-          onClick={() => navigator.clipboard.writeText(`http://localhost:3000/#${anchor}`)}
+          onClick={() => navigator.clipboard.writeText(`http://snelsi.now.sh/#${anchor}`)}
         >
-          <img src="static/icons/paperclip.svg" alt="paperclip" />
+          <FiPaperclip size="20" />
         </IconButton>
       </h4>
 
       {url && inner ? (
         <Link href={url}>
-          <ButtonText as="a" href={url}>
+          <ButtonText component="a" href={url}>
             See All
           </ButtonText>
         </Link>
       ) : (
-        <ButtonText as="a" href={url} target="_blank" rel="noopener noreferrer">
+        <ButtonText component="a" href={url} target="_blank" rel="noopener noreferrer">
           See All
         </ButtonText>
       )}
@@ -60,13 +61,8 @@ const GalleryHeader = styled(Header)`
     flex-wrap: nowrap;
 
     & > button.clip {
-      --base-color: 200, 200, 200;
       margin-left: 4px;
       opacity: 0;
-      & img {
-        height: 20px;
-        width: 20px;
-      }
     }
     &:hover > button.clip,
     &:focus-within > button.clip {

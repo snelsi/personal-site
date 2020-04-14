@@ -6,7 +6,7 @@ interface ArticlesListProps {}
 
 export const ArticlesList: React.FC<ArticlesListProps> = () => (
   <Grid>
-    {myArticles.map(article => (
+    {myArticles.map((article) => (
       <ArticleBlock key={article.id} article={article} />
     ))}
   </Grid>

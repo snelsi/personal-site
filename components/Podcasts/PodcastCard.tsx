@@ -3,14 +3,12 @@ import styled from "styled-components";
 
 interface PodcastCardProps {}
 
-export const PodcastCard: React.FC<PodcastCardProps> = () => {
-  return (
-    <Card>
-      <h6>Подскат</h6>
-      <p>Какую музыку слушают разработчики во время работы?</p>
-    </Card>
-  );
-};
+export const PodcastCard: React.FC<PodcastCardProps> = () => (
+  <Card>
+    <h6>Подскат</h6>
+    <p>Какую музыку слушают разработчики во время работы?</p>
+  </Card>
+);
 
 const Card = styled.div`
   background-color: var(--color-purple-5);

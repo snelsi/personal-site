@@ -8,17 +8,15 @@ interface StandProps {
   description: string;
 }
 
-export const Stand: React.FC<StandProps> = ({ image, href, title, description }) => {
-  return (
-    <Container>
-      <a href={href} target="_blank" rel="noopener noreferrer">
-        <img src={image} alt="Stand preview" />
-      </a>
-      <header>{title}</header>
-      <p className="subheadline">{description}</p>
-    </Container>
-  );
-};
+export const Stand: React.FC<StandProps> = ({ image, href, title, description }) => (
+  <Container>
+    <a href={href} target="_blank" rel="noopener noreferrer">
+      <img src={image} alt="Stand preview" />
+    </a>
+    <header>{title}</header>
+    <p className="subheadline">{description}</p>
+  </Container>
+);
 
 const Container = styled.div`
   & img {

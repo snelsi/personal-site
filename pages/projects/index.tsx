@@ -1,25 +1,48 @@
 import * as React from "react";
 import { NextPage } from "next";
-import Link from "next/link";
 import Head from "next/head";
+import styled from "styled-components";
 
-import { Catalog } from "components";
-import { TimestampCard } from "components/Projects/Timestamp";
+import { PageFooter, PageHeader, SiteHeader } from "components";
+import {
+  Timestamp,
+  Hangman,
+  GameOfLife,
+  PersonalSite,
+  CocomoCalculator,
+} from "components/Projects";
 
-const Projects: NextPage = () => {
-  return (
-    <>
-      <Head>
-        <title>Projects</title>
-      </Head>
-      <Link href="/">
-        <a href="/">Назад</a>
-      </Link>
-      <div>Мои проекты</div>
-      <TimestampCard />
-      <Catalog />
-    </>
-  );
-};
+const Projects: NextPage = () => (
+  <>
+    <Head>
+      <title>Projects</title>
+    </Head>
+    <SiteHeader />
 
+    <main>
+      <PageHeader data-fix-width>
+        <h2>Мои проекты</h2>
+        <p>
+          Да! Я тоже в шоке от их количества и крутости.{" "}
+          <span role="img" aria-label="cool emoji">
+            😎
+          </span>
+        </p>
+      </PageHeader>
+      <Grid data-fix-width>
+        <PersonalSite />
+        <Timestamp />
+        <Hangman />
+        <GameOfLife />
+        <CocomoCalculator />
+      </Grid>
+    </main>
+    <PageFooter />
+  </>
+);
+
+const Grid = styled.div`
+  display: grid;
+  gap: 1em;
+`;
 export default Projects;

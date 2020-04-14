@@ -24,7 +24,7 @@ export const Head: React.FC<HeadProps> = () => (
       Политехнического Университета. Сейчас я проживаю в Киеве,{" "}
       <span className="no-wrap">
         Украина.
-        <Flag src="static/icons/UkrainFlag.svg" alt="Ukrain flag" />
+        <Flag src="static/UkrainFlag.svg" alt="Ukrain flag" />
       </span>
     </p>
   </div>

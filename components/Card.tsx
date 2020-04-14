@@ -2,7 +2,6 @@ import * as React from "react";
 import styled from "styled-components";
 
 import { EyeIcon } from "components/Icons";
-import { Tag } from "components";
 
 interface CardProps {
   url: string;
@@ -86,13 +85,12 @@ export const Card: React.FC<CardProps> = ({
 );
 
 const CardBase = styled.a`
-  background: #ffffff;
+  background: var(--color-surface-1);
   box-shadow: 0px 6px 12px rgba(0, 0, 100, 0.1);
   border-radius: 0.5rem;
   display: grid;
   grid-template-rows: 148px 1fr;
   overflow: hidden;
-  font-size: 1.25rem;
   text-decoration: none;
   transition: var(--transition-ease);
   outline: none;
@@ -148,8 +146,7 @@ const CardBase = styled.a`
   }
 
   & .textContainer {
-    padding: 8px 12px 18px;
-    padding: 1.5rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -158,7 +155,7 @@ const CardBase = styled.a`
     & .cardMain {
       transition: all var(--transition-ease);
       font-size: 1em;
-      color: var(--color-cool-gray-10, #121619);
+      color: var(--color-text-main);
       margin: 1.5em 0;
 
       & .cardTitle {
@@ -166,6 +163,7 @@ const CardBase = styled.a`
         -webkit-box-orient: vertical;
 
         display: -webkit-box;
+        font-size: 1.25em;
         font-weight: 500;
         overflow: hidden;
       }

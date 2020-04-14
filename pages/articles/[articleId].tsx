@@ -1,24 +1,31 @@
 import * as React from "react";
 import { NextPage, NextPageContext } from "next";
-import Link from "next/link";
 import Head from "next/head";
+
+import { PageHeader, PageFooter, SiteHeader, Placeholder404 } from "components";
 
 interface ArticleProps {
   articleId: string;
 }
-const Article: NextPage<ArticleProps> = ({ articleId }) => {
-  return (
-    <>
-      <Head>
-        <title>Article {articleId}</title>
-      </Head>
-      <Link href="/articles">
-        <a href="/articles">Назад</a>
-      </Link>
-      <div>Статья {articleId}</div>
-    </>
-  );
-};
+const Article: NextPage<ArticleProps> = ({ articleId }) => (
+  <>
+    <Head>
+      <title>Article {articleId}</title>
+    </Head>
+
+    <SiteHeader />
+
+    <main data-fix-width>
+      <PageHeader>
+        <h2>Тут будет статья!</h2>
+        <p>{articleId}</p>
+      </PageHeader>
+
+      <Placeholder404 />
+    </main>
+    <PageFooter />
+  </>
+);
 
 interface MyContext extends NextPageContext {}
 Article.getInitialProps = async (ctx: MyContext) => {

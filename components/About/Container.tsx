@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  border: 1px solid #e7e9f5;
+  border: 1px solid var(--color-borderline);
   border-radius: 8px;
   padding: 20px;
   position: relative;
@@ -25,11 +25,11 @@ export const Container = styled.div`
   }
 
   & header {
-    border-bottom: 1px solid #e7e9f5;
+    border-bottom: 1px solid var(--color-borderline);
     padding-bottom: 1em;
   }
   & footer {
-    border-top: 1px solid #e7e9f5;
+    border-top: 1px solid var(--color-borderline);
     padding: 1em 0;
   }
 

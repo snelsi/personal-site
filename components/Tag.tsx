@@ -1,30 +1,19 @@
-import styled from "styled-components";
-
+import { withStyles } from "@material-ui/core/styles";
 import { ButtonText } from "components/Buttons";
 
-export const Tag = styled(ButtonText)`
-  --text-color: var(--color-blue-5);
-  border-radius: 1rem;
-  background-color: rgba(208, 226, 255, 0.5);
+export const Tag = withStyles({
+  root: {
+    "--text-color": "var(--color-blue-5)",
+    "--base-color": "69, 137, 255",
+    borderRadius: "1rem",
 
-  display: inline-block;
-  font-weight: 400;
-  margin-right: 12px;
+    backgroundColor: "rgba(69, 137, 255, 0.3)",
 
-  line-height: 1.4em;
-  font-size: 0.8em;
-  padding: 0.25em 1em;
-
-  &:not([data-type]) {
-    &:hover {
-      background-color: rgba(208, 226, 255, 0.75);
-    }
-    &:focus {
-      background-color: rgba(208, 226, 255, 1);
-    }
-    &:active {
-      background-color: rgba(166, 200, 255, 1);
-      color: var(--color-blue-6);
-    }
-  }
-`;
+    display: "inline-block",
+    fontWeight: 400,
+    marginRight: 12,
+    lineHeight: "1.4em",
+    fontSize: "0.8em",
+    padding: "0.25em 1em",
+  },
+})(ButtonText);

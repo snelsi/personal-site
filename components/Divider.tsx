@@ -16,6 +16,6 @@ const Container = styled.div`
     margin: auto;
     border: none;
     height: 1px;
-    background-color: var(--color-gray-2);
+    background-color: var(--color-borderline);
   }
 `;

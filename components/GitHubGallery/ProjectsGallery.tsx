@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import { useQuery, gql } from "@apollo/client";
-
+import { gitHubClient } from "utils/withGitHubApollo";
 import { Card, Gallery } from "components";
 
 interface Repositorie {
@@ -49,7 +49,9 @@ const GET_MY_REPOSITORIES = gql`
 interface GithubProjectsGalleryProps {}
 
 export const GithubProjectsGallery: React.FC<GithubProjectsGalleryProps> = () => {
-  const { data } = useQuery<GET_MY_REPOSITORIES_DATA>(GET_MY_REPOSITORIES);
+  const { data } = useQuery<GET_MY_REPOSITORIES_DATA>(GET_MY_REPOSITORIES, {
+    client: gitHubClient,
+  });
 
   return (
     <Gallery anchor="github" title="Покопаться в Коде" url="https://github.com/snelsi" fullScreen>

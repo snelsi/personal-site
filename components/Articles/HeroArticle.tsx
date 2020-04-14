@@ -8,20 +8,18 @@ interface HeroArticleProps {
   article: IArticle;
 }
 
-export const HeroArticle: React.FC<HeroArticleProps> = ({ article }) => {
-  return (
-    <div>
-      <Link href={`articles/${article.id}`}>
-        <Container href={`articles/${article.id}`}>
-          <img src={article.img} alt="Article preview" />
-          <div className="card-main">
-            <h3>{article.title}</h3>
-          </div>
-        </Container>
-      </Link>
-    </div>
-  );
-};
+export const HeroArticle: React.FC<HeroArticleProps> = ({ article }) => (
+  <div>
+    <Link href={`articles/${article.id}`}>
+      <Container href={`articles/${article.id}`}>
+        <img src={article.img} alt="Article preview" />
+        <div className="card-main">
+          <h3>{article.title}</h3>
+        </div>
+      </Container>
+    </Link>
+  </div>
+);
 
 const Container = styled.a`
   display: grid;

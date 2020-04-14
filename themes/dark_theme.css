@@ -1,0 +1,14 @@
+body[data-mode="dark"] {
+  --color-text-main: rgba(255, 255, 255, 0.92);
+  --color-text-secondary: var(--color-cool-gray-5);
+
+  --color-background: var(--color-gray-10);
+
+  --color-surface-1: var(--color-gray-9);
+  --color-surface-2: var(--color-gray-8);
+  --color-surface-3: var(--color-gray-7);
+
+  --color-borderline: var(--color-gray-8);
+
+  --color-button-back: 224, 224, 224;
+}

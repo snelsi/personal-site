@@ -7,13 +7,14 @@ import {
   Catalog,
   ContactButton,
   Divider,
-  LandingHeader,
   Footer,
   GitHubBanner,
   HireMeBanner,
   LinksBlock,
   PodcastsCatalog,
 } from "components";
+
+import { SiteHeader } from "components/SiteHeader";
 
 import { GithubProjectsGallery } from "components/GitHubGallery";
 import withApollo from "utils/withApollo";
@@ -25,13 +26,9 @@ const IndexPage: NextPage = () => {
     <>
       <Head>
         <title>Roman Zhuravlov - Personal Web Site</title>
-        <meta
-          name="viewport"
-          content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
-        />
-        <meta name="theme-color" content="#262626" />
       </Head>
-      <LandingHeader />
+
+      <SiteHeader />
       <Main>
         <div>
           <ArticlesCatalog />

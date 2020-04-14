@@ -2,25 +2,33 @@ import * as React from "react";
 import { NextPage } from "next";
 import Head from "next/head";
 
-import styled from "styled-components";
-import { LinksBlock } from "components";
-import { Header } from "components/LandingHeader/Header";
+import { LinksBlock, PageFooter, PageHeader } from "components";
+import { SiteHeader } from "components/SiteHeader";
 
-const AboutPage: NextPage = () => {
-  return (
-    <>
-      <Head>
-        <title>Contacts</title>
-      </Head>
-      <Header />
-      <Container>
-        <LinksBlock />
-      </Container>
-    </>
-  );
-};
+const AboutPage: NextPage = () => (
+  <>
+    <Head>
+      <title>Contacts</title>
+    </Head>
 
-const Container = styled.div`
-  padding: 1.25em;
-`;
+    <SiteHeader />
+
+    <PageHeader data-fix-width>
+      <h2>Мои контакты</h2>
+      <p>
+        Держите! Надеюсь, вы же не будете слать мне рекламу?{" "}
+        <span role="img" aria-label="nervous emoji">
+          😬
+        </span>
+      </p>
+    </PageHeader>
+
+    <div data-fix-width>
+      <LinksBlock />
+    </div>
+
+    <PageFooter />
+  </>
+);
+
 export default AboutPage;

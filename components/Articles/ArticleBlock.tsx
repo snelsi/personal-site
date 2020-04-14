@@ -19,7 +19,7 @@ export const ArticleBlock: React.FC<ArticleBlogProps> = ({ article }) => (
         </h3>
 
         <div className="tags">
-          {article.tags.map(tag => (
+          {article.tags.map((tag) => (
             <Tag key={tag}>{tag}</Tag>
           ))}
         </div>
@@ -28,7 +28,7 @@ export const ArticleBlock: React.FC<ArticleBlogProps> = ({ article }) => (
       <p>{article.textPreview}</p>
 
       <Link href={`articles/${article.id}`}>
-        <ButtonOutlined as="a" href={`articles/${article.id}`} className="showMore">
+        <ButtonOutlined href={`articles/${article.id}`} className="showMore">
           Читать Дальше
         </ButtonOutlined>
       </Link>
@@ -43,8 +43,8 @@ export const ArticleBlock: React.FC<ArticleBlogProps> = ({ article }) => (
 );
 
 const Block = styled.div`
-  border-bottom: 1px solid #e7e9f5;
-  border-top: 1px solid #e7e9f5;
+  border-bottom: 1px solid var(--color-borderline);
+  border-top: 1px solid var(--color-borderline);
   display: grid;
 
   font-size: 1.125rem;

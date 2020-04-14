@@ -1,9 +1,8 @@
 import * as React from "react";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 import { Card, Gallery } from "components";
 import { myArticles, HeroArticle } from "components/Articles";
-
-import { useMediaQuery } from "beautiful-react-hooks";
 
 interface ArticlesCatalogProps {}
 
@@ -15,7 +14,7 @@ export const ArticlesCatalog: React.FC<ArticlesCatalogProps> = () => {
     <>
       {!isMobile && <HeroArticle article={myArticles[0]} />}
       <Gallery anchor="articles" title="Почитать" url="articles" inner fullScreen>
-        {articles.map(article => (
+        {articles.map((article) => (
           <Card {...article} key={article.id} tag="Article" url={`articles/${article.id}`} />
         ))}
       </Gallery>

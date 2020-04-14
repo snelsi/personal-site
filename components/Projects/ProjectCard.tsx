@@ -15,24 +15,22 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   slogan,
   description,
   url,
-}) => {
-  return (
-    <Container>
-      <div className="main">
-        <div>
-          <h2>{title}</h2>
+}) => (
+  <Container>
+    <div className="main">
+      <div>
+        <h2>{title}</h2>
 
-          {slogan && <h5>{slogan}</h5>}
-          <p>{description}</p>
-        </div>
-        <a href={url} target="_blank" rel="noopener noreferrer">
-          {url}
-        </a>
+        {slogan && <h5>{slogan}</h5>}
+        <p>{description}</p>
       </div>
-      <Image src={img} />
-    </Container>
-  );
-};
+      <a href={url} target="_blank" rel="noopener noreferrer">
+        {url}
+      </a>
+    </div>
+    <Image src={img} />
+  </Container>
+);
 
 const Image = styled.img`
   border-radius: 0.5em;
@@ -52,7 +50,7 @@ const Image = styled.img`
 `;
 
 const Container = styled.div`
-  border: 1px solid #e7e9f5;
+  border: 1px solid var(--color-borderline);
   border-radius: 0.5rem;
   padding: 2em;
   position: relative;
@@ -89,7 +87,7 @@ const Container = styled.div`
     }
 
     & p {
-      color: var(--color-gray-6);
+      color: var(--color-text-secondary);
       font-size: 1.25em;
       margin: 1em 0;
       max-width: 420px;
@@ -97,7 +95,7 @@ const Container = styled.div`
     }
 
     & > a {
-      color: var(--color-gray-6);
+      color: var(--color-text-secondary);
       transition: var(--transition-ease);
       word-break: break-word;
 

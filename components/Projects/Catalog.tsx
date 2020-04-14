@@ -12,13 +12,13 @@ export const Catalog: React.FC<CatalogProps> = () => (
     <Header>
       <h4>Полистать Проекты</h4>
       <Link href="/projects">
-        <ButtonText as="a" href="/projects">
+        <ButtonText component="a" href="/projects">
           See All
         </ButtonText>
       </Link>
     </Header>
     <Grid>
-      {projects.map(project => (
+      {projects.map((project) => (
         <ProjectCard key={project.title} {...project} />
       ))}
     </Grid>

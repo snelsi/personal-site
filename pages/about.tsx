@@ -3,24 +3,22 @@ import { NextPage } from "next";
 import Head from "next/head";
 
 import styled from "styled-components";
-import { About } from "components/About";
-import { Header } from "components/LandingHeader/Header";
+import { About, PageFooter, SiteHeader } from "components";
 
-const AboutPage: NextPage = () => {
-  return (
-    <>
-      <Head>
-        <title>Roman Zhuravlov - Bio</title>
-      </Head>
-      <Header />
-      <Container>
-        <About />
-      </Container>
-    </>
-  );
-};
+const AboutPage: NextPage = () => (
+  <>
+    <Head>
+      <title>Roman Zhuravlov - Bio</title>
+    </Head>
+    <SiteHeader />
+    <Main>
+      <About />
+    </Main>
+    <PageFooter />
+  </>
+);
 
-const Container = styled.div`
+const Main = styled.main`
   padding: 1.25em;
 `;
 export default AboutPage;

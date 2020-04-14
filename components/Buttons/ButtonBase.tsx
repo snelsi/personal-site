@@ -1,21 +1,32 @@
-import styled from "styled-components";
+import { withStyles } from "@material-ui/core/styles";
+import MUIButtonBase, { ButtonBaseProps as MUIButtonBaseProps } from "@material-ui/core/ButtonBase";
 
-export const ButtonBase = styled.button`
-  align-items: center;
-  background-color: var(--color-blue-6);
-  border: none;
-  border-radius: 0.5rem;
-  color: var(--color-text-white);
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
+export interface ButtonBaseProps extends MUIButtonBaseProps {
+  component?: any;
+}
+interface LinkButtonBaseProps extends ButtonBaseProps {
+  component: "a";
+  href: string;
+  target?: "_blank";
+  rel?: "noopener noreferrer";
+}
 
-  line-height: 1.5;
-  font-size: 1em;
-  padding: 0.5em 1em;
-
-  text-decoration: none;
-  text-align: center;
-  transition: var(--transition-ease);
-  outline: none;
-`;
+export const ButtonBase = withStyles({
+  root: {
+    alignItems: "center",
+    backgroundColor: "var(--color-blue-6)",
+    border: "none",
+    borderRadius: "0.5rem",
+    color: "var(--color-text-white)",
+    cursor: "pointer",
+    display: "flex",
+    justifyContent: "center",
+    lineHeight: "1.5",
+    fontSize: "1em",
+    padding: "0.5em 1em",
+    textDecoration: "none",
+    textAlign: "center",
+    transition: "var(--transition-ease)",
+    outline: "none",
+  },
+})(MUIButtonBase) as (props: ButtonBaseProps | LinkButtonBaseProps) => React.ReactElement;

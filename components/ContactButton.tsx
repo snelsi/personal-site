@@ -1,14 +1,14 @@
 import * as React from "react";
-import styled from "styled-components";
 
+import { styled } from "@material-ui/core/styles";
 import { Button } from "components/Buttons";
 
-const FixedButton = styled(Button)`
-  position: fixed;
-  bottom: 20px;
-  right: 16px;
-  z-index: 12;
-`;
+const FixedButton = styled(Button)({
+  position: "fixed",
+  bottom: 20,
+  right: 16,
+  zIndex: 12,
+});
 
 interface ContactButtonProps {}
 

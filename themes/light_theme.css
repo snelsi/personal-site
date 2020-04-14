@@ -1,0 +1,15 @@
+body {
+  --color-text-main: rgba(0, 0, 0, 0.87);
+  --color-text-secondary: rgba(100, 100, 100, 0.87);
+  --color-text-secondary: var(--color-cool-gray-5);
+
+  --color-background: var(--color-white);
+
+  --color-surface-1: var(--color-white);
+  --color-surface-2: var(--color-white);
+  --color-surface-3: var(--color-white);
+
+  --color-borderline: var(--color-gray-2);
+
+  --color-button-back: 168, 168, 168;
+}

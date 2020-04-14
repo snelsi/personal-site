@@ -3,10 +3,11 @@ import styled from "styled-components";
 
 interface FooterProps {}
 
-export const Footer: React.FC<FooterProps> = () => {
+export const Footer: React.FC<FooterProps> = ({ children }) => {
   const date = new Date();
   return (
     <FooterBase>
+      {children}
       <div className="copyright">
         Roman Zhuravlov
         <br />© 2019 - {date.getFullYear()}
@@ -16,7 +17,7 @@ export const Footer: React.FC<FooterProps> = () => {
 };
 
 const FooterBase = styled.footer`
-  border-top: 1px solid #e7e9f5;
+  border-top: 1px solid var(--color-borderline);
   padding: 2em var(--block-inner-padding) 2em;
   text-align: center;
 `;
