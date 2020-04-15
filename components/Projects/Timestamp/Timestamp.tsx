@@ -40,9 +40,17 @@ const Card = styled(CardBase)`
     font-weight: 600;
   }
 
-  @media (max-width: 720px) {
-    background-position: 80% 80%;
+  @media (max-width: 780px) {
+    background-position: center 80%;
     background-size: 320px auto;
+  }
+
+  @media (max-width: 560px) {
+    & div.title {
+      font-size: 40px;
+    }
+  }
+  @media (max-width: 340px) {
     & div.title {
       font-size: 32px;
     }
