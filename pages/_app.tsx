@@ -8,7 +8,7 @@ import "colors.css";
 import "themes/light_theme.css";
 import "themes/dark_theme.css";
 
-import { ThemeProvider } from "components";
+import { ThemeProvider } from "utils/ThemeProvider";
 
 export default function MyApp({ Component, pageProps }) {
   React.useEffect(() => {
@@ -20,10 +20,8 @@ export default function MyApp({ Component, pageProps }) {
   }, []);
 
   return (
-    <>
-      <ThemeProvider>
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </>
+    <ThemeProvider>
+      <Component {...pageProps} />
+    </ThemeProvider>
   );
 }

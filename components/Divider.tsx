@@ -4,18 +4,19 @@ import styled from "styled-components";
 interface DividerProps {}
 
 export const Divider: React.FC<DividerProps> = () => (
-  <Container>
+  <Container data-fix-width>
     <hr />
   </Container>
 );
 
 const Container = styled.div`
-  margin: 20px 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
   & > hr {
-    max-width: 1200px;
-    margin: auto;
+    background-color: var(--color-borderline);
     border: none;
     height: 1px;
-    background-color: var(--color-borderline);
+    width: 100%;
   }
 `;

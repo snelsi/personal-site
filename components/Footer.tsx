@@ -7,10 +7,12 @@ export const Footer: React.FC<FooterProps> = ({ children }) => {
   const date = new Date();
   return (
     <FooterBase>
-      {children}
-      <div className="copyright">
-        Roman Zhuravlov
-        <br />© 2019 - {date.getFullYear()}
+      <div data-dix-width>
+        {children}
+        <div className="copyright">
+          Roman Zhuravlov
+          <br />© 2019 - {date.getFullYear()}
+        </div>
       </div>
     </FooterBase>
   );
@@ -18,6 +20,6 @@ export const Footer: React.FC<FooterProps> = ({ children }) => {
 
 const FooterBase = styled.footer`
   border-top: 1px solid var(--color-borderline);
-  padding: 2em var(--block-inner-padding) 2em;
+  padding: 2em 0;
   text-align: center;
 `;

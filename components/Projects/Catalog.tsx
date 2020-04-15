@@ -8,7 +8,7 @@ import { projects, ProjectCard } from "components/Projects";
 interface CatalogProps {}
 
 export const Catalog: React.FC<CatalogProps> = () => (
-  <>
+  <div data-fix-width>
     <Header>
       <h4>Полистать Проекты</h4>
       <Link href="/projects">
@@ -22,7 +22,7 @@ export const Catalog: React.FC<CatalogProps> = () => (
         <ProjectCard key={project.title} {...project} />
       ))}
     </Grid>
-  </>
+  </div>
 );
 
 const Grid = styled.div`

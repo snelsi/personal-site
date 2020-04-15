@@ -7,11 +7,9 @@ export const Container = styled.div`
   position: relative;
   overflow: hidden;
 
-  max-width: 1200px;
-  margin: auto;
+  & .about_footer {
+    border-top: 1px solid var(--color-borderline);
 
-  & header,
-  & footer {
     align-items: center;
     display: flex;
 
@@ -19,22 +17,15 @@ export const Container = styled.div`
     max-width: 640px;
     min-height: 2em;
 
+    padding-top: 1em;
+
     & button {
       margin: auto;
     }
   }
 
-  & header {
-    border-bottom: 1px solid var(--color-borderline);
-    padding-bottom: 1em;
-  }
-  & footer {
-    border-top: 1px solid var(--color-borderline);
-    padding: 1em 0;
-  }
-
   @media (max-width: 640px) {
-    &[data-hide] {
+    &[data-hide-border] {
       border: none;
       padding: 0;
     }

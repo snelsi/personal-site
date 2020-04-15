@@ -3,8 +3,7 @@ import styled from "styled-components";
 import Link from "next/link";
 
 import { FiPaperclip } from "react-icons/fi";
-import { ButtonText, IconButton } from "components";
-import { Header } from "components/Header";
+import { ButtonText, IconButton, Header } from "components";
 
 interface GalleryProps {
   anchor: string;
@@ -23,8 +22,8 @@ export const Gallery: React.FC<GalleryProps> = ({
   fullScreen = false,
 }) => (
   <div id={anchor}>
-    <GalleryHeader>
-      <h4 data-anchor={anchor}>
+    <Header data-fix-width>
+      <HeaderTitle data-anchor={anchor}>
         {title}
         <IconButton
           className="clip"
@@ -34,7 +33,7 @@ export const Gallery: React.FC<GalleryProps> = ({
         >
           <FiPaperclip />
         </IconButton>
-      </h4>
+      </HeaderTitle>
 
       {url && inner ? (
         <Link href={url}>
@@ -47,28 +46,26 @@ export const Gallery: React.FC<GalleryProps> = ({
           See All
         </ButtonText>
       )}
-    </GalleryHeader>
+    </Header>
     <Frame data-mode={fullScreen ? "fullScreen" : "normal"}>
       <div className="conveyor">{children}</div>
     </Frame>
   </div>
 );
 
-const GalleryHeader = styled(Header)`
-  & h4 {
-    align-items: baseline;
-    display: flex;
-    line-height: inherit;
-    flex-wrap: nowrap;
+const HeaderTitle = styled.h4`
+  align-items: baseline;
+  display: flex;
+  line-height: inherit;
+  flex-wrap: nowrap;
 
-    & > button.clip {
-      margin-left: 4px;
-      opacity: 0;
-    }
-    &:hover > button.clip,
-    &:focus-within > button.clip {
-      opacity: 1;
-    }
+  & > button.clip {
+    margin-left: 4px;
+    opacity: 0;
+  }
+  &:hover > button.clip,
+  &:focus-within > button.clip {
+    opacity: 1;
   }
 `;
 
@@ -83,37 +80,35 @@ const Frame = styled.div`
     grid-gap: 20px;
     grid-auto-flow: column;
 
-    padding: 20px 0;
     width: fit-content;
-  }
 
-  &[data-mode="fullScreen"] {
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    padding: 20px;
 
-    & > .conveyor {
-      padding: 20px var(--block-inner-padding);
+    /* Hide  overflowing cards on desktop */
+    @media (min-width: 1070px) {
+      & > .content-card {
+        display: none;
+      }
 
-      /* Hide  overflowind cards on desktop */
-      @media (min-width: 1070px) {
-        @media (max-width: 1590px) {
-          & > .content-card:nth-child(6) {
-            display: none;
-          }
+      & > .content-card:nth-child(-n + 3) {
+        display: grid;
+      }
+
+      @media (min-width: 1240px) {
+        & > .content-card:nth-child(4) {
+          display: grid;
         }
-        @media (max-width: 1590px) {
-          & > .content-card:nth-child(6) {
-            display: none;
-          }
+      }
+
+      @media (min-width: 1540px) {
+        & > .content-card:nth-child(5) {
+          display: grid;
         }
-        @media (max-width: 1330px) {
-          & > .content-card:nth-child(5) {
-            display: none;
-          }
+      }
+
+      @media (min-width: 1840px) {
+        & > .content-card:nth-child(6) {
+          display: grid;
         }
       }
     }

@@ -1,13 +1,12 @@
 import * as React from "react";
 import styled from "styled-components";
 
-import { ButtonText } from "components";
-import { Header } from "components/Header";
+import { ButtonText, Header } from "components";
 
 interface LinksBlockProps {}
 
 export const LinksBlock: React.FC<LinksBlockProps> = () => (
-  <div>
+  <div data-fix-width>
     <Header>
       <h4>Много ссылок</h4>
     </Header>
@@ -98,7 +97,9 @@ const Links = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   line-height: 1.5;
   grid-gap: 0.5em;
-  margin: 1.25em 0;
+
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
 
   @media (max-width: 640px) {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));

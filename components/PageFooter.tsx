@@ -34,7 +34,10 @@ const Footer = styled.footer`
   align-items: center;
   display: flex;
   justify-content: center;
-  padding: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 0 1em;
+
   width: 100%;
 
   & svg {

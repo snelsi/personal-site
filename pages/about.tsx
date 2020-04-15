@@ -19,6 +19,7 @@ const AboutPage: NextPage = () => (
 );
 
 const Main = styled.main`
-  padding: 1.25em;
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
 `;
 export default AboutPage;

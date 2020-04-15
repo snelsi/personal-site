@@ -14,9 +14,6 @@ const Banner = styled.div`
   padding: 12px 24px;
   position: relative;
 
-  max-width: 1200px;
-  margin: auto;
-
   & .main {
     align-items: center;
     display: grid;
@@ -39,7 +36,7 @@ interface BunnerBaseProps {
   label?: string;
 }
 export const BannerBase: React.FC<BunnerBaseProps> = ({ children, title, label }) => (
-  <Banner className="banner">
+  <Banner className="banner" data-fix-width>
     <div className="main">
       <h5>{title}</h5>
       {label && <p className="text-secondary">{label}</p>}

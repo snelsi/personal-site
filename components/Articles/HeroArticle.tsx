@@ -9,7 +9,7 @@ interface HeroArticleProps {
 }
 
 export const HeroArticle: React.FC<HeroArticleProps> = ({ article }) => (
-  <div>
+  <div data-fix-width>
     <Link href={`articles/${article.id}`}>
       <Container href={`articles/${article.id}`}>
         <img src={article.img} alt="Article preview" />

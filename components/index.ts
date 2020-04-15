@@ -12,7 +12,6 @@ export * from "./PageHeader";
 export * from "./Placeholder404";
 export * from "./Plate";
 export * from "./Tag";
-export * from "./ThemeProvider";
 
 export * from "./Articles";
 export * from "./Banners";

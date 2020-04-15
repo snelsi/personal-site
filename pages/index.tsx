@@ -2,94 +2,54 @@ import * as React from "react";
 import { NextPage } from "next";
 import Head from "next/head";
 
-import styled from "styled-components";
 import {
+  ArticlesCatalog,
   Catalog,
   ContactButton,
   Divider,
   Footer,
   GitHubBanner,
+  GithubProjectsGallery,
   HireMeBanner,
   LinksBlock,
   PodcastsCatalog,
+  SiteHeader,
 } from "components";
 
-import { SiteHeader } from "components/SiteHeader";
-
-import { GithubProjectsGallery } from "components/GitHubGallery";
 import withApollo from "utils/withApollo";
 
-import { ArticlesCatalog } from "components/Articles";
+const IndexPage: NextPage = () => (
+  <>
+    <Head>
+      <title>Roman Zhuravlov - Personal Web Site</title>
+    </Head>
 
-const IndexPage: NextPage = () => {
-  return (
-    <>
-      <Head>
-        <title>Roman Zhuravlov - Personal Web Site</title>
-      </Head>
+    <SiteHeader />
+    <main>
+      <ArticlesCatalog />
 
-      <SiteHeader />
-      <Main>
-        <div>
-          <ArticlesCatalog />
-        </div>
+      <Divider />
 
-        <Divider />
+      <Catalog />
 
-        <div>
-          <Catalog />
-        </div>
+      <PodcastsCatalog />
 
-        <div>
-          <PodcastsCatalog />
-        </div>
+      <Divider />
 
-        <Divider />
+      <HireMeBanner />
 
-        <div>
-          <HireMeBanner />
-        </div>
+      <Divider />
 
-        <Divider />
+      <GithubProjectsGallery />
 
-        <div>
-          <GithubProjectsGallery />
-        </div>
+      <GitHubBanner />
 
-        <div>
-          <section>
-            <GitHubBanner />
-          </section>
-        </div>
+      <LinksBlock />
+    </main>
 
-        <div>
-          <LinksBlock />
-        </div>
-      </Main>
-      <Footer />
-      <ContactButton />
-    </>
-  );
-};
-
-const Main = styled.main`
-  padding: 20px 0;
-
-  & > div {
-    padding: 0 var(--block-inner-padding);
-    & > div {
-      margin: auto;
-      max-width: 1200px;
-    }
-  }
-
-  & section {
-    padding: 1em 0;
-
-    @media (min-width: 720px) {
-      padding-bottom: 6.5em;
-    }
-  }
-`;
+    <Footer />
+    <ContactButton />
+  </>
+);
 
 export default withApollo(IndexPage);

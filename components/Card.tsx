@@ -106,7 +106,7 @@ const CardBase = styled.a`
   @media (min-width: 1200px) {
     box-shadow: none;
     min-height: 360px;
-    min-width: 300px;
+    min-width: 280px;
   }
 
   &:hover,

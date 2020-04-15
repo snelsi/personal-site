@@ -1,8 +1,7 @@
 import * as React from "react";
-import Link from "next/link";
 import styled from "styled-components";
 
-import { Button, ButtonText } from "components";
+import { Button } from "components";
 import {
   AboutMyself,
   Container,
@@ -20,7 +19,7 @@ import {
 interface AboutProps {}
 
 export const About: React.FC<AboutProps> = () => (
-  <Container data-hide>
+  <Container data-hide-border data-fix-width>
     <MyPhoto />
     <Content>
       <Head />
@@ -33,28 +32,9 @@ export const About: React.FC<AboutProps> = () => (
       <Sallery />
       <AboutMyself />
     </Content>
-    <footer>
+    <div className="about_footer">
       <Button>Написать мне</Button>
-    </footer>
-  </Container>
-);
-
-interface AboutExpressProps {}
-
-export const AboutExpress: React.FC<AboutExpressProps> = () => (
-  <Container>
-    <MyPhoto />
-    <Content>
-      <Head />
-      <AboutMyself />
-    </Content>
-    <footer>
-      <Link href="/about">
-        <ButtonText component="a" href="/about">
-          Подробнее
-        </ButtonText>
-      </Link>
-    </footer>
+    </div>
   </Container>
 );
 
