@@ -47,8 +47,8 @@ const BaseCard = styled.div`
   min-height: 425px;
   max-width: 450px;
 
-  height: fill-available;
-  width: fill-available;
+  height: stretch;
+  width: stretch;
 
   & > svg.title {
     margin-bottom: 0.75rem;
