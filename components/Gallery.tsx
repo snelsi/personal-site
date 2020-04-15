@@ -29,9 +29,10 @@ export const Gallery: React.FC<GalleryProps> = ({
         <IconButton
           className="clip"
           type="button"
+          data-size="medium"
           onClick={() => navigator.clipboard.writeText(`http://snelsi.now.sh/#${anchor}`)}
         >
-          <FiPaperclip size="20" />
+          <FiPaperclip />
         </IconButton>
       </h4>
 

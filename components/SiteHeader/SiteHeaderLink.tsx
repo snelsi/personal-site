@@ -6,14 +6,18 @@ import { ButtonText } from "components";
 const HeaderLinkContainer = styled.div`
   padding: 0.5em 0;
   position: relative;
-  min-width: 100px;
+
+  & a,
+  & button {
+    min-height: 3rem;
+  }
 
   & a {
     --base-color: var(--color-button-gray);
     --text-color: var(--color-text-main);
 
     font-size: 1.125em;
-    font-weight: 400;
+    font-weight: 500;
     white-space: nowrap;
 
     &:not(:last-child) {

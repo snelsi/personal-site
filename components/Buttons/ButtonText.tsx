@@ -8,8 +8,6 @@ export const ButtonText = withStyles({
 
     backgroundColor: "rgba(var(--base-color), 0)",
     color: "var(--text-color)",
-    fontSize: "1em",
-    padding: "0.5em 1em",
 
     "&:hover, &:focus": {
       backgroundColor: "rgba(var(--base-color), 0.3)",
