@@ -38,6 +38,10 @@ const Container = styled.div`
   overflow: hidden;
   height: 100%;
   width: 100%;
+
+  align-items: center;
+  display: flex;
+  justify-content: center;
 `;
 
 const BubbleBase = styled.span`
