@@ -9,7 +9,7 @@ const HeaderLinkContainer = styled.div`
   min-width: 100px;
 
   & a {
-    --base-color: var(--color-button-back);
+    --base-color: var(--color-button-gray);
     --text-color: var(--color-text-main);
 
     font-size: 1.125em;

@@ -10,5 +10,5 @@ body[data-mode="dark"] {
 
   --color-borderline: var(--color-gray-8);
 
-  --color-button-back: 224, 224, 224;
+  --color-button-gray: 200, 200, 200;
 }
