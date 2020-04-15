@@ -6,9 +6,10 @@ export const Header = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
-  white-space: nowrap;
   min-height: 3em;
   margin: auto;
-  padding: 0.5em 0;
   line-height: 2.5em;
+  padding: 0.5em 0;
+  overflow: hidden;
+  white-space: nowrap;
 `;
