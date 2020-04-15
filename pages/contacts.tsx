@@ -23,9 +23,7 @@ const AboutPage: NextPage = () => (
       </p>
     </PageHeader>
 
-    <div data-fix-width>
-      <LinksBlock />
-    </div>
+    <LinksBlock />
 
     <PageFooter />
   </>
