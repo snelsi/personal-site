@@ -37,15 +37,6 @@ const Container = styled.div`
     justify-content: center;
 
     width: 100%;
-
-    & h5.name {
-      font-weight: 700;
-      margin-right: auto;
-      padding: 0.5em 0;
-      & a {
-        color: var(--color-text-main);
-      }
-    }
   }
 
   @media (max-width: 720px) {
