@@ -19,22 +19,24 @@ import {
 interface AboutProps {}
 
 export const About: React.FC<AboutProps> = () => (
-  <Container data-hide-border data-fix-width>
+  <Container data-fix-width>
     <MyPhoto />
     <Content>
       <Head />
+      <hr />
       <ProfessionalSkills />
       <Stack />
       <Technologies />
       <Tools />
+      <hr />
       <Expirience />
+      <hr />
       <Languages />
       <Sallery />
       <AboutMyself />
+      <hr />
+      <Button className="contactButton">Написать мне</Button>
     </Content>
-    <div className="about_footer">
-      <Button>Написать мне</Button>
-    </div>
   </Container>
 );
 
@@ -43,6 +45,14 @@ const Content = styled.div`
   max-width: 640px;
   font-size: 18px;
   line-height: 1.4;
+
+  & > hr {
+    border: none;
+    background-color: var(--color-borderline);
+    height: 1px;
+    margin: 1em 0;
+    width: 100%;
+  }
 
   & .block {
     margin: 1em 0 1.5em;
@@ -60,12 +70,16 @@ const Content = styled.div`
   }
 
   & h6 {
-    margin-bottom: 0.8em;
-    font-weight: 500;
+    margin-bottom: 1em;
+    font-weight: 600;
   }
 
   & p {
     color: var(--color-text-main);
     margin: 0.8em 0;
+  }
+
+  & button.contactButton {
+    margin: 1em auto;
   }
 `;

@@ -7,28 +7,9 @@ export const Container = styled.div`
   position: relative;
   overflow: hidden;
 
-  & .about_footer {
-    border-top: 1px solid var(--color-borderline);
-
-    align-items: center;
-    display: flex;
-
-    margin: auto;
-    max-width: 640px;
-    min-height: 2em;
-
-    padding-top: 1em;
-
-    & button {
-      margin: auto;
-    }
-  }
-
   @media (max-width: 640px) {
-    &[data-hide-border] {
-      border: none;
-      padding: 0;
-    }
+    border: none;
+    padding: 0;
   }
 
   & ul {
