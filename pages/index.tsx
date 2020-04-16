@@ -1,6 +1,7 @@
 import * as React from "react";
 import { NextPage } from "next";
-import Head from "next/head";
+
+import { MainPreview } from "components/PagePreviews";
 
 import {
   ArticlesCatalog,
@@ -20,9 +21,7 @@ import withApollo from "utils/withApollo";
 
 const IndexPage: NextPage = () => (
   <>
-    <Head>
-      <title>Roman Zhuravlov - Personal Web Site</title>
-    </Head>
+    <MainPreview />
 
     <SiteHeader />
     <main>
