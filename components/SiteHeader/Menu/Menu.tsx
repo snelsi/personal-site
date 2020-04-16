@@ -1,11 +1,11 @@
 import * as React from "react";
 import styled from "styled-components";
 
-import { CloseButton, MennuButton, Modal, ThemeSwitcher } from "components/SiteHeader/Menu";
+import { useMediaQuery } from "@material-ui/core";
+
+import { MennuButton, MenuHeader, Modal, ThemeSwitcher } from "components/SiteHeader/Menu";
 
 import { FiBook, FiGithub, FiMic, FiUser, FiHeart, FiFolder, FiPhone } from "react-icons/fi";
-
-import { useMediaQuery } from "@material-ui/core";
 
 interface MenuProps {
   open: boolean;
@@ -14,7 +14,6 @@ interface MenuProps {
 
 export const Menu: React.FC<MenuProps> = ({ open, closeDialog }) => {
   const isMobile = useMediaQuery("(max-width: 720px)");
-
   return (
     <Modal
       onClose={closeDialog}
@@ -22,12 +21,7 @@ export const Menu: React.FC<MenuProps> = ({ open, closeDialog }) => {
       open={open}
       fullScreen={isMobile}
     >
-      {isMobile && (
-        <MobileHeader>
-          <h4>Roman Zhuravlov</h4>
-          <CloseButton onClick={closeDialog} />
-        </MobileHeader>
-      )}
+      {isMobile && <MenuHeader closeDialog={closeDialog} />}
       <Buttons>
         <MennuButton href="/about" title="Про меня">
           <FiUser color="var(--color-blue-6)" />
@@ -56,15 +50,6 @@ export const Menu: React.FC<MenuProps> = ({ open, closeDialog }) => {
     </Modal>
   );
 };
-
-const MobileHeader = styled.header`
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 0.5em;
-  padding-left: 0.25em;
-  border-bottom: 1px solid var(--color-borderline);
-`;
 
 const Buttons = styled.div`
   display: grid;

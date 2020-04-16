@@ -40,7 +40,7 @@ const Container = styled.div`
   }
 
   @media (max-width: 720px) {
-    padding-right: 0.25em;
+    padding-right: 4px;
 
     & .HeaderLinkContainer {
       display: none;
