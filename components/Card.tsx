@@ -38,7 +38,7 @@ export const Card: React.FC<CardProps> = ({
     rel="noopener noreferrer"
   >
     <div className="imageContainer">
-      <img src={img} alt="Article" />
+      <img src={img} alt="Card preview" />
       <span>{tag}</span>
     </div>
 

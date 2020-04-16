@@ -30,6 +30,7 @@ export const Gallery: React.FC<GalleryProps> = ({
           type="button"
           data-size="medium"
           onClick={() => navigator.clipboard.writeText(`http://snelsi.now.sh/#${anchor}`)}
+          aria-label="Copy Link to Clipboard"
         >
           <FiPaperclip />
         </IconButton>

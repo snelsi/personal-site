@@ -28,7 +28,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         {url}
       </a>
     </div>
-    <Image src={img} />
+    <Image src={img} alt="Project preview" />
   </Container>
 );
 
