@@ -3,6 +3,8 @@ import Document, { Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet as StyledComponentSheets } from "styled-components";
 import { ServerStyleSheets } from "@material-ui/core/styles";
 
+import { InitialThemeSet } from "scripts";
+
 export default class MyDocument extends Document {
   render() {
     return (
@@ -12,6 +14,7 @@ export default class MyDocument extends Document {
           <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
         </Head>
         <body>
+          <InitialThemeSet />
           <Main />
           <NextScript />
         </body>

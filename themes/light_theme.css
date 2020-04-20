@@ -1,4 +1,4 @@
-body {
+:root {
   --color-text-main: rgba(0, 0, 0, 0.87);
   --color-text-secondary: rgba(100, 100, 100, 0.87);
   --color-text-secondary: var(--color-cool-gray-5);

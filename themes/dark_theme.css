@@ -1,4 +1,4 @@
-body[data-mode="dark"] {
+:root[data-mode="dark"] {
   --color-text-main: rgba(255, 255, 255, 0.92);
   --color-text-secondary: var(--color-cool-gray-5);
 
