@@ -8,9 +8,9 @@
     "start": "next start"
   },
   "dependencies": {
-    "@apollo/client": "^3.0.0-beta.43",
+    "@apollo/client": "^3.0.0-beta.44",
     "@material-ui/core": "^4.9.11",
-    "@tippyjs/react": "^4.0.1",
+    "@tippyjs/react": "^4.0.2",
     "fslightbox-react": "^1.4.9",
     "graphql": "^15.0.0",
     "isomorphic-unfetch": "3.0.0",
@@ -19,14 +19,14 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-headroom": "^3.0.0",
-    "react-icons": "^3.9.0",
+    "react-icons": "^3.10.0",
     "react-is": "^16.13.1",
     "styled-components": "^5.1.0",
     "tippy.js": "^6.2.0",
     "use-local-storage-state": "^2.0.0"
   },
   "devDependencies": {
-    "@types/node": "^13.13.1",
+    "@types/node": "^13.13.2",
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.6",
     "@types/react-headroom": "^2.2.1",
@@ -41,6 +41,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^3.0.0",
-    "typescript": "3.8.3"
+    "typescript": "3.8.3",
+    "terser": "^4.6.12"
   }
 }

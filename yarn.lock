@@ -45,10 +45,10 @@
   dependencies:
     cross-fetch "3.0.4"
 
-"@apollo/client@^3.0.0-beta.43":
-  version "3.0.0-beta.43"
-  resolved "https://registry.yarnpkg.com/@apollo/client/-/client-3.0.0-beta.43.tgz#e6707ffc285b906dfb99fd9ac553bb1c9acb6829"
-  integrity sha512-ufE0QubCI6kP/BudcnV3AGZVgsN/ZJNWy70k6ZwcR8fnYWqPfjxW1aATTq8Ud54latHpO83UtKHVOHUQiClQOA==
+"@apollo/client@^3.0.0-beta.44":
+  version "3.0.0-beta.44"
+  resolved "https://registry.yarnpkg.com/@apollo/client/-/client-3.0.0-beta.44.tgz#79c6083dc2fe81725ad64398bc78e641ed1c1d84"
+  integrity sha512-udNiabIYs9WLHWvj2j6tlsaWPNhgMZsHrZyBTKOh+69fLpmZZ4Vv4mepWq/3WCzyHoWa3n3FPi/ajNljkO/Olg==
   dependencies:
     "@types/zen-observable" "^0.8.0"
     "@wry/equality" "^0.1.9"
@@ -1069,10 +1069,10 @@
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.3.3.tgz#8731722aeb7330e8fd9eb5d424be6b98dea7d6da"
   integrity sha512-yEvVC8RfhRPkD9TUn7cFcLcgoJePgZRAOR7T21rcRY5I8tpuhzeWfGa7We7tB14fe9R7wENdqUABcMdwD4SQLw==
 
-"@tippyjs/react@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@tippyjs/react/-/react-4.0.1.tgz#87b95363fe6ea69b42b1da43d9c158a8b5dd5027"
-  integrity sha512-lODKpp5DbyT89CPbhvzA0q3XyXga6UtVfLH8Y7ncqjnwovO5KWOiJ+V14MC1ytN+6JjhovDTisr/udq9NR632A==
+"@tippyjs/react@^4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@tippyjs/react/-/react-4.0.2.tgz#fadd14f1e36dd4f63f5f241cc78f3a1bb8394250"
+  integrity sha512-iAKTjUmrXqTTJ4HZRDgmvVfUiv9pTzJoDjPLDbmvB6vttkuYvZ/o8NhHa72vMFgHpiMFNoYWtB8OCRR6x5Zs8w==
   dependencies:
     prop-types "^15.6.2"
     tippy.js "^6.2.0"
@@ -1100,10 +1100,10 @@
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.4.tgz#38fd73ddfd9b55abb1e1b2ed578cb55bd7b7d339"
   integrity sha512-8+KAKzEvSUdeo+kmqnKrqgeE+LcA0tjYWFY7RPProVYwnqDjukzO+3b6dLD56rYX5TdWejnEOLJYOIeh4CXKuA==
 
-"@types/node@^13.13.1":
-  version "13.13.1"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.13.1.tgz#1ba94c5a177a1692518bfc7b41aec0aa1a14354e"
-  integrity sha512-uysqysLJ+As9jqI5yqjwP3QJrhOcUwBjHUlUxPxjbplwKoILvXVsmYWEhfmAQlrPfbRZmhJB007o4L9sKqtHqQ==
+"@types/node@^13.13.2":
+  version "13.13.2"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.13.2.tgz#160d82623610db590a64e8ca81784e11117e5a54"
+  integrity sha512-LB2R1Oyhpg8gu4SON/mfforE525+Hi/M1ineICEDftqNVTyFg1aRIeGuTvXAoWHc4nbrFncWtJgMmoyRvuGh7A==
 
 "@types/prop-types@*":
   version "15.7.3"
@@ -5470,10 +5470,10 @@ react-headroom@^3.0.0:
     raf "^3.3.0"
     shallowequal "^1.1.0"
 
-react-icons@^3.9.0:
-  version "3.9.0"
-  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-3.9.0.tgz#89a00f20a0e02e6bfd899977eaf46eb4624239d5"
-  integrity sha512-gKbYKR+4QsD3PmIHLAM9TDDpnaTsr3XZeK1NTAb6WQQ+gxEdJ0xuCgLq0pxXdS7Utg2AIpcVhM1ut/jlDhcyNg==
+react-icons@^3.10.0:
+  version "3.10.0"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-3.10.0.tgz#6c217a2dde2e8fa8d293210023914b123f317297"
+  integrity sha512-WsQ5n1JToG9VixWilSo1bHv842Cj5aZqTGiS3Ud47myF6aK7S/IUY2+dHcBdmkQcCFRuHsJ9OMUI0kTDfjyZXQ==
   dependencies:
     camelcase "^5.0.0"
 
@@ -6360,6 +6360,15 @@ terser@^4.1.2:
   version "4.6.6"
   resolved "https://registry.yarnpkg.com/terser/-/terser-4.6.6.tgz#da2382e6cafbdf86205e82fb9a115bd664d54863"
   integrity sha512-4lYPyeNmstjIIESr/ysHg2vUPRGf2tzF9z2yYwnowXVuVzLEamPN1Gfrz7f8I9uEPuHcbFlW4PLIAsJoxXyJ1g==
+  dependencies:
+    commander "^2.20.0"
+    source-map "~0.6.1"
+    source-map-support "~0.5.12"
+
+terser@^4.6.12:
+  version "4.6.12"
+  resolved "https://registry.yarnpkg.com/terser/-/terser-4.6.12.tgz#44b98aef8703fdb09a3491bf79b43faffc5b4fee"
+  integrity sha512-fnIwuaKjFPANG6MAixC/k1TDtnl1YlPLUlLVIxxGZUn1gfUx2+l3/zGNB72wya+lgsb50QBi2tUV75RiODwnww==
   dependencies:
     commander "^2.20.0"
     source-map "~0.6.1"
