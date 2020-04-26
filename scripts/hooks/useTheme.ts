@@ -1,19 +1,18 @@
 import { createLocalStorageStateHook } from "use-local-storage-state";
 
-export const useThemeStore = createLocalStorageStateHook<"light" | "dark">(
-  "preffered-theme",
-  "light",
-);
+type ITheme = "light" | "dark" | "system" | undefined;
+
+export const useThemeStore = createLocalStorageStateHook<ITheme>("preffered-theme", "system");
 
 interface useThemeProps {
-  theme: "dark" | "light";
-  setTheme: React.Dispatch<React.SetStateAction<"light" | "dark">>;
+  theme: ITheme;
+  setTheme: React.Dispatch<React.SetStateAction<ITheme>>;
   toggleTheme: () => void;
 }
 export function useTheme(): useThemeProps {
   if (typeof window === "undefined") {
     return {
-      theme: "light",
+      theme: "system",
       setTheme: () => {
         throw new Error("Setting a theme is not supported inside server-side rendered apps");
       },
@@ -23,6 +22,7 @@ export function useTheme(): useThemeProps {
     };
   }
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [theme, setTheme] = useThemeStore();
   const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light");
 

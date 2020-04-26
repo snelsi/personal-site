@@ -8,10 +8,12 @@ export const ThemeProvider: React.FC = ({ children }) => {
   const { theme } = useTheme();
 
   React.useEffect(() => {
-    document.documentElement.dataset.mode = theme;
+    if (theme) {
+      document.documentElement.dataset.theme = theme;
+    }
 
     return () => {
-      document.documentElement.dataset.mode = undefined;
+      document.documentElement.dataset.theme = undefined;
     };
   }, [theme]);
 
