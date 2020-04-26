@@ -19,7 +19,7 @@ export const ImageLightbox: React.FC<ImageLightboxProps> = ({ src, ...props }) =
 
 const Button = styled.button`
   background: none;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: none;
   border-radius: 0;
   cursor: pointer;
 
