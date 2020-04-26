@@ -84,6 +84,7 @@ const Container = styled.div`
     & h5 {
       margin: 1em 0;
       font-weight: 300;
+      font-variation-settings: "wght" 300;
     }
 
     & p {

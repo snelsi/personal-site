@@ -5,6 +5,7 @@ import styled from "styled-components";
 
 import { PageFooter, PageHeader, SiteHeader } from "components";
 import {
+  CanvasHexagons,
   Timestamp,
   Hangman,
   GameOfLife,
@@ -34,6 +35,7 @@ const Projects: NextPage = () => (
         <Timestamp />
         <Hangman />
         <GameOfLife />
+        <CanvasHexagons />
         <CocomoCalculator />
       </Grid>
     </main>

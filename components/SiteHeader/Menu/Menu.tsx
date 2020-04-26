@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import { useMediaQuery } from "@material-ui/core";
 
-import { MennuButton, MenuHeader, Modal, ThemeSwitcher } from "components/SiteHeader/Menu";
+import { MennuButton, MenuHeader, Modal, ThemeSelection } from "components/SiteHeader/Menu";
 
 import { FiBook, FiGithub, FiMic, FiUser, FiHeart, FiFolder, FiPhone } from "react-icons/fi";
 
@@ -46,7 +46,8 @@ export const Menu: React.FC<MenuProps> = ({ open, closeDialog }) => {
           <FiHeart color="var(--color-accent-red)" />
         </MennuButton>
       </Buttons>
-      <ThemeSwitcher />
+
+      <ThemeSelection />
     </Modal>
   );
 };

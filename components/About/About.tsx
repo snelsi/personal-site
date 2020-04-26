@@ -66,12 +66,14 @@ const Content = styled.div`
     margin: 1em auto;
     max-width: 460px;
     font-weight: 600;
+    font-variation-settings: "wght" 600;
     text-align: center;
   }
 
   & h6 {
     margin-bottom: 1em;
     font-weight: 600;
+    font-variation-settings: "wght" 600;
   }
 
   & p {

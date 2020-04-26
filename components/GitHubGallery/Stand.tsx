@@ -29,6 +29,7 @@ const Container = styled.div`
   & header {
     margin-top: 10px;
     font-weight: 500;
+    font-variation-settings: "wght" 500;
   }
   & p {
     color: #3c3c43;

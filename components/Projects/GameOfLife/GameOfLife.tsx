@@ -22,6 +22,7 @@ const Card = styled(CardBase)`
     font-size: 42px;
 
     font-weight: 700;
+    font-variation-settings: "wght" 700;
     text-transform: uppercase;
   }
 

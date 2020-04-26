@@ -18,6 +18,7 @@ const HeaderLinkContainer = styled.div`
 
     font-size: 1.125em;
     font-weight: 500;
+    font-variation-settings: "wght" 500;
     white-space: nowrap;
 
     &:not(:last-child) {

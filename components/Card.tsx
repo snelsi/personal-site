@@ -165,6 +165,7 @@ const CardBase = styled.a`
         display: -webkit-box;
         font-size: 1.25em;
         font-weight: 500;
+        font-variation-settings: "wght" 500;
         overflow: hidden;
       }
       & p {
@@ -173,6 +174,7 @@ const CardBase = styled.a`
 
         display: -webkit-box;
         font-weight: 400;
+        font-variation-settings: "wght" 400;
         margin-top: 4px;
         opacity: 0.9;
         overflow: hidden;
@@ -192,6 +194,7 @@ const CardBase = styled.a`
         font-size: 1em;
         line-height: 1;
         font-weight: 500;
+        font-variation-settings: "wght" 500;
         text-align: center;
         border-radius: 20px;
         min-width: 70px;
@@ -205,7 +208,7 @@ const CardBase = styled.a`
     }
     & .cardFooter,
     & .cardHeader {
-      color: var(--color-cool-gray-5);
+      color: var(--color-text-secondary);
       font-size: 0.875rem;
     }
 

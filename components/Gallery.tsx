@@ -2,7 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import Link from "next/link";
 
-import { FiPaperclip } from "react-icons/fi";
+import { FiPaperclip, FiChevronRight } from "react-icons/fi";
 import { ButtonText, IconButton, Header } from "components";
 
 interface GalleryProps {
@@ -40,11 +40,13 @@ export const Gallery: React.FC<GalleryProps> = ({
         <Link href={url}>
           <ButtonText component="a" href={url}>
             See All
+            <FiChevronRight size={20} strokeWidth={1.5} />
           </ButtonText>
         </Link>
       ) : (
         <ButtonText component="a" href={url} target="_blank" rel="noopener noreferrer">
           See All
+          <FiChevronRight size={20} strokeWidth={1.5} />
         </ButtonText>
       )}
     </Header>
@@ -54,7 +56,7 @@ export const Gallery: React.FC<GalleryProps> = ({
   </div>
 );
 
-const HeaderTitle = styled.h4`
+const HeaderTitle = styled.h5`
   align-items: baseline;
   display: flex;
   line-height: inherit;
@@ -78,12 +80,12 @@ const Frame = styled.div`
 
   & > .conveyor {
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 16px;
     grid-auto-flow: column;
 
     width: fit-content;
 
-    padding: 20px;
+    padding: 12px 20px 16px;
 
     /* Hide  overflowing cards on desktop */
     @media (min-width: 1070px) {

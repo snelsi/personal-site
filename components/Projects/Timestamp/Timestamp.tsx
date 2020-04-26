@@ -27,6 +27,7 @@ const Card = styled(CardBase)`
     font-size: 60px;
 
     font-weight: 700;
+    font-variation-settings: "wght" 700;
     text-transform: uppercase;
   }
   & p {
@@ -38,6 +39,7 @@ const Card = styled(CardBase)`
   & div.time {
     font-size: 24px;
     font-weight: 600;
+    font-variation-settings: "wght" 600;
   }
 
   @media (max-width: 780px) {

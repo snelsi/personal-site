@@ -8,6 +8,9 @@ interface PersonalSiteProps {}
 export const PersonalSite: React.FC<PersonalSiteProps> = () => (
   <Card href="http://snelsi.now.sh/" target="_blank" rel="noopener noreferrer">
     <div className="title">My Personal Site!</div>
+    <p>Yup, this whole site is open source!</p>
+
+    <div className="circle" />
   </Card>
 );
 
@@ -20,6 +23,7 @@ const Card = styled(CardBase)`
     font-size: 48px;
 
     font-weight: 600;
+    font-variation-settings: "wght" 600;
   }
   & p {
     color: var(--color-grey-8);
@@ -32,5 +36,18 @@ const Card = styled(CardBase)`
     & div.title {
       font-size: 24px;
     }
+  }
+
+  & > .circle {
+    border-radius: 50%;
+    position: absolute;
+
+    bottom: -250px;
+    left: -280px;
+
+    height: 600px;
+    width: 600px;
+
+    background-color: rgba(255, 255, 255, 1);
   }
 `;

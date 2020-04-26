@@ -25,7 +25,6 @@ const Header = styled(StickyHeader)`
 const Container = styled.div`
   background-color: var(--color-background);
   overflow: auto;
-  padding: 0 20px;
   width: 100%;
   z-index: 100;
 
@@ -40,8 +39,6 @@ const Container = styled.div`
   }
 
   @media (max-width: 720px) {
-    padding-right: 4px;
-
     & .HeaderLinkContainer {
       display: none;
     }
