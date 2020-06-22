@@ -12,6 +12,7 @@ const Wrapper = styled.div<Ratio>`
   position: relative;
 
   & > img {
+    background-color: var(--color-gray-4);
     box-shadow: var(--shadow);
     left: 0;
     top: 0;
