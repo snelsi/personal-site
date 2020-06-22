@@ -3,7 +3,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 
 import { FaTelegramPlane } from "react-icons/fa";
-import { GoMail } from "react-icons/Go";
+import { GoMail } from "react-icons/go";
 
 import styled from "styled-components";
 import { Email, SiteFooter, SiteHeader } from "components";
