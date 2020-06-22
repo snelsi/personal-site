@@ -1,4 +1,6 @@
-export * from "./hooks/useTheme";
+export * from "./hooks/сheerExplorers";
+export * from "./hooks/useInterval";
 export * from "./hooks/useTime";
 
-export * from "./initialThemeSet";
+export * from "./calculateYearSince";
+export * from "./confetti";

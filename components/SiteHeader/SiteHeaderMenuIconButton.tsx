@@ -1,7 +1,20 @@
 import * as React from "react";
 
-import { FiGrid } from "react-icons/fi";
 import { IconButton, ButtonBaseProps } from "components/Buttons";
+
+const MenuIcon = () => (
+  <svg fill="var(--color-text-main)" viewBox="0 0 24 24" height="24" width="24">
+    <circle cx="5" cy="5" r="2" />
+    <circle cx="12" cy="5" r="2" />
+    <circle cx="19" cy="5" r="2" />
+    <circle cx="5" cy="12" r="2" />
+    <circle cx="12" cy="12" r="2" />
+    <circle cx="19" cy="12" r="2" />
+    <circle cx="5" cy="19" r="2" />
+    <circle cx="12" cy="19" r="2" />
+    <circle cx="19" cy="19" r="2" />
+  </svg>
+);
 
 export interface SiteHeaderMenuIconButtonProps extends ButtonBaseProps {}
 
@@ -9,6 +22,6 @@ export const SiteHeaderMenuIconButton: React.FC<SiteHeaderMenuIconButtonProps> =
   HTMLButtonElement
 >((props, ref) => (
   <IconButton {...props} ref={ref} aria-label="Menu">
-    <FiGrid color="var(--color-text-main)" size="24" strokeWidth="1.5" />
+    <MenuIcon />
   </IconButton>
 ));

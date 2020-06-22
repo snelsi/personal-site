@@ -1,20 +1,22 @@
 import * as React from "react";
-import { NextPage } from "next";
+import type { NextPage } from "next";
 import Head from "next/head";
 
 import styled from "styled-components";
-import { About, PageFooter, SiteHeader } from "components";
+import { About, ContactButton, NewsLine, SiteFooter, SiteHeader } from "components";
 
 const AboutPage: NextPage = () => (
   <>
     <Head>
-      <title>Roman Zhuravlov - Bio</title>
+      <title>Roman Zhuravlov - About me</title>
     </Head>
+    <NewsLine />
     <SiteHeader />
     <Main>
       <About />
     </Main>
-    <PageFooter />
+    <SiteFooter />
+    <ContactButton />
   </>
 );
 

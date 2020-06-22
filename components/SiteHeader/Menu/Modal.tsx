@@ -10,7 +10,7 @@ export const Modal = styled(Dialog)({
     backgroundColor: "var(--color-surface-2)",
     color: "var(--color-text-main)",
 
-    margin: "64px 32px",
+    margin: "56px 32px",
     padding: "12px",
   },
   "& .MuiDialog-scrollPaper": {

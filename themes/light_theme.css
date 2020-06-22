@@ -1,7 +1,14 @@
 :root {
-  --color-text-main: rgba(0, 0, 0, 0.87);
-  --color-text-secondary: rgba(100, 100, 100, 0.87);
-  --color-text-secondary: var(--color-cool-gray-5);
+  --color-text-main: rgba(0, 0, 0, 0.9);
+  --color-text-secondary: var(--color-cool-gray-9);
+  --color-text-white: var(--color-white);
+  --color-text-black: var(--color-black);
+  --color-text-link: var(--color-blue-500);
+  --color-text-primary: var(--color-blue-500);
+
+  --color-primary-lighter: var(--color-blue-400);
+  --color-primary: var(--color-blue-500);
+  --color-primary-darker: var(--color-blue-600);
 
   --color-background: var(--color-white);
 
@@ -12,4 +19,10 @@
   --color-borderline: var(--color-gray-2);
 
   --color-button-gray: 200, 200, 200;
+
+  --shadow-normall: 0px 5px 10px rgba(0, 0, 0, 0.12);
+  --shadow-hover: 0px 8px 30px rgba(0, 0, 0, 0.12);
+
+  --color-text-main: #1f1f1f;
+  --color-text-secondary: #393939;
 }

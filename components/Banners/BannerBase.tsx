@@ -8,7 +8,7 @@ const Banner = styled.div`
   cursor: pointer;
   display: flex;
   height: 30vw;
-  max-height: 340px;
+  max-height: 200px;
   text-decoration: none;
   overflow: hidden;
   padding: 12px 24px;
@@ -36,10 +36,14 @@ interface BunnerBaseProps {
   label?: string;
 }
 export const BannerBase: React.FC<BunnerBaseProps> = ({ children, title, label }) => (
-  <Banner className="banner" data-fix-width>
+  <Banner className="banner">
     <div className="main">
-      <h5>{title}</h5>
-      {label && <p className="text-secondary">{label}</p>}
+      <h5 data-font-size="XL">{title}</h5>
+      {label && (
+        <p data-font-size="Focus" className="text-secondary">
+          {label}
+        </p>
+      )}
     </div>
     {children}
   </Banner>

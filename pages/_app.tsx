@@ -1,14 +1,14 @@
-import React from "react";
+import * as React from "react";
 
-import "tippy.js/dist/tippy.css";
-
-import "styles.css";
-import "colors.css";
+import "css/normalize.css";
+import "css/styles.css";
+import "css/typography.css";
+import "css/colors.css";
 
 import "themes/light_theme.css";
-import "themes/dark_theme.css";
+import "react-awesome-slider/dist/styles.css";
 
-import { ThemeProvider } from "utils/ThemeProvider";
+import { useCheerExplorers } from "scripts/hooks/сheerExplorers";
 
 export default function MyApp({ Component, pageProps }) {
   React.useEffect(() => {
@@ -19,9 +19,7 @@ export default function MyApp({ Component, pageProps }) {
     }
   }, []);
 
-  return (
-    <ThemeProvider>
-      <Component {...pageProps} />
-    </ThemeProvider>
-  );
+  useCheerExplorers();
+
+  return <Component {...pageProps} />;
 }

@@ -1,6 +1,8 @@
-:root[data-theme="dark"] {
-  --color-text-main: rgba(255, 255, 255, 0.92);
+*[data-theme="dark"] {
+  --color-text-main: rgba(255, 255, 255, 0.95);
   --color-text-secondary: var(--color-cool-gray-5);
+  --color-text-link: var(--color-blue-7);
+  --color-text-primary: var(--color-blue-400);
 
   --color-background: var(--color-gray-10);
 
@@ -11,22 +13,7 @@
   --color-borderline: var(--color-gray-8);
 
   --color-button-gray: 200, 200, 200;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme]),
-  :root[data-theme="system"] {
-    --color-text-main: rgba(255, 255, 255, 0.92);
-    --color-text-secondary: var(--color-cool-gray-5);
-
-    --color-background: var(--color-gray-10);
-
-    --color-surface-1: var(--color-gray-9);
-    --color-surface-2: var(--color-gray-8);
-    --color-surface-3: var(--color-gray-7);
-
-    --color-borderline: var(--color-gray-8);
-
-    --color-button-gray: 200, 200, 200;
-  }
+  --shadow-normall: 0px 5px 10px rgba(255, 255, 255, 0.12);
+  --shadow-hover: 0px 8px 30px rgba(255, 255, 255, 0.12);
 }

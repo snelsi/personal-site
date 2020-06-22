@@ -4,7 +4,7 @@ import Link from "next/link";
 import { withStyles } from "@material-ui/core/styles";
 import { ButtonBase } from "components/Buttons";
 
-const Button = withStyles({
+export const MennuButtonWrapper = withStyles({
   root: {
     backgroundColor: "transparent",
     borderRadius: "0.25em",
@@ -41,15 +41,30 @@ const Button = withStyles({
 interface MennuButtonProps {
   href: string;
   title: string;
-  prefetch?: boolean;
+  outside?: boolean;
 }
 
-export const MennuButton: React.FC<MennuButtonProps> = ({ href, title, children, ...props }) => (
-  <Link href={href} {...props}>
-    <Button component="a" href={href}>
-      <div className="menu_button_icon">{children}</div>
+export const MennuButton: React.FC<MennuButtonProps> = ({
+  href,
+  title,
+  children,
+  outside = false,
+}) => {
+  if (outside) {
+    return (
+      <MennuButtonWrapper component="a" href={href}>
+        <div className="menu_button_icon">{children}</div>
+        <div className="menu_button_title">{title}</div>
+      </MennuButtonWrapper>
+    );
+  }
 
-      <div className="menu_button_title">{title}</div>
-    </Button>
-  </Link>
-);
+  return (
+    <Link href={href}>
+      <MennuButtonWrapper component="a" href={href}>
+        <div className="menu_button_icon">{children}</div>
+        <div className="menu_button_title">{title}</div>
+      </MennuButtonWrapper>
+    </Link>
+  );
+};

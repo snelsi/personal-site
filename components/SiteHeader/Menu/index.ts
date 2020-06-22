@@ -3,5 +3,4 @@ export * from "./Menu";
 export * from "./MenuButton";
 export * from "./MenuHeader";
 export * from "./Modal";
-export * from "./ThemeSwitcher";
-export * from "./ThemeSelection";
+export * from "./SurpriseButton";

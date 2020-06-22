@@ -10,18 +10,18 @@ export const IconButton = withStyles({
 
     height: "2em",
     width: "2em",
-    padding: "0.5em",
+    padding: "0.25em",
 
-    "&[data-size=small]": {
+    '&[data-size="small" i]': {
       fontSize: "1rem",
     },
-    "&[data-size=medium]": {
+    '&[data-size="medium" i]': {
       fontSize: "1.25rem",
     },
-    "&[data-size=normall]": {
+    '&[data-size="normall" i]': {
       fontSize: "1.5rem",
     },
-    "&[data-size=big]": {
+    '&[data-size="big" i]': {
       fontSize: "2rem",
     },
 

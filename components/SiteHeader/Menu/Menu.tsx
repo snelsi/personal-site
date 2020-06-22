@@ -3,9 +3,11 @@ import styled from "styled-components";
 
 import { useMediaQuery } from "@material-ui/core";
 
-import { MennuButton, MenuHeader, Modal, ThemeSelection } from "components/SiteHeader/Menu";
+import { MennuButton, MenuHeader, Modal, SurpriseMenuButton } from "components/SiteHeader/Menu";
 
-import { FiBook, FiGithub, FiMic, FiUser, FiHeart, FiFolder, FiPhone } from "react-icons/fi";
+import { FiBook, FiGithub, FiHome, FiLinkedin, FiUser, FiMail } from "react-icons/fi";
+
+import { FaDribbble } from "react-icons/fa";
 
 interface MenuProps {
   open: boolean;
@@ -20,43 +22,55 @@ export const Menu: React.FC<MenuProps> = ({ open, closeDialog }) => {
       aria-labelledby="simple-dialog-title"
       open={open}
       fullScreen={isMobile}
+      className="montserrat"
     >
       {isMobile && <MenuHeader closeDialog={closeDialog} />}
-      <Buttons>
-        <MennuButton href="/about" title="Про меня">
-          <FiUser color="var(--color-blue-6)" />
-        </MennuButton>
-        <MennuButton href="/projects" title="Проекты">
-          <FiFolder color="var(--color-accent-yellow)" />
-        </MennuButton>
-        <MennuButton href="/articles" title="Блог">
-          <FiBook color="var(--color-accent-green)" />
-        </MennuButton>
-        <MennuButton href="/podcasts" title="Подкасты">
-          <FiMic color="var(--color-text-main)" />
-        </MennuButton>
-        <MennuButton href="https://github.com/snelsi" title="GitHub" prefetch={false}>
-          <FiGithub color="var(--color-text-main)" />
-        </MennuButton>
-        <MennuButton href="/contacts" title="Контакты">
-          <FiPhone color="var(--color-blue-6)" />
-        </MennuButton>
+      <Grid>
+        <Buttons>
+          <MennuButton href="/" title="Home">
+            <FiHome color="var(--color-grey-10)" />
+          </MennuButton>
+          <MennuButton href="/contact" title="Contact">
+            <FiMail color="var(--color-magenta-500)" />
+          </MennuButton>
+          <MennuButton href="/about" title="About me">
+            <FiUser color="var(--color-blue-500)" />
+          </MennuButton>
 
-        <MennuButton href="/support" title="Поддержать">
-          <FiHeart color="var(--color-accent-red)" />
-        </MennuButton>
-      </Buttons>
+          <MennuButton href="/blog" title="Blog">
+            <FiBook color="var(--color-green-500)" />
+          </MennuButton>
+          <SurpriseMenuButton />
+        </Buttons>
 
-      <ThemeSelection />
+        <hr />
+
+        <Buttons>
+          <MennuButton href="https://github.com/snelsi" title="GitHub" outside>
+            <FiGithub color="var(--color-text-main)" />
+          </MennuButton>
+          <MennuButton href="https://dribbble.com/snelsi" title="Dribbble" outside>
+            <FaDribbble color="#EA4C89" />
+          </MennuButton>
+          <MennuButton href="https://www.linkedin.com/in/roman-zhuravlov/" title="LinkedIn" outside>
+            <FiLinkedin color="#2176A6" />
+          </MennuButton>
+        </Buttons>
+      </Grid>
     </Modal>
   );
 };
 
+const Grid = styled.div`
+  display: grid;
+  grid-gap: 4px;
+
+  margin: 4px 0;
+`;
 const Buttons = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   grid-gap: 4px;
 
-  margin: 4px 0;
   max-width: 360px;
 `;

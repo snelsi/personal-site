@@ -4,20 +4,18 @@ import { useRouter } from "next/router";
 import { ButtonText } from "components";
 
 const HeaderLinkContainer = styled.div`
-  padding: 0.5em 0;
   position: relative;
+  height: 100%;
 
-  & a,
-  & button {
-    min-height: 3rem;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   & a {
-    --base-color: var(--color-button-gray);
-    --text-color: var(--color-text-main);
-
-    font-size: 1.125em;
+    font-size: 17px;
     font-weight: 500;
+    height: 40px;
+
     font-variation-settings: "wght" 500;
     white-space: nowrap;
 
@@ -27,14 +25,13 @@ const HeaderLinkContainer = styled.div`
   }
 
   &[data-matched="true"]:after {
-    font-size: 1.125em;
     content: "";
     position: absolute;
     left: 1em;
     right: 1em;
     bottom: 0;
-    height: 3px;
-    background-color: var(--color-blue-6);
+    height: 2px;
+    background-color: var(--color-primary);
   }
 `;
 
@@ -43,6 +40,7 @@ interface HeaderLinkProps {
 }
 export const SiteHeaderLink: React.FC<HeaderLinkProps> = ({ href, children }) => {
   const router = useRouter();
+
   return (
     <HeaderLinkContainer data-matched={href === router.route} className="HeaderLinkContainer">
       <Link href={href}>

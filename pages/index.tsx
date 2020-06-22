@@ -1,54 +1,44 @@
 import * as React from "react";
 import { NextPage } from "next";
+import styled, { createGlobalStyle } from "styled-components";
 
+import { Landing } from "components/Landing";
 import { MainPreview } from "components/PagePreviews";
 
 import {
-  ArticlesCatalog,
-  Catalog,
   ContactButton,
-  Divider,
-  Footer,
+  CardsCatalog,
+  SiteFooter,
   GitHubBanner,
-  GithubProjectsGallery,
-  HireMeBanner,
-  LinksBlock,
-  PodcastsCatalog,
   SiteHeader,
+  NewsLine,
 } from "components";
 
-import withApollo from "utils/withApollo";
+const GlobalStyles = createGlobalStyle`div.headroom--unfixed > .headroomContainer {
+  border-bottom: none;
+}`;
+
+const Main = styled.main`
+  padding: 40px 0;
+`;
 
 const IndexPage: NextPage = () => (
   <>
     <MainPreview />
+    <NewsLine />
 
     <SiteHeader />
-    <main>
-      <ArticlesCatalog />
 
-      <Divider />
+    <Landing />
 
-      <Catalog />
-
-      <PodcastsCatalog />
-
-      <Divider />
-
-      <HireMeBanner />
-
-      <Divider />
-
-      <GithubProjectsGallery />
-
+    <Main>
+      <GlobalStyles />
+      <CardsCatalog />
       <GitHubBanner />
-
-      <LinksBlock />
-    </main>
-
-    <Footer />
+    </Main>
+    <SiteFooter />
     <ContactButton />
   </>
 );
 
-export default withApollo(IndexPage);
+export default IndexPage;

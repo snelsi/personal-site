@@ -1,87 +1,110 @@
 import * as React from "react";
 import styled from "styled-components";
 
-import { Button } from "components";
 import {
-  AboutMyself,
-  Container,
+  Summary,
+  Contact,
+  Degree,
   Expirience,
-  Head,
+  Intro,
   Languages,
-  MyPhoto,
   ProfessionalSkills,
   Sallery,
-  Stack,
+  Start,
   Technologies,
   Tools,
 } from "components/About";
 
-interface AboutProps {}
+const Wrapper = styled.div`
+  & .block {
+    padding: 0;
+    margin: 10vw auto;
+    width: 95%;
 
-export const About: React.FC<AboutProps> = () => (
-  <Container data-fix-width>
-    <MyPhoto />
-    <Content>
-      <Head />
-      <hr />
-      <ProfessionalSkills />
-      <Stack />
-      <Technologies />
-      <Tools />
-      <hr />
-      <Expirience />
-      <hr />
-      <Languages />
-      <Sallery />
-      <AboutMyself />
-      <hr />
-      <Button className="contactButton">Написать мне</Button>
-    </Content>
-  </Container>
-);
+    &:first-child {
+      margin-top: 5vw;
+    }
 
-const Content = styled.div`
-  margin: auto;
-  max-width: 640px;
-  font-size: 18px;
-  line-height: 1.4;
+    @media (max-width: 800px) {
+      margin: 120px auto;
 
-  & > hr {
-    border: none;
-    background-color: var(--color-borderline);
-    height: 1px;
-    margin: 1em 0;
-    width: 100%;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
   }
 
-  & .block {
-    margin: 1em 0 1.5em;
+  & a {
+    color: inherit;
+    border-bottom: 1px solid rgba(31, 31, 31, 0.4);
+  }
+
+  & li {
+    list-style: none;
+  }
+
+  & .text-block {
+    font-weight: 400;
+    line-height: 1.35;
+    letter-spacing: -0.03em;
+    max-width: 600px;
+    width: 100%;
+    margin-bottom: 4.65vw;
+
+    padding: 0 2.325vw;
+
+    @media (max-width: 800px) {
+      padding: 0 5vw;
+    }
+
+    @media (min-width: 600px) {
+      &:not([data-right]) {
+        padding-left: 2.325vw;
+        margin-right: auto;
+      }
+
+      &[data-right] {
+        padding-right: 2.325vw;
+        margin-left: auto;
+      }
+    }
+  }
+
+  & h3 {
+    color: #111;
+    margin-bottom: 0.75em;
+    font-family: Montserrat, var(--sans-family);
+  }
+  & li,
+  & p {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.5;
+
+    @media (max-width: 800px) {
+      font-size: 19px;
+    }
   }
 
   & .no-wrap {
     white-space: nowrap;
   }
-
-  & h5 {
-    margin: 1em auto;
-    max-width: 460px;
-    font-weight: 600;
-    font-variation-settings: "wght" 600;
-    text-align: center;
-  }
-
-  & h6 {
-    margin-bottom: 1em;
-    font-weight: 600;
-    font-variation-settings: "wght" 600;
-  }
-
-  & p {
-    color: var(--color-text-main);
-    margin: 0.8em 0;
-  }
-
-  & button.contactButton {
-    margin: 1em auto;
-  }
 `;
+
+interface AboutProps {}
+
+export const About: React.FC<AboutProps> = () => (
+  <Wrapper>
+    <Intro />
+    <Degree />
+    <Start />
+    <ProfessionalSkills />
+    <Expirience />
+    <Technologies />
+    <Languages />
+    <Tools />
+    <Summary />
+    <Sallery />
+    <Contact />
+  </Wrapper>
+);

@@ -14,7 +14,7 @@ interface LinkButtonBaseProps extends ButtonBaseProps {
 export const ButtonBase = withStyles({
   root: {
     alignItems: "center",
-    backgroundColor: "var(--color-blue-6)",
+    backgroundColor: "var(--color-primary)",
     border: "none",
     borderRadius: "0.5rem",
     color: "var(--color-text-white)",
@@ -23,7 +23,9 @@ export const ButtonBase = withStyles({
     justifyContent: "center",
     lineHeight: "1.5",
     fontSize: "1em",
+    fontFamily: "Montserrat, var(--sans-family)",
     padding: "0.5em 1em",
+
     textDecoration: "none",
     textAlign: "center",
     transition: "var(--transition-ease)",

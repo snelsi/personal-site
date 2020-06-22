@@ -1,13 +1,20 @@
 import * as React from "react";
+import styled from "styled-components";
 
 import { SiteHeaderLink } from "components/SiteHeader";
 
 interface SiteHeaderLinksProps {}
 
 export const SiteHeaderLinks: React.FC<SiteHeaderLinksProps> = () => (
-  <>
-    <SiteHeaderLink href="/about">Про меня</SiteHeaderLink>
-    <SiteHeaderLink href="/articles">Блог</SiteHeaderLink>
-    <SiteHeaderLink href="/projects">Работы</SiteHeaderLink>
-  </>
+  <Container>
+    <SiteHeaderLink href="/blog">Blog</SiteHeaderLink>
+    <SiteHeaderLink href="/about">About me</SiteHeaderLink>
+    <SiteHeaderLink href="/contact">Contact</SiteHeaderLink>
+  </Container>
 );
+
+const Container = styled.div`
+  display: grid;
+  grid-auto-flow: column;
+  gap: 20px;
+`;

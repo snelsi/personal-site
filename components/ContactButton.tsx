@@ -2,6 +2,7 @@ import * as React from "react";
 
 import { styled } from "@material-ui/core/styles";
 import { Button } from "components/Buttons";
+import Link from "next/link";
 
 const FixedButton = styled(Button)({
   position: "fixed",
@@ -13,5 +14,7 @@ const FixedButton = styled(Button)({
 interface ContactButtonProps {}
 
 export const ContactButton: React.FC<ContactButtonProps> = () => (
-  <FixedButton type="button">Написать мне</FixedButton>
+  <Link href="/contact">
+    <FixedButton>Contact me</FixedButton>
+  </Link>
 );

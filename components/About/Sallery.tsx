@@ -1,22 +1,33 @@
 import * as React from "react";
 import styled from "styled-components";
 
-import Tippy from "@tippyjs/react";
+import { withStyles } from "@material-ui/core/styles";
+import MUiTooltip from "@material-ui/core/Tooltip";
+
+const ToolTip = withStyles({
+  arrow: {
+    color: "var(--color-gray-8)",
+  },
+  tooltip: {
+    backgroundColor: "var(--color-gray-8)",
+    fontSize: "15px",
+  },
+})(MUiTooltip);
 
 interface SalleryProps {}
 
 export const Sallery: React.FC<SalleryProps> = () => (
-  <div className="block">
-    <Block>
-      <h5>
-        Желаемая зарплата{" "}
-        <Tippy content="На руки">
+  <Block className="block">
+    <div data-fix-width>
+      <h5 data-font-size="XL">
+        Desired salary{" "}
+        <ToolTip arrow placement="top" title="Take-home">
           <Underlined tabIndex={0}>net</Underlined>
-        </Tippy>
-        : <span className="no-wrap">750$ / мес</span>
+        </ToolTip>
+        : <span className="sallary">750$ / Month</span>
       </h5>
-    </Block>
-  </div>
+    </div>
+  </Block>
 );
 
 const Underlined = styled.span`
@@ -25,14 +36,22 @@ const Underlined = styled.span`
   transition: var(--transition-ease);
 
   &:focus {
-    border-bottom-color: var(--color-blue-6);
+    border-bottom-color: var(--color-primary);
   }
 `;
 
 const Block = styled.div`
-  border-top: 1px solid var(--color-borderline);
-  border-bottom: 1px solid var(--color-borderline);
-  padding: 0 24px;
-  width: fit-content;
   margin: auto;
+  & > div {
+    border-top: 1px solid var(--color-borderline);
+    border-bottom: 1px solid var(--color-borderline);
+    padding: 1em 0;
+    width: fit-content;
+    text-align: center;
+
+    & .sallary {
+      line-height: 1.5;
+      white-space: nowrap;
+    }
+  }
 `;

@@ -1,4 +1,5 @@
 import * as React from "react";
+import styled from "styled-components";
 
 import {
   SiteHeaderBase,
@@ -12,7 +13,17 @@ interface SiteHeaderProps {}
 export const SiteHeader: React.FC<SiteHeaderProps> = () => (
   <SiteHeaderBase>
     <SiteHeaderTitle />
-    <SiteHeaderLinks />
-    <SiteHeaderMenu />
+    <RightPart>
+      <SiteHeaderLinks />
+      <SiteHeaderMenu />
+    </RightPart>
   </SiteHeaderBase>
 );
+
+const RightPart = styled.div`
+  align-items: center;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 24px;
+  height: 100%;
+`;

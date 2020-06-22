@@ -2,20 +2,41 @@ import styled from "styled-components";
 import { BannerBase } from "components/Banners";
 
 const Base = styled.a`
+  display: block;
+
   & .banner {
     background: center center no-repeat url(images/gitHubPromo_small.jpg), var(--color-cool-gray-9);
     background-size: cover;
+
+    & svg {
+      top: 0;
+      right: 5%;
+      height: 100%;
+      width: 15vw;
+      min-width: 100px;
+      max-width: 120px;
+    }
 
     @media (min-width: 710px) {
       background: center center no-repeat url(images/gitHubPromo_large.jpg),
         var(--color-cool-gray-9);
       background-size: cover;
+
+      & svg {
+        width: 10vw;
+      }
+    }
+
+    @media (max-width: 400px) {
+      & svg {
+        display: none;
+      }
     }
   }
 `;
 
 export const GitHubBanner: React.FC = () => (
-  <Base href="https://github.com/snelsi" target="_blank" rel="noopener noreferrer">
+  <Base href="https://github.com/snelsi" target="_blank" rel="noopener noreferrer" data-fix-width>
     <BannerBase title="Looking for sources?" label="Check out my GitHub!">
       <svg width="80" height="80" fill="none" viewBox="0 0 80 80">
         <path
