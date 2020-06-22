@@ -22,7 +22,7 @@ export const projects: Project[] = [
   },
   {
     url: "http://my-dashboard.now.sh/",
-    img: "images/cards/dashboard.jpg",
+    img: "images/cards/Dashboard.jpg",
     title: "Tasks Managament Dashboard with beautiful-dnd",
     tags: ["New", "Project"],
   },
