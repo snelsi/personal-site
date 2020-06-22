@@ -52,7 +52,7 @@ export const Menu: React.FC<MenuProps> = ({ open, closeDialog }) => {
           <MennuButton href="https://dribbble.com/snelsi" title="Dribbble" outside>
             <FaDribbble color="#EA4C89" />
           </MennuButton>
-          <MennuButton href="https://www.linkedin.com/in/roman-zhuravlov/" title="LinkedIn" outside>
+          <MennuButton href="https://www.linkedin.com/in/snelsi/" title="LinkedIn" outside>
             <FiLinkedin color="#2176A6" />
           </MennuButton>
         </Buttons>
