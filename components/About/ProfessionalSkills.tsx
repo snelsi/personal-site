@@ -8,7 +8,7 @@ const Container = styled.div`
     margin-bottom: 1em !important;
 
     & h3 {
-      font-variation-settings: "wght" 640;
+      font-variation-settings: "wght" 600;
     }
   }
 `;
