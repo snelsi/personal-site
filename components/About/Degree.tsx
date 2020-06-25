@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useMediaQuery } from "@material-ui/core";
 
-import { ImageWithRatio } from "components";
+import { Image } from "components";
 import styled from "styled-components";
 
 interface DegreeProps {}
@@ -21,8 +21,8 @@ export const Degree: React.FC<DegreeProps> = () => {
           Systems Engineering on ’Computer Sciences’ specialty.
         </p>
       </div>
-      <ImageWithRatio
-        src="images/about/KPI.jpg"
+      <Image
+        src={mobile ? "about/kpi-mobile.jpg" : "about/kpi.jpg"}
         alt="Kiev Politechnical Institute"
         ratio={mobile ? 150 : 66}
       />

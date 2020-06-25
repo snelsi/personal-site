@@ -42,11 +42,11 @@ export const Expirience: React.FC<ExpirienceProps> = () => (
     <div>
       <SliderStyles />
       <AwesomeSlider>
-        <div data-src="images/about/App1.jpg" />
-        <div data-src="images/about/App2.jpg" />
-        <div data-src="images/about/App3.jpg" />
-        <div data-src="images/about/App4.jpg" />
-        <div data-src="images/about/App5.jpg" />
+        <div data-src="images/about/App1.jpg" data-alt="Desktop Dark Music Player" />
+        <div data-src="images/about/App2.jpg" data-alt="Daily Progress Flash Screen" />
+        <div data-src="images/about/App3.jpg" data-alt="Landing Page to Time Management App" />
+        <div data-src="images/about/App4.jpg" data-alt="Social Profile and Portfolio UI" />
+        <div data-src="images/about/App5.jpg" data-alt="Direct Messaging Screen" />
       </AwesomeSlider>
     </div>
     <div className="text-block" data-right>

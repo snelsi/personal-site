@@ -4,7 +4,7 @@ export * from "./Catalog";
 export * from "./ContactButton";
 export * from "./Email";
 export * from "./FunnyVideo";
-export * from "./ImageWithRatio";
+export * from "./Image";
 export * from "./NewsLine";
 
 export * from "./About";

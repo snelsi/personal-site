@@ -2,7 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import { useMediaQuery } from "@material-ui/core";
 
-import { ImageWithRatio } from "components";
+import { Image } from "components";
 
 const Wrapper = styled.div`
   margin-right: auto;
@@ -26,8 +26,8 @@ export const Start: React.FC<StartProps> = () => {
         </p>
       </div>
       <Wrapper>
-        <ImageWithRatio
-          src="images/about/programming.jpg"
+        <Image
+          src="about/programming.jpg"
           alt="Web programming"
           ratio={mobile ? 120 : 66}
         />

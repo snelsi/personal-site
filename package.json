@@ -33,6 +33,15 @@
     "eslint-config-alloy": "^3.7.3",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.20.0",
-    "typescript": "3.9.5"
+
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "jimp": "^0.13.0",
+    "lqip-loader": "^2.2.0",
+    "next-compose-plugins": "^2.2.0",
+    "next-optimized-images": "^2.6.1",
+    "responsive-loader": "^1.2.0",
+    "typescript": "3.9.5",
+    "webp-loader": "^0.6.0"
   }
 }

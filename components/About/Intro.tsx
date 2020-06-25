@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import Link from "next/link";
 
-import { Button, ImageWithRatio } from "components";
+import { Button, Image } from "components";
 import { calculateYearSince } from "scripts";
 
 const Block = styled.div`
@@ -94,7 +94,7 @@ export const Intro: React.FC<IntroProps> = () => (
       </Link>
     </div>
     <div className="imageWrapper">
-      <ImageWithRatio src="images/about/me.jpg" alt="Me" ratio={120} />
+      <Image src="about/me.jpg" alt="Me" ratio={120} />
     </div>
   </Block>
 );

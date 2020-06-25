@@ -2,6 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 
 import { Project } from "components/projects";
+import { Image } from "components";
 
 const Tag = styled.div`
   background: var(--color-red-500);
@@ -43,7 +44,7 @@ const Tags: React.FC<TagsProps> = ({ tags }) => {
 const InnerContent: React.FC<Project> = ({ img, title, tags }) => (
   <>
     <div className="imageContainer">
-      <img src={img} alt="Card preview" />
+      <Image src={img} alt="Card preview" ratio={75} />
       <Tags tags={tags} />
     </div>
     <div className="textContainer montserrat" data-font-size="L">
@@ -110,25 +111,10 @@ const CardBase = styled.a`
   }
 
   & .imageContainer {
-    background: var(--color-gray-2, #dde1e6);
     border-radius: 6px;
     overflow: hidden;
     position: relative;
     margin-bottom: 16px;
-
-    padding-bottom: 75%;
-    height: 0;
-
-    & img {
-      object-fit: cover;
-      transition: var(--transition-ease);
-
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 100%;
-    }
 
     &::after {
       content: "";
@@ -148,9 +134,6 @@ const CardBase = styled.a`
       vertical-align: bottom;
       margin-left: 8px;
     }
-  }
-
-  &:hover {
   }
 
   &:not(.private) {
