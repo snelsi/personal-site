@@ -52,6 +52,7 @@ const Wrapper = styled.div<Ratio>`
     height: 100%;
     top: 0;
     left: 0;
+    transition: var(--transition-ease);
   }
 
   & .blur-image {
