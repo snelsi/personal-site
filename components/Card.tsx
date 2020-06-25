@@ -45,11 +45,6 @@ const InnerContent: React.FC<Project> = ({ img, title, tags }) => (
     <div className="imageContainer">
       <img src={img} alt="Card preview" />
       <Tags tags={tags} />
-      {/* {tag && (
-        <Tag className="tag montserrat" data-type={tag}>
-          {tag}
-        </Tag>
-      )} */}
     </div>
     <div className="textContainer montserrat" data-font-size="L">
       {title}
