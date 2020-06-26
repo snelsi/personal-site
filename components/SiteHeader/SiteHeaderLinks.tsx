@@ -13,7 +13,7 @@ export const SiteHeaderLinks: React.FC<SiteHeaderLinksProps> = () => (
   </Container>
 );
 
-const Container = styled.div`
+const Container = styled.ul`
   display: grid;
   grid-auto-flow: column;
   gap: 20px;

@@ -42,12 +42,14 @@ export const SiteHeaderLink: React.FC<HeaderLinkProps> = ({ href, children }) =>
   const router = useRouter();
 
   return (
-    <HeaderLinkContainer data-matched={href === router.route} className="HeaderLinkContainer">
-      <Link href={href}>
-        <ButtonText component="a" href={href}>
-          {children}
-        </ButtonText>
-      </Link>
-    </HeaderLinkContainer>
+    <li>
+      <HeaderLinkContainer data-matched={href === router.route} className="HeaderLinkContainer">
+        <Link href={href}>
+          <ButtonText component="a" href={href}>
+            {children}
+          </ButtonText>
+        </Link>
+      </HeaderLinkContainer>
+    </li>
   );
 };
