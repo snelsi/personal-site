@@ -9,7 +9,7 @@ export default {
     description: "Personal site, blog and portfolio of Roman Zhuravlov.",
     images: [
       {
-        url: "https://www.snelsi.now.sh/images/MainPreview.jpg",
+        url: "https://snelsi.now.sh/images/MainPreview.jpg",
         width: 1200,
         height: 628,
         alt: "My name on forest background",
