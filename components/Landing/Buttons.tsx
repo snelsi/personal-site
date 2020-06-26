@@ -6,17 +6,20 @@ import { Button, ButtonOutlined } from "components/Buttons";
 interface ButtonsProps {}
 
 export const Buttons: React.FC<ButtonsProps> = () => (
-  <Container>
+    <li>
     <Link href="/contact">
       <Button className="contact">Contact me</Button>
     </Link>
+    </li>
+    <li>
     <Link href="/about">
       <ButtonOutlined className="about">My Resume</ButtonOutlined>
     </Link>
+    </li>
   </Container>
 );
 
-const Container = styled.div`
+const Container = styled.ul`
   display: grid;
   grid-auto-flow: column;
   gap: 24px;
