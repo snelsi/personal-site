@@ -50,6 +50,21 @@ const H1 = styled.h1`
   display: grid;
   justify-content: left;
   user-select: none;
+
+  font-size: 60px;
+
+  @media (max-width: 1440px) {
+    font-size: 4.5vw;
+  }
+  @media (max-width: 1020px) {
+    font-size: 6.5vw;
+  }
+  @media (max-width: 640px) {
+    font-size: 8vw;
+  }
+  @media (max-width: 340px) {
+    font-size: 24px;
+  }
 `;
 
 interface FadingTitleProps {
@@ -65,20 +80,7 @@ const FadingTitle = styled.span<FadingTitleProps>`
   grid-column: 1;
   grid-row: 1;
 
-  font-size: 60px;
-
-  @media (max-width: 1440px) {
-    font-size: 4.5vw;
-  }
-  @media (max-width: 1020px) {
-    font-size: 6.5vw;
-  }
-  @media (max-width: 640px) {
-    font-size: 32px;
-  }
-  @media (max-width: 340px) {
-    font-size: 24px;
-  }
+  font-size: inherit;
 
   & > div {
     white-space: nowrap;
