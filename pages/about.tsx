@@ -1,15 +1,23 @@
 import * as React from "react";
 import type { NextPage } from "next";
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 
 import styled from "styled-components";
 import { About, ContactButton, NewsLine, SiteFooter, SiteHeader } from "components";
 
 const AboutPage: NextPage = () => (
   <>
-    <Head>
-      <title>Roman Zhuravlov - About me</title>
-    </Head>
+    <NextSeo
+      title="Roman Zhuravlov - About me"
+      description="My biography and experience."
+      canonical="https://www.snelsi.now.sh/about"
+      openGraph={{
+        url: "https://www.snelsi.now.sh/about",
+        title: "Roman Zhuravlov - About me",
+        type: "profile",
+        description: "Personal site, blog and portfolio of Roman Zhuravlov.",
+      }}
+    />
     <NewsLine />
     <SiteHeader />
     <Main>

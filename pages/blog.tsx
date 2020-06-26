@@ -1,8 +1,7 @@
 import * as React from "react";
 import { NextPage } from "next";
+import { NextSeo } from "next-seo";
 import styled from "styled-components";
-
-import { MainPreview } from "components/PagePreviews";
 
 import { ContactButton, FunnyVideo, SiteFooter, SiteHeader } from "components";
 
@@ -27,7 +26,18 @@ const Wrapper = styled.div`
 
 const BlogPage: NextPage = () => (
   <>
-    <MainPreview />
+    <NextSeo
+      title="Roman Zhuravlov - Blog"
+      description="My articles and thoughts."
+      canonical="https://www.snelsi.now.sh/blog"
+      openGraph={{
+        url: "https://www.snelsi.now.sh/blog",
+        title: "Roman Zhuravlov - Blog",
+        type: "blog",
+        description: "My articles and thoughts.",
+      }}
+    />
+
     <SiteHeader />
     <Main>
       <h2 data-fix-width>

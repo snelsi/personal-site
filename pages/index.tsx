@@ -3,7 +3,6 @@ import { NextPage } from "next";
 import styled, { createGlobalStyle } from "styled-components";
 
 import { Landing } from "components/Landing";
-import { MainPreview } from "components/PagePreviews";
 
 import {
   ContactButton,
@@ -24,7 +23,6 @@ const Main = styled.main`
 
 const IndexPage: NextPage = () => (
   <>
-    <MainPreview />
     <NewsLine />
 
     <SiteHeader />

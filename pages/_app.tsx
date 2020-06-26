@@ -1,4 +1,6 @@
 import * as React from "react";
+import { DefaultSeo } from "next-seo";
+import SEO from "next-seo.config";
 
 import "css/normalize.css";
 import "css/styles.css";
@@ -21,5 +23,10 @@ export default function MyApp({ Component, pageProps }) {
 
   useCheerExplorers();
 
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <DefaultSeo {...SEO} />
+      <Component {...pageProps} />
+    </>
+  );
 }

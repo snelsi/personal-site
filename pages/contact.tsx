@@ -1,6 +1,6 @@
 import * as React from "react";
 import type { NextPage } from "next";
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 
 import { FaTelegramPlane } from "react-icons/fa";
 import { GoMail } from "react-icons/go";
@@ -54,9 +54,16 @@ const Link = styled.a`
 
 const ContactPage: NextPage = () => (
   <>
-    <Head>
-      <title>Roman Zhuravlov - Contact me</title>
-    </Head>
+    <NextSeo
+      title="Roman Zhuravlov - Contact me"
+      description="My mail, telegram and contact information."
+      canonical="https://www.snelsi.now.sh/contact"
+      openGraph={{
+        url: "https://www.snelsi.now.sh/contact",
+        title: "Roman Zhuravlov - Contact me",
+        description: "My mail, telegram and contact information.",
+      }}
+    />
     <SiteHeader />
     <Main>
       <div>
