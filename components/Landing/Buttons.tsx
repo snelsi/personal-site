@@ -6,15 +6,16 @@ import { Button, ButtonOutlined } from "components/Buttons";
 interface ButtonsProps {}
 
 export const Buttons: React.FC<ButtonsProps> = () => (
+  <Container aria-label="actions">
     <li>
-    <Link href="/contact">
-      <Button className="contact">Contact me</Button>
-    </Link>
+      <Link href="/contact">
+        <Button className="contact">Contact me</Button>
+      </Link>
     </li>
     <li>
-    <Link href="/about">
-      <ButtonOutlined className="about">My Resume</ButtonOutlined>
-    </Link>
+      <Link href="/about">
+        <ButtonOutlined className="about">My Resume</ButtonOutlined>
+      </Link>
     </li>
   </Container>
 );
