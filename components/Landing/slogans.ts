@@ -10,8 +10,8 @@ export const slogans = [
     emoji: "❤️",
   },
   {
-    top: "Smart Code without",
-    bottom: "Compromises",
+    top: "Smart Code With",
+    bottom: "No drawbacks",
     emoji: "🚀",
   },
   {
