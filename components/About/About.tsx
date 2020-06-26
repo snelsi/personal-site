@@ -37,6 +37,10 @@ const Wrapper = styled.div`
   & a {
     color: inherit;
     border-bottom: 1px solid rgba(31, 31, 31, 0.4);
+
+    &:hover {
+      border-bottom: 1px solid rgba(31, 31, 31, 0.75);
+    }
   }
 
   & li {
