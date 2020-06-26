@@ -15,7 +15,7 @@ const Header = styled(StickyHeader)`
   }
 `;
 
-const Container = styled.div`
+const Nav = styled.nav`
   background-color: var(--color-background);
   border-bottom: 1px solid var(--color-borderline);
   overflow: hidden;
@@ -58,6 +58,8 @@ export const SiteHeaderBase: React.FC<SiteHeaderBaseProps> = ({ children }) => (
     wrapperStyle={wrapperStyle}
     className="montserrat"
   >
-    <Container className="headroomContainer">{children}</Container>
+    <header>
+      <Nav className="headroomContainer">{children}</Nav>
+    </header>
   </Header>
 );
