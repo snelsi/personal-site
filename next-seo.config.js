@@ -23,4 +23,9 @@ export default {
       gender: "Male",
     },
   },
+  twitter: {
+    handle: '@handle',
+    site: '@site',
+    cardType: 'summary_large_image',
+  },
 };
