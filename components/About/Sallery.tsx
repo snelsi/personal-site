@@ -30,10 +30,11 @@ export const Sallery: React.FC<SalleryProps> = () => (
   </Block>
 );
 
-const Underlined = styled.span`
+const Underlined = styled.abbr`
   border-bottom: 2px dotted var(--color-borderline);
   outline: none;
   transition: var(--transition-ease);
+  text-decoration: none;
 
   &:focus {
     border-bottom-color: var(--color-primary);
