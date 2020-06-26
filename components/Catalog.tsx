@@ -16,7 +16,7 @@ const Header = styled.div`
   & > h3 {
     white-space: nowrap;
   }
-  & > div {
+  & > ul {
     align-items: center;
     display: flex;
   }
@@ -49,7 +49,7 @@ const Header = styled.div`
   }
 `;
 
-const Grid = styled.div`
+const Grid = styled.ul`
   display: grid;
 
   margin: 48px auto;
@@ -70,38 +70,50 @@ export const CardsCatalog: React.FC<CatalogProps> = () => {
     <div data-fix-width>
       <Header>
         <h3 className="montserrat">My Projects</h3>
-        <div>
-          <ButtonText
-            onClick={() => setMode(isMobile ? "Project" : undefined)}
-            data-selected={mode === undefined}
-          >
-            <span>All {projects.length}</span>
-          </ButtonText>
-          <ButtonText
-            onClick={() => setMode(isMobile ? "Game" : "Project")}
-            data-selected={mode === "Project"}
-          >
-            <span>
-              Projects {projects.filter((project) => project.tags.includes("Project")).length}
-            </span>
-          </ButtonText>
-          <ButtonText
-            onClick={() => setMode(isMobile ? "Fun" : "Game")}
-            data-selected={mode === "Game"}
-          >
-            <span>Games {projects.filter((project) => project.tags.includes("Game")).length}</span>
-          </ButtonText>
-          <ButtonText
-            onClick={() => setMode(isMobile ? undefined : "Fun")}
-            data-selected={mode === "Fun"}
-          >
-            <span>Fun {projects.filter((project) => project.tags.includes("Fun")).length}</span>
-          </ButtonText>
-        </div>
+        <ul>
+          <li>
+            <ButtonText
+              onClick={() => setMode(isMobile ? "Project" : undefined)}
+              data-selected={mode === undefined}
+            >
+              <span>All {projects.length}</span>
+            </ButtonText>
+          </li>
+          <li>
+            <ButtonText
+              onClick={() => setMode(isMobile ? "Game" : "Project")}
+              data-selected={mode === "Project"}
+            >
+              <span>
+                Projects {projects.filter((project) => project.tags.includes("Project")).length}
+              </span>
+            </ButtonText>
+          </li>
+          <li>
+            <ButtonText
+              onClick={() => setMode(isMobile ? "Fun" : "Game")}
+              data-selected={mode === "Game"}
+            >
+              <span>
+                Games {projects.filter((project) => project.tags.includes("Game")).length}
+              </span>
+            </ButtonText>
+          </li>
+          <li>
+            <ButtonText
+              onClick={() => setMode(isMobile ? undefined : "Fun")}
+              data-selected={mode === "Fun"}
+            >
+              <span>Fun {projects.filter((project) => project.tags.includes("Fun")).length}</span>
+            </ButtonText>
+          </li>
+        </ul>
       </Header>
       <Grid>
         {projects.map((project) => (
-          <Card {...project} key={project.title} disabled={mode && !project.tags.includes(mode)} />
+          <li key={project.title}>
+            <Card {...project} disabled={mode && !project.tags.includes(mode)} />
+          </li>
         ))}
       </Grid>
     </div>
