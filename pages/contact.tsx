@@ -134,7 +134,7 @@ const Cards = styled.div`
     }
 
     & .telegram {
-      background-color: var(--color-blue-300);
+      background-color: var(--color-blue-400);
     }
 
     & .email {
