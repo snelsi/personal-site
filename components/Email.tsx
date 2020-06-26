@@ -15,7 +15,7 @@ const Wrapper = styled.div`
     margin-bottom: 0.5em;
   }
 
-  & > button {
+  & > address > button {
     border: none;
     background: none;
     cursor: pointer;
@@ -31,9 +31,11 @@ export const Email: React.FC<EmailProps> = () => {
   return (
     <Wrapper>
       <h6>Or just send me a letter:</h6>
-      <CopyToClipboard text="commerce@snelsi.com" onCopy={() => setOpen(true)}>
-        <button data-font-size="XL">commerce@snelsi.com</button>
-      </CopyToClipboard>
+      <address>
+        <CopyToClipboard text="commerce@snelsi.com" onCopy={() => setOpen(true)}>
+          <button data-font-size="XL">commerce@snelsi.com</button>
+        </CopyToClipboard>
+      </address>
       <Snackbar
         anchorOrigin={{
           vertical: "bottom",
