@@ -18,7 +18,7 @@ export const Contact: React.FC<ContactProps> = () => (
           Let&apos;s talk!
         </h4>
         <div>
-          Write to me about anything. I&apos;m always happy to answer and give you my professional
+          Write to me about anything. I&apos;m always happy to answer and provide you my professional
           help.
         </div>
       </div>
