@@ -83,11 +83,10 @@ export const Intro: React.FC<IntroProps> = () => (
         Hey! I am {calculateYearSince(new Date("April 22 2000"))} years old web developer from
         Ukraine. I specialize in client interfaces, functional components and their internal logic.
         I create modern, beautiful, and accessible websites and apps. My goal is to help companies
-        from whole around the world to make their brand work and turn incoming people into happy
-        customers.
+        around the world to build their brand and turn incoming people into happy customers.
       </p>
       <p className="aside">
-        Let&apos;s work together! I&apos;m always happy to give you my professional help.
+        Let&apos;s work together! I&apos;m always happy to provide you my professional help.
       </p>
       <Link href="/contact">
         <Button>Contact me</Button>

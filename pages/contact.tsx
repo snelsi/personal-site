@@ -70,7 +70,7 @@ const ContactPage: NextPage = () => (
         <Cards data-fix-width>
           <h2 className="montserrat">Let&apos;s talk! </h2>
           <p>
-            Write to me about anything. I&apos;m always happy to answer and give you my professional
+            Write to me about anything. I&apos;m always happy to answer and provide you my professional
             help.
           </p>
           <div className="cards" data-fix-width>

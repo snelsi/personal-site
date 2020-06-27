@@ -57,7 +57,7 @@ export const NewsLine: React.FC<NewsLineProps> = () => (
     <span role="img" aria-label="turtle with megaphone">
       📣🐢
     </span>
-    <div className="optional"> Contact me if you interested.</div>{" "}
+    <div className="optional"> Contact me if you are interested.</div>{" "}
     <Link href="/contact">
       <a href="/contact">Contact</a>
     </Link>
