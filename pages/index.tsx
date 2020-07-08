@@ -23,7 +23,7 @@ const Main = styled.main`
 
 const IndexPage: NextPage = () => (
   <>
-    <NewsLine />
+    {/* <NewsLine /> */}
 
     <SiteHeader />
 
