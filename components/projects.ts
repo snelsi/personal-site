@@ -9,10 +9,22 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    url: "https://medspravki.snelsi.vercel.app/",
+    img: "cards/Medspravki.jpg",
+    title: "Medspravki UA - Next generation of Medical Certificates",
+    tags: ["New", "Project"],
+  },
+  {
+    url: "https://poker.snelsi.now.sh/",
+    img: "cards/Poker.jpg",
+    title: "Poker game - My Interview Assignment for Artkai",
+    tags: ["New", "Game", "Fun"],
+  },
+  {
     url: "https://tyson-language.now.sh/",
     img: "cards/Tyson.jpg",
     title: "Tyson - Modern and Simple Programming Language",
-    tags: ["New", "Project"],
+    tags: ["Project"],
   },
   {
     url: "https://dribbble.com/snelsi/collections/2371607-DailyUI",
@@ -24,7 +36,7 @@ export const projects: Project[] = [
     url: "http://my-dashboard.now.sh/",
     img: "cards/Dashboard.jpg",
     title: "Tasks Managament Dashboard with beautiful-dnd",
-    tags: ["New", "Project"],
+    tags: ["Project"],
   },
   {
     url: "https://timestamp.snelsi.now.sh/",
