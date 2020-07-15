@@ -100,6 +100,7 @@ export const Card: React.FC<CardProps> = ({ disabled = false, ...props }) => {
 };
 
 const CardBase = styled.a`
+  display: block;
   overflow: hidden;
   text-decoration: none;
   transition: var(--transition-ease), opacity 0.2s ease-out;
