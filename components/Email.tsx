@@ -32,8 +32,8 @@ export const Email: React.FC<EmailProps> = () => {
     <Wrapper>
       <h6>Or just send me a letter:</h6>
       <address>
-        <CopyToClipboard text="commerce@snelsi.com" onCopy={() => setOpen(true)}>
-          <button data-font-size="XL">commerce@snelsi.com</button>
+        <CopyToClipboard text="hello@snelsi.com" onCopy={() => setOpen(true)}>
+          <button data-font-size="XL">hello@snelsi.com</button>
         </CopyToClipboard>
       </address>
       <Snackbar
