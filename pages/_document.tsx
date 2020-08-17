@@ -14,7 +14,6 @@ class MyDocument extends Document {
           <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
           <meta name="theme-color" content="var(--color-background, white)" />
-          <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
 
           {/* Global site tag (gtag.js) - Google Analytics */}
           <script
