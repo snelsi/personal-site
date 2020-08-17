@@ -2,12 +2,12 @@ import * as React from "react";
 import styled from "styled-components";
 import StickyHeader from "react-headroom";
 
-const HeaderStyles: React.CSSProperties = {
+const HeaderStyles = {
   zIndex: 100,
-};
-const wrapperStyle: React.CSSProperties = {
+} as any;
+const wrapperStyle = {
   backgroundColor: "var(--color-background)",
-};
+} as any;
 
 const Header = styled(StickyHeader)`
   & .headroom--unpinned:focus-within {
