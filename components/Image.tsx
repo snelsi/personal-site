@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
 import * as React from "react";
 import styled from "styled-components";
+import Img from "react-optimized-image";
 
 interface ImageProps {
   src: string;
@@ -8,24 +9,18 @@ interface ImageProps {
   ratio?: number;
 }
 
-export const Image: React.FC<ImageProps> = ({ src, alt, ratio = 100 }) => {
-  const blur = require(`../images/${src}?lqip`);
-  const image = require(`../images/${src}?resize&sizes[]=400&sizes[]=800&sizes[]=1200`);
-  const webpImage = require(`../images/${src}?webp?resize&sizes[]=400&sizes[]=800&sizes[]=1200`);
-
-  return (
-    <div>
-      <Wrapper className="image-container" ratio={ratio}>
-        <img className="blur-image" src={blur} alt="blured placeholder" />
-        <picture>
-          <source srcSet={webpImage.srcSet} type="image/webp" />
-          <source srcSet={image.srcSet} type="image/jpeg" />
-          <img src={webpImage.src} alt={alt} />
-        </picture>
-      </Wrapper>
-    </div>
-  );
-};
+export const Image: React.FC<ImageProps> = ({ src, alt, ratio = 100 }) => (
+  <div>
+    <Wrapper className="image-container" ratio={ratio}>
+      <Img
+        src={require(`../images/${src}`)}
+        // webp
+        sizes={[400, 800, 1200]}
+        alt={alt}
+      />
+    </Wrapper>
+  </div>
+);
 
 interface Ratio {
   ratio?: number;
