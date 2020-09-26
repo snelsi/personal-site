@@ -84,7 +84,7 @@ const ContactPage: NextPage = () => (
               <div>Telegram for friends</div>
             </Link>
             <Link
-              href="mailto:contact@snelsi.com"
+              href="mailto:hey@snelsi.com"
               target="_blank"
               rel="noopener noreferrer"
               className="email"
