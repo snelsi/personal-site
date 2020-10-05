@@ -11,7 +11,7 @@ export const projects: Project[] = [
   {
     url: "https://tulpan.snelsi.now.sh/",
     img: "cards/Tulpan.jpg",
-    title: "Tyulpan - Beautiful landing page for a beautiful car service company",
+    title: "Tyulpan - Gorgeous Landing page for a Car Service Company",
     tags: ["New", "Project"],
   },
   {
