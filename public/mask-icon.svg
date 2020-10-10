@@ -1,3 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 600 600">
-  <rect width="600" height="600" fill="#000" rx="100"/>
+<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M85 0C38 0 0 38 0 85v342c0 47 38 85 85 85h342c47 0 85-38 85-85V85c0-47-38-85-85-85H85zm171 66c-2 104-86 189-191 190 105 2 189 87 191 191 2-104 86-189 191-191-105-1-189-86-191-190z" fill="#000"/>
 </svg>
