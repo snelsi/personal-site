@@ -54,9 +54,13 @@ const Grid = styled.ul`
 
   margin: 48px auto;
   gap: 48px;
+  overflow: hidden;
 
   @media screen and (min-width: 940px) {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  & > li {
+    overflow: hidden;
   }
 `;
 

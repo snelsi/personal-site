@@ -1,11 +1,12 @@
 import * as React from "react";
 import styled from "styled-components";
+import { Image } from "components";
 
 interface HeroImageProps {}
 
 export const HeroImage: React.FC<HeroImageProps> = () => (
   <Container>
-    <img src="/App.jpg" alt="Hero Illustration" />
+    <Image src="App.jpg" alt="Hero Illustration" width={2880} height={1900} />
   </Container>
 );
 

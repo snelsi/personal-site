@@ -24,7 +24,8 @@ export const Degree: React.FC<DegreeProps> = () => {
       <Image
         src={mobile ? "about/kpi-mobile.jpg" : "about/kpi.jpg"}
         alt="Kiev Politechnical Institute"
-        ratio={mobile ? 150 : 66}
+        width={mobile ? 1041 : 2000}
+        height={mobile ? 1331 : 1332}
       />
       <Aside>
         © Image by{" "}

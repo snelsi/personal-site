@@ -93,7 +93,7 @@ export const Intro: React.FC<IntroProps> = () => (
       </Link>
     </div>
     <div className="imageWrapper">
-      <Image src="about/me.jpg" alt="Me" ratio={120} />
+      <Image src="about/me.jpg" alt="Me" width={575} height={690} />
     </div>
   </Block>
 );

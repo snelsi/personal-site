@@ -29,7 +29,8 @@ export const Start: React.FC<StartProps> = () => {
         <Image
           src="about/programming.jpg"
           alt="Web programming"
-          ratio={mobile ? 120 : 66}
+          width={mobile ? 900 : 1636}
+          height={1080}
         />
       </Wrapper>
     </div>

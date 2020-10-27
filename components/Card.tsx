@@ -44,7 +44,7 @@ const Tags: React.FC<TagsProps> = ({ tags }) => {
 const InnerContent: React.FC<Project> = ({ img, title, tags }) => (
   <>
     <div className="imageContainer">
-      <Image src={img} alt="Card preview" ratio={75} />
+      <Image src={img} alt="Card preview" width={1920} height={1442} />
       <Tags tags={tags} />
     </div>
     <div className="textContainer montserrat" data-font-size="L">
