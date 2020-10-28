@@ -16,7 +16,7 @@ export const Image: React.FC<ImageProps> = ({ src, ...props }) => (
 );
 
 const Wrapper = styled.div`
-  background: var(--color-gray-2, #dde1e6);
+  background: var(--color-gray-1);
   box-shadow: var(--shadow);
 
   transition: var(--transition-ease);
