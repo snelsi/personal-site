@@ -130,6 +130,7 @@ const CardBase = styled.a`
   }
 
   & .textContainer {
+    padding-right: 1em;
     & svg {
       display: inline-block;
       vertical-align: bottom;
