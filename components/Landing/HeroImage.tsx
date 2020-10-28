@@ -21,6 +21,10 @@ const Container = styled.div`
   height: 600px;
   z-index: 0;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   @media (max-width: 1500px) {
     width: 45vw;
     height: 500px;
@@ -28,9 +32,9 @@ const Container = styled.div`
   @media (max-width: 1080px) {
     display: none;
   }
-  & > img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+
+  & > div {
+    overflow: hidden;
+    border-radius: 8px;
   }
 `;
