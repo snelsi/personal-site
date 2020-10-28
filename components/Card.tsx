@@ -116,6 +116,7 @@ const CardBase = styled.a`
     overflow: hidden;
     position: relative;
     margin-bottom: 16px;
+    image-rendering: -webkit-optimize-contrast;
 
     &::after {
       content: "";
