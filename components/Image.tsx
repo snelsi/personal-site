@@ -25,6 +25,10 @@ const Wrapper = styled.div`
     box-shadow: var(--shadow-hover);
   }
 
+  & > div {
+    display: block;
+  }
+
   & img {
     object-fit: cover;
     transition: transform 0.2s ease;
