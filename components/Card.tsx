@@ -137,7 +137,7 @@ const CardBase = styled.a`
     &::after {
       content: "";
       border: 1px solid rgba(0, 0, 0, 0.1);
-      border-radius: 6px;
+      border-radius: inherit;
       position: absolute;
       left: 0;
       top: 0;
