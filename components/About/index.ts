@@ -3,6 +3,7 @@ export * from "./Summary";
 export * from "./Contact";
 export * from "./Degree";
 export * from "./Expirience";
+export * from "./HoursWorked";
 export * from "./Intro";
 export * from "./Languages";
 export * from "./ProfessionalSkills";

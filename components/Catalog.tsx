@@ -71,7 +71,7 @@ export const CardsCatalog: React.FC<CatalogProps> = () => {
   const isMobile = useMediaQuery("(max-width: 800px)");
 
   return (
-    <div data-fix-width>
+    <div data-fix-width id="projects">
       <Header>
         <h3 className="montserrat">My Projects</h3>
         <ul>
