@@ -1,14 +1,17 @@
 import * as React from "react";
 import styled from "styled-components";
-import Img, { ImageProps } from "next/image";
+import Img, { ImageProps as NextImageProps } from "next/image";
 
-export const Image: React.FC<ImageProps> = ({ src, ...props }) => (
-  <Wrapper className="image-container">
+interface ImageProps {
+  bgColor?: string;
+}
+export const Image: React.FC<ImageProps & NextImageProps> = ({ src, bgColor, ...props }) => (
+  <Wrapper className="image-container" style={bgColor ? { background: bgColor } : undefined}>
     <Img src={`/images/${src}`} {...props} />
   </Wrapper>
 );
 
-const Wrapper = styled.div`
+const Wrapper = styled.div<ImageProps>`
   background: var(--color-gray-1);
   box-shadow: var(--shadow);
 

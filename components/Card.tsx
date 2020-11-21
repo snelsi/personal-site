@@ -44,10 +44,23 @@ const Tags: React.FC<TagsProps> = ({ tags }) => {
 interface InnerContentProps extends Project {
   priority?: boolean;
 }
-const InnerContent: React.FC<InnerContentProps> = ({ img, title, tags, priority = false }) => (
+const InnerContent: React.FC<InnerContentProps> = ({
+  img,
+  title,
+  tags,
+  bgColor,
+  priority = false,
+}) => (
   <>
     <div className="imageContainer">
-      <Image src={img} alt="Card preview" width={1920} height={1442} priority={priority} />
+      <Image
+        src={img}
+        alt="Card preview"
+        width={1920}
+        height={1442}
+        bgColor={bgColor}
+        priority={priority}
+      />
       <Tags tags={tags} />
     </div>
     <div className="textContainer montserrat" data-font-size="L">

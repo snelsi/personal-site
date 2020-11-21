@@ -9,6 +9,7 @@ import {
   Intro,
   Languages,
   ProfessionalSkills,
+  HoursWorked,
   Sallery,
   Start,
   Technologies,
@@ -104,6 +105,7 @@ export const About: React.FC<AboutProps> = () => (
     <Start />
     <ProfessionalSkills />
     <Expirience />
+    <HoursWorked />
     <Technologies />
     <Languages />
     <Tools />
