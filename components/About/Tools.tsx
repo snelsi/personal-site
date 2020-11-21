@@ -1,10 +1,18 @@
 import * as React from "react";
 import styled from "styled-components";
 
+import { useInView } from "scripts";
 import { Tool } from "./Tool";
 
 const Wrapper = styled.div`
   margin: 10vw 0;
+
+  transition: opacity 1s ease;
+
+  &[data-visible="false"] {
+    transform: translateY(12px);
+    opacity: 0;
+  }
 `;
 
 const Text = styled.div`
@@ -58,26 +66,31 @@ const Grid = styled.ul`
 
 interface ToolsProps {}
 
-export const Tools: React.FC<ToolsProps> = () => (
-  <Wrapper>
-    <Text data-fix-width>
-      <h4 data-font-size="XL" className="montserrat">
-        My Tools
-      </h4>
-      <p data-font-size="Focus">
-        Time and patience are the key to everything. But sometimes right tool does half of the job.
-      </p>
-    </Text>
+export const Tools: React.FC<ToolsProps> = () => {
+  const { ref, visible } = useInView();
 
-    <Container>
-      <div>
-        <Grid>
-          <Tool src="images/about/tools/VSCode.svg" alt="VSCode" title="VS Code" />
-          <Tool src="images/about/tools/Figma.svg" alt="Figma" title="Figma" />
-          <Tool src="images/about/tools/Photoshop.svg" alt="Photoshop" title="Photoshop" />
-          <Tool src="images/about/tools/Illustrator.svg" alt="Illustrator" title="Illustrator" />
-        </Grid>
-      </div>
-    </Container>
-  </Wrapper>
-);
+  return (
+    <Wrapper ref={ref} data-visible={visible}>
+      <Text data-fix-width>
+        <h4 data-font-size="XL" className="montserrat">
+          My Tools
+        </h4>
+        <p data-font-size="Focus">
+          Time and patience are the key to everything. But sometimes right tool does half of the
+          job.
+        </p>
+      </Text>
+
+      <Container>
+        <div>
+          <Grid>
+            <Tool src="images/about/tools/VSCode.svg" alt="VSCode" title="VS Code" />
+            <Tool src="images/about/tools/Figma.svg" alt="Figma" title="Figma" />
+            <Tool src="images/about/tools/Photoshop.svg" alt="Photoshop" title="Photoshop" />
+            <Tool src="images/about/tools/Illustrator.svg" alt="Illustrator" title="Illustrator" />
+          </Grid>
+        </div>
+      </Container>
+    </Wrapper>
+  );
+};

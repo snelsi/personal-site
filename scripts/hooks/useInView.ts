@@ -9,7 +9,7 @@ export const useInView = ({
   rootMargin = "-200px 0px",
   triggerOnce = true,
   ...props
-}) => {
+} = {}) => {
   const [visible, setVisible] = React.useState<boolean>(initialValue);
   const { ref, inView, ...hookProps } = RIUseInView({
     rootMargin,

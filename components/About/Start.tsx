@@ -3,6 +3,16 @@ import styled from "styled-components";
 import { useMediaQuery } from "@material-ui/core";
 
 import { Image } from "components";
+import { useInView } from "scripts";
+
+const Block = styled.div`
+  transition: opacity 1s ease;
+
+  &[data-visible="false"] {
+    transform: translateY(12px);
+    opacity: 0;
+  }
+`;
 
 const Wrapper = styled.div`
   margin-right: auto;
@@ -13,9 +23,10 @@ interface StartProps {}
 
 export const Start: React.FC<StartProps> = () => {
   const mobile = useMediaQuery("(max-width: 1020px)");
+  const { visible, ref } = useInView();
 
   return (
-    <div className="block">
+    <Block className="block" ref={ref} data-visible={visible}>
       <div className="text-block">
         <h3>The Long Journey</h3>
         <p>
@@ -33,6 +44,6 @@ export const Start: React.FC<StartProps> = () => {
           height={1080}
         />
       </Wrapper>
-    </div>
+    </Block>
   );
 };

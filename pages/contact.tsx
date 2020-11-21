@@ -7,6 +7,7 @@ import { GoMail } from "react-icons/go";
 
 import styled from "styled-components";
 import { Email, SiteFooter, SiteHeader } from "components";
+import { useInView } from "scripts";
 
 const Link = styled.a`
   align-items: center;
@@ -52,54 +53,58 @@ const Link = styled.a`
   }
 `;
 
-const ContactPage: NextPage = () => (
-  <>
-    <NextSeo
-      title="Roman Zhuravlov - Contact me"
-      description="My mail, telegram and contact information."
-      canonical="https://www.snelsi.now.sh/contact"
-      openGraph={{
-        url: "https://www.snelsi.now.sh/contact",
-        title: "Roman Zhuravlov - Contact me",
-        description: "My mail, telegram and contact information.",
-      }}
-    />
-    <SiteHeader />
-    <Main>
-      <div>
-        <Cards data-fix-width>
-          <h2 className="montserrat">Let&apos;s talk! </h2>
-          <p>
-            Write to me about anything. I&apos;m always happy to answer and provide you my professional
-            help.
-          </p>
-          <div className="cards" data-fix-width>
-            <Link
-              href="http://t.me/snelsi"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="telegram"
-            >
-              <FaTelegramPlane size={24} color="#fff" />
-              <div>Telegram for friends</div>
-            </Link>
-            <Link
-              href="mailto:hey@snelsi.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="email"
-            >
-              <GoMail size={24} color="#fff" />
-              <div>Email for customers</div>
-            </Link>
-          </div>
-        </Cards>
-        <Email />
-      </div>
-    </Main>
-    <SiteFooter />
-  </>
-);
+const ContactPage: NextPage = () => {
+  const { ref, visible } = useInView({ rootMargin: "0px" });
+
+  return (
+    <>
+      <NextSeo
+        title="Roman Zhuravlov - Contact me"
+        description="My mail, telegram and contact information."
+        canonical="https://www.snelsi.now.sh/contact"
+        openGraph={{
+          url: "https://www.snelsi.now.sh/contact",
+          title: "Roman Zhuravlov - Contact me",
+          description: "My mail, telegram and contact information.",
+        }}
+      />
+      <SiteHeader />
+      <Main>
+        <div>
+          <Cards data-fix-width ref={ref} data-visible={visible}>
+            <h2 className="montserrat">Let&apos;s talk! </h2>
+            <p>
+              Write to me about anything. I&apos;m always happy to answer and provide you my
+              professional help.
+            </p>
+            <div className="cards" data-fix-width>
+              <Link
+                href="http://t.me/snelsi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="telegram"
+              >
+                <FaTelegramPlane size={24} color="#fff" />
+                <div>Telegram for friends</div>
+              </Link>
+              <Link
+                href="mailto:hey@snelsi.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="email"
+              >
+                <GoMail size={24} color="#fff" />
+                <div>Email for customers</div>
+              </Link>
+            </div>
+          </Cards>
+          <Email />
+        </div>
+      </Main>
+      <SiteFooter />
+    </>
+  );
+};
 
 const Main = styled.main`
   margin-top: 1.25em;
@@ -110,6 +115,13 @@ const Cards = styled.div`
   min-height: 50vh;
   padding: 10vh 0;
   text-align: center;
+
+  transition: opacity 1.5s ease-out;
+
+  &[data-visible="false"] {
+    transform: translateY(12px);
+    opacity: 0;
+  }
 
   & > p {
     max-width: 420px;

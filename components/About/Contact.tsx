@@ -3,31 +3,45 @@ import styled from "styled-components";
 
 import Link from "next/link";
 
-import { BubblesBackground } from "../BubblesBackground";
 import { Button } from "components";
+import { useInView } from "scripts";
+import { BubblesBackground } from "../BubblesBackground";
 
 interface ContactProps {}
 
-export const Contact: React.FC<ContactProps> = () => (
-  <div className="block">
-    <Container>
-      <BubblesBackground />
+export const Contact: React.FC<ContactProps> = () => {
+  const { visible, ref } = useInView();
 
-      <div>
-        <h4 data-font-size="Large" className="montserrat">
-          Let&apos;s talk!
-        </h4>
+  return (
+    <Wrapper className="block" ref={ref} data-visible={visible}>
+      <Container>
+        <BubblesBackground />
+
         <div>
-          Write to me about anything. I&apos;m always happy to answer and provide you my professional
-          help.
+          <h4 data-font-size="Large" className="montserrat">
+            Let&apos;s talk!
+          </h4>
+          <div>
+            Write to me about anything. I&apos;m always happy to answer and provide you my
+            professional help.
+          </div>
         </div>
-      </div>
-      <Link href="/contact">
-        <Button>Contact me</Button>
-      </Link>
-    </Container>
-  </div>
-);
+        <Link href="/contact">
+          <Button>Contact me</Button>
+        </Link>
+      </Container>
+    </Wrapper>
+  );
+};
+
+const Wrapper = styled.div`
+  transition: opacity 1s ease;
+
+  &[data-visible="false"] {
+    transform: translateY(12px);
+    opacity: 0;
+  }
+`;
 
 const Container = styled.div`
   width: 100%;

@@ -3,25 +3,30 @@ import styled from "styled-components";
 
 import { BubblesBackground } from "components";
 import { Buttons, HeroImage, Title } from "components/Landing";
+import { useInView } from "scripts";
 
 interface LandingProps {}
 
-export const Landing: React.FC<LandingProps> = () => (
-  <Container id="Landing">
-    <BubblesBackground />
-    <div className="wrapper">
-      <div className="content">
-        <Title />
-        <p data-font-size="Focus">
-          I’m a 20 years old React / Typescript Front-end developer and UI / UX designer from
-          Ukraine
-        </p>
-        <Buttons />
+export const Landing: React.FC<LandingProps> = () => {
+  const { visible, ref } = useInView({ rootMargin: "0px" });
+
+  return (
+    <Container id="Landing">
+      <BubblesBackground />
+      <div className="wrapper" ref={ref} data-visible={visible}>
+        <div className="content">
+          <Title />
+          <p data-font-size="Focus">
+            I’m a 20 years old React / Typescript Front-end developer and UI / UX designer from
+            Ukraine
+          </p>
+          <Buttons />
+        </div>
+        <HeroImage />
       </div>
-      <HeroImage />
-    </div>
-  </Container>
-);
+    </Container>
+  );
+};
 
 const Container = styled.div`
   background: linear-gradient(108.43deg, #f9f8fd 0%, #f1edff 100%), #f9f8fd;
@@ -39,6 +44,13 @@ const Container = styled.div`
     max-width: 1440px;
     padding: 24px 0;
     width: 90%;
+
+    transition: opacity 1.5s ease;
+
+    &[data-visible="false"] {
+      transform: translateY(12px);
+      opacity: 0;
+    }
 
     & > .content {
       z-index: 1;

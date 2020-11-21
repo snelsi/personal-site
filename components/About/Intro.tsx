@@ -4,13 +4,20 @@ import styled from "styled-components";
 import Link from "next/link";
 
 import { Button, Image } from "components";
-import { calculateYearSince } from "scripts";
+import { calculateYearSince, useInView } from "scripts";
 
 const Block = styled.div`
   align-items: flex-start;
   display: flex;
   justify-content: center;
   max-width: 1440px;
+
+  transition: opacity 1.5s ease;
+
+  &[data-visible="false"] {
+    transform: translateY(12px);
+    opacity: 0;
+  }
 
   @media (min-width: 1020px) {
     & > .imageWrapper {
@@ -74,26 +81,31 @@ const Block = styled.div`
 
 interface IntroProps {}
 
-export const Intro: React.FC<IntroProps> = () => (
-  <Block className="block">
-    <div className="text-block">
-      <h1 className="montserrat">Roman Zhuravlov</h1>
-      <h3>Frontend web developer and UI/UX designer</h3>
-      <p>
-        Hey! I am {calculateYearSince(new Date("April 22 2000"))} years old web developer from
-        Ukraine. I specialize in client interfaces, functional components and their internal logic.
-        I create modern, beautiful, and accessible websites and apps. My goal is to help companies
-        around the world to build their brand and turn incoming people into happy customers.
-      </p>
-      <p className="aside">
-        Let&apos;s work together! I&apos;m always happy to provide you my professional help.
-      </p>
-      <Link href="/contact">
-        <Button>Contact me</Button>
-      </Link>
-    </div>
-    <div className="imageWrapper">
-      <Image src="about/me.jpg" alt="Me" width={575} height={690} bgColor="#1A1A1A" priority />
-    </div>
-  </Block>
-);
+export const Intro: React.FC<IntroProps> = () => {
+  const { visible, ref } = useInView({ rootMargin: "0px" });
+
+  return (
+    <Block className="block" ref={ref} data-visible={visible}>
+      <div className="text-block">
+        <h1 className="montserrat">Roman Zhuravlov</h1>
+        <h3>Frontend web developer and UI/UX designer</h3>
+        <p>
+          Hey! I am {calculateYearSince(new Date("April 22 2000"))} years old web developer from
+          Ukraine. I specialize in client interfaces, functional components and their internal
+          logic. I create modern, beautiful, and accessible websites and apps. My goal is to help
+          companies around the world to build their brand and turn incoming people into happy
+          customers.
+        </p>
+        <p className="aside">
+          Let&apos;s work together! I&apos;m always happy to provide you my professional help.
+        </p>
+        <Link href="/contact">
+          <Button>Contact me</Button>
+        </Link>
+      </div>
+      <div className="imageWrapper">
+        <Image src="about/me.jpg" alt="Me" width={575} height={690} bgColor="#1A1A1A" priority />
+      </div>
+    </Block>
+  );
+};

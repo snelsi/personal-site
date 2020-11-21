@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled, { keyframes } from "styled-components";
+import { useInView } from "scripts";
 
 const greetings = ["Hello!", "Привiт!", "Русские тут?", "こんにちは"];
 
@@ -9,6 +10,13 @@ const animationDuration = oneAnimationDuration * greetings.length;
 const Container = styled.div`
   display: grid;
   gap: 48px;
+
+  transition: opacity 1s ease;
+
+  &[data-visible="false"] {
+    transform: translateY(12px);
+    opacity: 0;
+  }
 
   @media (min-width: 1020px) {
     grid-template-columns: 4fr 3fr;
@@ -22,29 +30,33 @@ const Container = styled.div`
 
 interface LanguagesProps {}
 
-export const Languages: React.FC<LanguagesProps> = () => (
-  <Container className="block">
-    <Wrapper>
-      <h4>
-        {greetings.map((greeting, index) => (
-          <FadingTitle data-font-size="Large" key={greeting} delay={oneAnimationDuration * index}>
-            {greeting}
-          </FadingTitle>
-        ))}
-      </h4>
-    </Wrapper>
+export const Languages: React.FC<LanguagesProps> = () => {
+  const { visible, ref } = useInView();
 
-    <div className="text-block">
-      <h3>Knowledge of languages</h3>
-      <ul>
-        <li>Russian - Native</li>
-        <li>Ukrainian - Native</li>
-        <li>English - Strong</li>
-        <li>Japanese - Beginner</li>
-      </ul>
-    </div>
-  </Container>
-);
+  return (
+    <Container className="block" ref={ref} data-visible={visible}>
+      <Wrapper>
+        <h4>
+          {greetings.map((greeting, index) => (
+            <FadingTitle data-font-size="Large" key={greeting} delay={oneAnimationDuration * index}>
+              {greeting}
+            </FadingTitle>
+          ))}
+        </h4>
+      </Wrapper>
+
+      <div className="text-block">
+        <h3>Knowledge of languages</h3>
+        <ul>
+          <li>Russian - Native</li>
+          <li>Ukrainian - Native</li>
+          <li>English - Strong</li>
+          <li>Japanese - Beginner</li>
+        </ul>
+      </div>
+    </Container>
+  );
+};
 
 const Wrapper = styled.div`
   align-items: center;

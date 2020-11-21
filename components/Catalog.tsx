@@ -1,10 +1,19 @@
 import * as React from "react";
 import styled from "styled-components";
+import { useMediaQuery } from "@material-ui/core";
 
 import { ButtonText, Card } from "components";
-
 import { Tag, projects } from "components/projects";
-import { useMediaQuery } from "@material-ui/core";
+import { useInView } from "scripts";
+
+const Wrapper = styled.div`
+  transition: opacity 1.5s ease-out;
+
+  &[data-visible="false"] {
+    transform: translateY(12px);
+    opacity: 0;
+  }
+`;
 
 const Header = styled.div`
   align-items: center;
@@ -69,9 +78,10 @@ interface CatalogProps {}
 export const CardsCatalog: React.FC<CatalogProps> = () => {
   const [mode, setMode] = React.useState<Tag>(undefined);
   const isMobile = useMediaQuery("(max-width: 800px)");
+  const { visible, ref } = useInView();
 
   return (
-    <div data-fix-width id="projects">
+    <Wrapper data-fix-width id="projects" ref={ref} data-visible={visible}>
       <Header>
         <h3 className="montserrat">My Projects</h3>
         <ul>
@@ -124,6 +134,6 @@ export const CardsCatalog: React.FC<CatalogProps> = () => {
           </li>
         ))}
       </Grid>
-    </div>
+    </Wrapper>
   );
 };

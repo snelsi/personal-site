@@ -1,8 +1,16 @@
 import * as React from "react";
 import styled from "styled-components";
+import { useInView } from "scripts";
 
 const Container = styled.div`
   width: 100% !important;
+
+  transition: opacity 1s ease;
+
+  &[data-visible="false"] {
+    transform: translateY(12px);
+    opacity: 0;
+  }
 
   & > .header {
     margin-bottom: 1em !important;
@@ -158,9 +166,10 @@ interface ProfessionalSkillsProps {}
 
 export const ProfessionalSkills: React.FC<ProfessionalSkillsProps> = () => {
   const [state, setState] = React.useState(0);
+  const { visible, ref } = useInView();
 
   return (
-    <Container className="block">
+    <Container className="block" ref={ref} data-visible={visible}>
       <div className="header block" data-font-size="Large" data-font-weight="600">
         <div className="text-block">
           <h3 data-font-size="Large" className="montserrat">
