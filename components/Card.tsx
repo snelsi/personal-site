@@ -132,7 +132,6 @@ const CardBase = styled.a`
     border-radius: 6px;
     overflow: hidden;
     position: relative;
-    margin-bottom: 16px;
     image-rendering: -webkit-optimize-contrast;
 
     &::after {
@@ -148,6 +147,7 @@ const CardBase = styled.a`
   }
 
   & .textContainer {
+    margin-top: 16px;
     padding-right: 1em;
     & svg {
       display: inline-block;
