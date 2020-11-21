@@ -6,7 +6,7 @@ interface HeroImageProps {}
 
 export const HeroImage: React.FC<HeroImageProps> = () => (
   <Container>
-    <Image src="App.jpg" alt="Hero Illustration" width={2880} height={1900} />
+    <Image src="App.jpg" alt="Hero Illustration" width={2880} height={1900} priority />
   </Container>
 );
 

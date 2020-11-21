@@ -1,13 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import Img from "next/image";
-
-interface ImageProps {
-  src: string;
-  alt: string;
-  width: number;
-  height: number;
-}
+import Img, { ImageProps } from "next/image";
 
 export const Image: React.FC<ImageProps> = ({ src, ...props }) => (
   <Wrapper className="image-container">
@@ -26,7 +19,7 @@ const Wrapper = styled.div`
   }
 
   & > div {
-    display: block;
+    display: block !important;
   }
 
   & img {

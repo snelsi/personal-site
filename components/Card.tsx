@@ -41,10 +41,13 @@ const Tags: React.FC<TagsProps> = ({ tags }) => {
   return null;
 };
 
-const InnerContent: React.FC<Project> = ({ img, title, tags }) => (
+interface InnerContentProps extends Project {
+  priority?: boolean;
+}
+const InnerContent: React.FC<InnerContentProps> = ({ img, title, tags, priority = false }) => (
   <>
     <div className="imageContainer">
-      <Image src={img} alt="Card preview" width={1920} height={1442} />
+      <Image src={img} alt="Card preview" width={1920} height={1442} priority={priority} />
       <Tags tags={tags} />
     </div>
     <div className="textContainer montserrat" data-font-size="L">
@@ -73,6 +76,7 @@ const InnerContent: React.FC<Project> = ({ img, title, tags }) => (
 
 interface CardProps extends Project {
   disabled?: boolean;
+  priority?: boolean;
 }
 export const Card: React.FC<CardProps> = ({ disabled = false, ...props }) => {
   if (props.url)

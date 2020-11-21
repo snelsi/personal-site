@@ -114,9 +114,13 @@ export const CardsCatalog: React.FC<CatalogProps> = () => {
         </ul>
       </Header>
       <Grid>
-        {projects.map((project) => (
+        {projects.map((project, index) => (
           <li key={project.title}>
-            <Card {...project} disabled={mode && !project.tags.includes(mode)} />
+            <Card
+              {...project}
+              disabled={mode && !project.tags.includes(mode)}
+              priority={index < 4}
+            />
           </li>
         ))}
       </Grid>
