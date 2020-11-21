@@ -12,14 +12,14 @@ export const projects: Project[] = [
   {
     url: "https://tulpan.snelsi.now.sh/",
     img: "cards/Tulpan.jpg",
-    title: "Tyulpan - Gorgeous Landing page for a Car Service Company",
+    title: "Tyulpan - Gorgeous Landing page for the Car Service",
     tags: ["New", "Project"],
     bgColor: "#fff",
   },
   {
     url: "https://medspravki.snelsi.vercel.app/",
     img: "cards/Medspravki.jpg",
-    title: "Medspravki UA - Next generation of Medical Certificates",
+    title: "Medspravki UA - Nextgen of Medical Certificates",
     tags: ["Project"],
     bgColor: "#fff",
   },
@@ -47,7 +47,7 @@ export const projects: Project[] = [
   {
     url: "http://my-dashboard.now.sh/",
     img: "cards/Dashboard.jpg",
-    title: "Tasks Managament Dashboard with beautiful-dnd",
+    title: "Cool and Basic Project Management Dashboard",
     tags: ["Project"],
     bgColor: "#FAFAFA",
   },
