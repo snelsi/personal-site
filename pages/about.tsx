@@ -18,7 +18,7 @@ const AboutPage: NextPage = () => (
         description: "Personal site, blog and portfolio of Roman Zhuravlov.",
       }}
     />
-    {/* <NewsLine /> */}
+    <NewsLine />
     <SiteHeader />
     <Main>
       <About />

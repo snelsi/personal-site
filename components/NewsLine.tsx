@@ -51,15 +51,19 @@ const Wrapper = styled.div`
 
 interface NewsLineProps {}
 
-export const NewsLine: React.FC<NewsLineProps> = () => (
-  <Wrapper>
-    I&apos;m available for work!{" "}
-    <span role="img" aria-label="turtle with megaphone">
-      📣🐢
-    </span>
-    <div className="optional"> Contact me if you are interested.</div>{" "}
-    <Link href="/contact">
-      <a href="/contact">Contact</a>
-    </Link>
-  </Wrapper>
-);
+export const NewsLine: React.FC<NewsLineProps> = () => {
+  return null;
+  // eslint-disable-next-line no-unreachable
+  return (
+    <Wrapper>
+      I&apos;m available for work!{" "}
+      <span role="img" aria-label="turtle with megaphone">
+        📣🐢
+      </span>
+      <div className="optional"> Contact me if you are interested.</div>{" "}
+      <Link href="/contact">
+        <a href="/contact">Contact</a>
+      </Link>
+    </Wrapper>
+  );
+};
