@@ -12,23 +12,26 @@ import { useInView } from "scripts";
 const Link = styled.a`
   align-items: center;
   background-color: var(--color-gray-1);
-  border-radius: 20px;
+  border-radius: 12px;
   box-shadow: var(--shadow);
   color: var(--color-text-white) !important;
   cursor: pointer;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  font-size: 21px;
   font-family: Montserrat, var(--sans-family);
-  overflow: hidden;
-  padding: 25% 0.75em;
-  text-align: center;
-  transition: var(--transition-ease);
-
-  max-width: 240px;
+  font-weight: 500;
+  font-variation-settings: "wght" 500;
   margin: auto;
+  height: 240px;
+  overflow: hidden;
+  padding: 1em;
+  position: relative;
+  text-align: center;
+  transition: all 0.2s ease-out;
+
   width: 100%;
-  font-size: 20px;
 
   & > svg {
     --size: 100px;
@@ -46,7 +49,7 @@ const Link = styled.a`
   &:hover,
   &:focus {
     box-shadow: var(--shadow-hover);
-    transform: scale(1.02);
+    transform: scale(1.01);
   }
   &:active {
     transform: scale(0.98);
@@ -77,14 +80,14 @@ const ContactPage: NextPage = () => {
               Write to me about anything! I&apos;m always happy to answer and provide you my
               professional help.
             </p>
-            <div className="cards" data-fix-width>
+            <div className="cards">
               <Link
                 href="http://t.me/snelsi"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="telegram"
               >
-                <FaTelegramPlane size={24} color="#fff" />
+                <FaTelegramPlane size={24} />
                 <div>Telegram for friends</div>
               </Link>
               <Link
@@ -93,12 +96,12 @@ const ContactPage: NextPage = () => {
                 rel="noopener noreferrer"
                 className="email"
               >
-                <GoMail size={24} color="#fff" />
+                <GoMail size={24} />
                 <div>Email for customers</div>
               </Link>
             </div>
           </Cards>
-          <Email />
+          <Email data-fix-width />
         </div>
       </Main>
       <SiteFooter />
@@ -131,20 +134,18 @@ const Cards = styled.div`
   }
 
   & > .cards {
-    display: grid;
     align-items: center;
+    display: grid;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 920px;
 
-    @media (min-width: 641px) {
-      grid-template-columns: 240px 240px;
-    }
-    @media (max-width: 640px) {
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    }
-    @media (max-width: 440px) {
-      max-width: 240px;
+    @media (max-width: 420px) {
+      grid-template-columns: 1fr;
     }
 
     & .telegram {

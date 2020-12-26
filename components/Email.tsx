@@ -53,14 +53,14 @@ const Wrapper = styled.div`
 `;
 interface EmailProps {}
 
-export const Email: React.FC<EmailProps> = () => {
+export const Email: React.FC<EmailProps> = ({ ...props }) => {
   const [open, setOpen] = React.useState(false);
   const { ref, visible } = useInView({ rootMargin: "0px" });
 
   const closeSnackbar = () => setOpen(false);
 
   return (
-    <Wrapper ref={ref} data-visible={visible}>
+    <Wrapper ref={ref} data-visible={visible} {...props}>
       <div className="copy-email-title" data-font-size="Focus">
         Or just send me a letter:
       </div>
