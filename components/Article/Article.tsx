@@ -19,11 +19,11 @@ export const Article = styled.article`
     display: block;
   }
   & > *:not([data-full-width]) {
-    color: rgba(0, 0, 0, 0.9);
+    color: #292926;
     margin-left: auto;
     margin-right: auto;
-    max-width: 42rem;
-    width: 87.5%;
+    max-width: 680px;
+    width: 88%;
   }
 
   & h1 {
@@ -36,7 +36,7 @@ export const Article = styled.article`
   & h2 {
     font-size: 25px;
     line-height: 30px;
-    margin: 70px 0 20px;
+    margin: 60px 0 20px;
     max-width: 720px;
   }
   & h3 {
@@ -51,9 +51,11 @@ export const Article = styled.article`
     font-weight: 400;
     font-variation-settings: "wght" 400;
     font-size: 19px;
-    line-height: 28px;
-    margin-bottom: 20px;
+    line-height: 30px;
+    margin-bottom: 24px;
     max-width: 680px;
+    letter-spacing: -0.003em;
+    word-break: break-word;
   }
 
   & blockquote {
