@@ -6,34 +6,67 @@ import IconButton from "@material-ui/core/IconButton";
 import { MdClose } from "react-icons/md";
 
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import { useInView } from "scripts";
 
 const Wrapper = styled.div`
   text-align: center;
   margin-bottom: 10vh;
 
-  & > h6 {
+  transition: opacity 1.5s ease-out;
+
+  &[data-visible="false"] {
+    transform: translateY(12px);
+    opacity: 0;
+  }
+
+  & > div.copy-email-title {
     margin-bottom: 0.5em;
+    font-size: 19px;
   }
 
   & > address > button {
     border: none;
-    background: none;
+    border-radius: 5px;
     cursor: pointer;
+
+    background-color: #ceceff;
+    max-width: 100%;
+    font-family: "Montserrat";
+    font-size: 26px;
+    transition: var(--transition-ease);
+    padding: 0.225em 0.75em;
+    width: 380px;
+
+    &:focus:not(:focus-visible) {
+      outline: none;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: #c1c1ff;
+    }
+
+    &:active {
+      background-color: #b8b8ff;
+    }
   }
 `;
 interface EmailProps {}
 
 export const Email: React.FC<EmailProps> = () => {
   const [open, setOpen] = React.useState(false);
+  const { ref, visible } = useInView({ rootMargin: "0px" });
 
   const closeSnackbar = () => setOpen(false);
 
   return (
-    <Wrapper>
-      <h6>Or just send me a letter:</h6>
+    <Wrapper ref={ref} data-visible={visible}>
+      <div className="copy-email-title" data-font-size="Focus">
+        Or just send me a letter:
+      </div>
       <address>
-        <CopyToClipboard text="hey@snelsi.com" onCopy={() => setOpen(true)}>
-          <button data-font-size="XL">hey@snelsi.com</button>
+        <CopyToClipboard text="hello@snelsi.com" onCopy={() => setOpen(true)}>
+          <button data-font-size="L">hello@snelsi.com</button>
         </CopyToClipboard>
       </address>
       <Snackbar
