@@ -6,7 +6,7 @@ import { SiteHeaderLink } from "components/SiteHeader";
 interface SiteHeaderLinksProps {}
 
 export const SiteHeaderLinks: React.FC<SiteHeaderLinksProps> = () => (
-  <Container>
+  <Container className="site-header-links">
     <SiteHeaderLink href="/blog">Blog</SiteHeaderLink>
     <SiteHeaderLink href="/about">About me</SiteHeaderLink>
     <SiteHeaderLink href="/contact">Contact</SiteHeaderLink>

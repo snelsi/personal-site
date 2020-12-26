@@ -29,7 +29,7 @@ const Nav = styled.nav`
   @media (max-width: 720px) {
     padding: 0 20px;
 
-    & .HeaderLinkContainer {
+    & .site-header-links {
       display: none;
     }
   }
