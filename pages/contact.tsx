@@ -74,7 +74,7 @@ const ContactPage: NextPage = () => {
           <Cards data-fix-width ref={ref} data-visible={visible}>
             <h2 className="montserrat">Let&apos;s talk! </h2>
             <p>
-              Write to me about anything. I&apos;m always happy to answer and provide you my
+              Write to me about anything! I&apos;m always happy to answer and provide you my
               professional help.
             </p>
             <div className="cards" data-fix-width>
@@ -124,8 +124,10 @@ const Cards = styled.div`
   }
 
   & > p {
-    max-width: 420px;
     margin: 24px auto 48px;
+    max-width: 500px;
+    line-height: 1.4;
+    font-size: 19px;
   }
 
   & > .cards {
