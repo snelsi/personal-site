@@ -79,7 +79,7 @@ export const FunnyVideo: React.FC<FunnyVideoProps> = () => {
   return (
     <Video>
       <video ref={videoRef} autoPlay muted loop>
-        <source src={`funnyVideos/${video.src}`} type="video/mp4" />
+        <source src={`/funnyVideos/${video.src}`} type="video/mp4" />
         404 | Page not found
       </video>
       {video.sound && (
