@@ -69,3 +69,8 @@ hr {
 ul {
   list-style: none;
 }
+
+::selection {
+  background-color: #79ffe1;
+  color: #000;
+}
