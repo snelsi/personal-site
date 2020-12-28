@@ -17,7 +17,7 @@ export const Contact: React.FC<ContactProps> = () => {
       <Container>
         <BubblesBackground />
 
-        <div>
+        <div className="block-content">
           <h4 data-font-size="Large" className="montserrat">
             Let&apos;s talk!
           </h4>
@@ -51,7 +51,7 @@ const Container = styled.div`
   background: linear-gradient(108.43deg, #ff90c6 0%, #c2b1ff 100%);
   color: white;
 
-  padding: 2em 4em;
+  padding: 2em clamp(2em, 5vw, 4em);
   margin: auto;
   min-height: 240px;
 
@@ -62,21 +62,10 @@ const Container = styled.div`
   position: relative;
   overflow: hidden;
 
-  @media (max-width: 800px) {
-    flex-direction: column;
-
-    & > div {
-      padding-right: 0;
-    }
-    & > button {
-      margin-top: 1.5em;
-    }
-  }
-
-  & > div {
+  & > div.block-content {
     text-align: left;
     z-index: 1;
-    padding-right: 40px;
+    padding-right: clamp(20px, 5vw, 40px);
     & > h4 {
       margin-bottom: 0.4em;
     }
@@ -84,7 +73,7 @@ const Container = styled.div`
       font-weight: 400;
       font-size: 19px;
       line-height: 1.5;
-      max-width: 500px;
+      max-width: 450px;
     }
   }
   & > button {
@@ -95,5 +84,17 @@ const Container = styled.div`
     padding: 0 32px;
     z-index: 1;
     white-space: nowrap;
+  }
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+
+    & > div.block-content {
+      text-align: center;
+      padding-right: 0;
+    }
+    & > button {
+      margin-top: 1.25em;
+    }
   }
 `;
