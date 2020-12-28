@@ -4,9 +4,19 @@ import Img, { ImageProps as NextImageProps } from "next/image";
 
 interface ImageProps {
   bgColor?: string;
+  noShadow?: boolean;
 }
-export const Image: React.FC<ImageProps & NextImageProps> = ({ src, bgColor, ...props }) => (
-  <Wrapper className="image-container" style={bgColor ? { background: bgColor } : undefined}>
+export const Image: React.FC<ImageProps & NextImageProps> = ({
+  src,
+  bgColor,
+  noShadow = false,
+  ...props
+}) => (
+  <Wrapper
+    className="image-container"
+    style={bgColor ? { background: bgColor } : undefined}
+    data-no-shadow={noShadow}
+  >
     <Img src={`/images/${src}`} {...props} />
   </Wrapper>
 );
@@ -36,5 +46,9 @@ const Wrapper = styled.div<ImageProps>`
     height: 110%;
     top: -5%;
     left: -5%;
+  }
+
+  &[data-no-shadow="true"] {
+    box-shadow: none;
   }
 `;

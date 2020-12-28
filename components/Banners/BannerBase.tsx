@@ -9,7 +9,8 @@ const Banner = styled.div`
   cursor: pointer;
   display: flex;
   height: 30vw;
-  max-height: 200px;
+  max-height: 220px;
+  min-height: 180px;
   text-decoration: none;
   overflow: hidden;
   padding: 12px 24px;

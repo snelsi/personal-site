@@ -52,7 +52,7 @@ a:active {
   color: var(--color-primary-darker);
 }
 
-*[data-fix-width] {
+*[data-fix-width="true"] {
   margin-left: auto;
   margin-right: auto;
   max-width: 1440px;
