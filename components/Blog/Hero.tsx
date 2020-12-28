@@ -36,6 +36,7 @@ const Wrapper = styled.a`
     margin-bottom: 20px;
 
     color: var(--color-text-main);
+    font-family: Inter, var(--sans-family);
 
     & .hero-date {
       color: #888;
@@ -95,7 +96,11 @@ export const Hero: React.FC<HeroProps> = ({
           <h2 className="hero-title">{title}</h2>
           <div className="hero-tags">
             <span className="hero-date">{date}</span>
-            {category && <span className="hero-category">{category}</span>}
+            {category && (
+              <span className="hero-category" data-font-weight={500}>
+                {category}
+              </span>
+            )}
           </div>
         </article>
       </Wrapper>
