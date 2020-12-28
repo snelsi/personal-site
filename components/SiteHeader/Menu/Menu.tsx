@@ -72,5 +72,7 @@ const Buttons = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   grid-gap: 4px;
 
-  max-width: 360px;
+  @media (min-width: 721px) {
+    max-width: 360px;
+  }
 `;

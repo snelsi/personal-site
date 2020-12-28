@@ -9,7 +9,7 @@ interface MenuHeaderProps {
 
 export const MenuHeader: React.FC<MenuHeaderProps> = ({ closeDialog }) => (
   <Header>
-    <h4>Roman Zhuravlov</h4>
+    <h4 data-font-weight="bold">Roman Zhuravlov</h4>
     <CloseButton onClick={closeDialog} />
   </Header>
 );

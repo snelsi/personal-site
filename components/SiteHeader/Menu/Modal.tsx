@@ -22,5 +22,6 @@ export const Modal = styled(Dialog)({
   "& .MuiDialog-paperFullScreen": {
     backgroundColor: "var(--color-surface-1)",
     margin: 0,
+    padding: "12px 5vw",
   },
 });
