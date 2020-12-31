@@ -12,7 +12,7 @@ export default {
         url: "https://snelsi.now.sh/images/MainPreview.jpg",
         width: 1200,
         height: 628,
-        alt: "My name on forest background",
+        alt: "Roman Zhuravlov - Web Developer",
       },
     ],
     site_name: "Roman Zhuravlov - Web Developer",
