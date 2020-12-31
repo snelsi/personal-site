@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
 export const Article = styled.article`
+  --color-text-header: #1f1f1f;
+  --color-text-main: #292926;
+  --color-text-secondary: #6f6f79;
+
   vertical-align: baseline;
   font-weight: 400;
   font-variation-settings: "wght" 400;
@@ -24,7 +28,7 @@ export const Article = styled.article`
     display: block;
   }
   & > *:not([data-full-width]) {
-    color: #292926;
+    color: var(--color-text-main);
     margin-left: auto;
     margin-right: auto;
     max-width: 680px;

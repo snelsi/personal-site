@@ -34,7 +34,7 @@ const ArticleHeader = styled.div`
 
   & a {
     border-radius: 3px;
-    color: #888;
+    color: rgb(111, 111, 121);
     display: block;
     cursor: pointer;
     margin-bottom: 20px;
@@ -71,7 +71,7 @@ const Header = styled.div`
   }
   & .post-tags {
     align-items: center;
-    color: var(--color-text-main);
+    color: var(--color-text-header);
     font-size: 16px;
     margin-top: 14px;
     margin-bottom: 20px;
@@ -84,7 +84,7 @@ const Header = styled.div`
     }
 
     & .post-date {
-      color: #888;
+      color: var(--color-text-secondary);
       margin-right: 1em;
     }
     & .post-category {
@@ -92,7 +92,7 @@ const Header = styled.div`
     }
     & .post-read-time {
       align-items: center;
-      color: #888;
+      color: var(--color-text-secondary);
       display: inline-flex;
       flex-wrap: nowrap;
       font-size: 0.94em;
@@ -187,9 +187,9 @@ const BlogPost: React.FC<BlogPostProps> = ({ source, post, slug }) => {
                   )}
                 </div>
                 {thumbnail && (
-                <div className="post-thumbnail">
-                  <Image src={thumbnail} alt={thumbnailAlt} width={1440} height={400} priority />
-                </div>
+                  <div className="post-thumbnail">
+                    <Image src={thumbnail} alt={thumbnailAlt} width={1440} height={400} priority />
+                  </div>
                 )}
               </div>
             </Header>
