@@ -87,7 +87,7 @@ export const Hero: React.FC<HeroProps> = ({
             <Image
               src={thumbnail}
               alt={thumbnailAlt}
-              width={1080}
+              width={1440}
               height={400}
               priority={priority}
             />

@@ -2,9 +2,14 @@ import styled from "styled-components";
 
 export const Article = styled.article`
   vertical-align: baseline;
+  font-weight: 400;
+  font-variation-settings: "wght" 400;
+  font-size: 19px;
+  line-height: 30px;
 
   & * {
     font-family: Inter, var(--sans-family);
+    line-height: inherit;
   }
   & h1,
   & h2,
@@ -26,36 +31,54 @@ export const Article = styled.article`
     width: 88%;
   }
 
+  & .article-header {
+    margin-bottom: min(8vw, 80px);
+  }
+
   & h1 {
     font-size: 48px;
     line-height: 54px;
     margin-bottom: 40px;
     letter-spacing: -0.2px;
-    max-width: 720px;
   }
   & h2 {
     font-size: 25px;
     line-height: 30px;
-    margin: 60px 0 20px;
-    max-width: 720px;
+    margin: 60px 0 24px;
   }
   & h3 {
     font-size: 48px;
     line-height: 54px;
     margin-bottom: 40px;
     letter-spacing: -0.2px;
-    max-width: 720px;
   }
 
   & p {
-    font-weight: 400;
-    font-variation-settings: "wght" 400;
-    font-size: 19px;
-    line-height: 30px;
     margin-bottom: 24px;
-    max-width: 680px;
     letter-spacing: -0.003em;
     word-break: break-word;
+  }
+
+  & ol,
+  & ul {
+    list-style-position: outside;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    letter-spacing: -0.003em;
+    list-style-image: none;
+    padding: 0;
+    word-break: break-word;
+
+    & li {
+      max-width: 600px;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      margin-left: 1.5em;
+
+      &::marker {
+        margin-right: 1em;
+      }
+    }
   }
 
   & blockquote {
@@ -63,7 +86,6 @@ export const Article = styled.article`
     margin-top: 40px;
     font-size: 22px;
     line-height: 32px;
-    max-width: 920px;
 
     background: #f8f8f8;
     padding: 0.85em 1.5em;
@@ -76,6 +98,14 @@ export const Article = styled.article`
     background-color: #ffffa1;
     box-shadow: 0 5px 0 #ffffa1, 0 -1px 0 #ffffa1;
   }
+
+  transition: opacity 1.5s ease-out;
+
+  &[data-visible="false"] {
+    transform: translateY(12px);
+    opacity: 0;
+  }
+
   @media (max-width: 590px) {
     & h1 {
       font-size: 24px;
@@ -83,10 +113,8 @@ export const Article = styled.article`
       margin-bottom: 24px;
     }
 
-    & p {
-      font-size: 17px;
-      line-height: 25px;
-    }
+    font-size: 17px;
+    line-height: 25px;
 
     & blockquote {
       margin-bottom: 20px;

@@ -19,6 +19,7 @@
     "lint": "eslint . --ext js,jsx,ts,tsx --max-warnings=0"
   },
   "dependencies": {
+    "@fec/remark-a11y-emoji": "^3.0.0",
     "@material-ui/core": "^4.11.2",
     "@mdx-js/loader": "^1.6.22",
     "@next/mdx": "^10.0.4",
@@ -35,22 +36,23 @@
     "react-headroom": "^3.1.0",
     "react-icons": "^4.1.0",
     "react-intersection-observer": "^8.31.0",
+    "remark-mark-plus": "^1.0.21",
     "remark-slug": "^6.0.0",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
-    "@types/node": "^14.14.16",
+    "@types/node": "^14.14.17",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@types/react-headroom": "^2.2.1",
     "@types/styled-components": "^5.1.7",
-    "@typescript-eslint/eslint-plugin": "^4.11.0",
-    "@typescript-eslint/parser": "^4.11.0",
+    "@typescript-eslint/eslint-plugin": "^4.11.1",
+    "@typescript-eslint/parser": "^4.11.1",
     "babel-plugin-styled-components": "^1.12.0",
     "eslint": "^7.16.0",
-    "eslint-config-alloy": "^3.9.0",
+    "eslint-config-alloy": "^3.10.0",
     "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react": "^7.22.0",
     "next-compose-plugins": "^2.2.1",
     "typescript": "4.1.3"
   },
