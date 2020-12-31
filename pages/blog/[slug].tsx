@@ -138,9 +138,9 @@ const BlogPost: React.FC<BlogPostProps> = ({ source, post, slug }) => {
     <>
       <NextSeo
         title={title || "Roman Zhuravlov - Blog"}
-        canonical={`https://www.snelsi.now.sh/${slug}`}
+        canonical={`https://snelsi.now.sh/blog/${slug}`}
         openGraph={{
-          url: `https://www.snelsi.now.sh/${slug}`,
+          url: `https://snelsi.now.sh/blog/${slug}`,
           title: title || "Roman Zhuravlov - Blog",
           type: "blog",
         }}

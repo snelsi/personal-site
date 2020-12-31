@@ -1,9 +1,9 @@
 export default {
   title: "Roman Zhuravlov - Web developer",
   description: "Personal site, blog and portfolio of Roman Zhuravlov.",
-  canonical: "https://www.snelsi.now.sh/",
+  canonical: "https://snelsi.now.sh/",
   openGraph: {
-    url: "https://www.snelsi.now.sh/",
+    url: "https://snelsi.now.sh/",
     title: "Roman Zhuravlov - Web developer",
     type: "website",
     description: "Personal site, blog and portfolio of Roman Zhuravlov.",

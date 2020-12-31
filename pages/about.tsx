@@ -10,9 +10,9 @@ const AboutPage: NextPage = () => (
     <NextSeo
       title="Roman Zhuravlov - About me"
       description="My biography and experience."
-      canonical="https://www.snelsi.now.sh/about"
+      canonical="https://snelsi.now.sh/about"
       openGraph={{
-        url: "https://www.snelsi.now.sh/about",
+        url: "https://snelsi.now.sh/about",
         title: "Roman Zhuravlov - About me",
         type: "profile",
         description: "Personal site, blog and portfolio of Roman Zhuravlov.",
