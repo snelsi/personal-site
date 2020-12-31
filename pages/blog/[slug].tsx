@@ -125,6 +125,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ source, post, slug }) => {
   const {
     title,
     subTitle,
+    description,
     thumbnail,
     thumbnailAlt = "Article thumbnail",
     date,
@@ -142,6 +143,8 @@ const BlogPost: React.FC<BlogPostProps> = ({ source, post, slug }) => {
         openGraph={{
           url: `https://snelsi.now.sh/blog/${slug}`,
           title: title || "Roman Zhuravlov - Blog",
+          description:
+            description || subTitle || "Personal site, blog and portfolio of Roman Zhuravlov.",
           type: "blog",
           ...(thumbnail
             ? {
