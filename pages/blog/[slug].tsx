@@ -143,6 +143,18 @@ const BlogPost: React.FC<BlogPostProps> = ({ source, post, slug }) => {
           url: `https://snelsi.now.sh/blog/${slug}`,
           title: title || "Roman Zhuravlov - Blog",
           type: "blog",
+          ...(thumbnail
+            ? {
+                images: [
+                  {
+                    url: `https://snelsi.now.sh/images/${thumbnail}`,
+                    width: 1440,
+                    height: 400,
+                    alt: title || "Roman Zhuravlov - Web Developer",
+                  },
+                ],
+              }
+            : {}),
         }}
       />
 
@@ -174,9 +186,11 @@ const BlogPost: React.FC<BlogPostProps> = ({ source, post, slug }) => {
                     </span>
                   )}
                 </div>
+                {thumbnail && (
                 <div className="post-thumbnail">
                   <Image src={thumbnail} alt={thumbnailAlt} width={1440} height={400} priority />
                 </div>
+                )}
               </div>
             </Header>
             {content}
