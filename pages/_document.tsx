@@ -9,9 +9,9 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <meta charSet="utf-8" />
-          <link rel="icon" href="favicon.svg" />
-          <link rel="mask-icon" href="mask-icon.svg" color="#000000" />
-          <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+          <link rel="icon" href="/favicon.svg" />
+          <link rel="mask-icon" href="/mask-icon.svg" color="#000000" />
+          <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
           <meta name="theme-color" content="var(--color-background, white)" />
 
