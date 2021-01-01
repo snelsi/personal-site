@@ -64,9 +64,9 @@ const ContactPage: NextPage = () => {
       <NextSeo
         title="Roman Zhuravlov - Contact me"
         description="My mail, telegram and contact information."
-        canonical="https://snelsi.now.sh/contact"
+        canonical="https://snelsi.com/contact"
         openGraph={{
-          url: "https://snelsi.now.sh/contact",
+          url: "https://snelsi.com/contact",
           title: "Roman Zhuravlov - Contact me",
           description: "My mail, telegram and contact information.",
         }}

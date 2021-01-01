@@ -90,9 +90,9 @@ const BlogPage: NextPage<BlogPageProps> = ({ posts }) => {
       <NextSeo
         title="Roman Zhuravlov - Blog"
         description="My articles and thoughts."
-        canonical="https://snelsi.now.sh/blog"
+        canonical="https://snelsi.com/blog"
         openGraph={{
-          url: "https://snelsi.now.sh/blog",
+          url: "https://snelsi.com/blog",
           title: "Roman Zhuravlov - Blog",
           type: "blog",
           description: "My articles and thoughts.",
