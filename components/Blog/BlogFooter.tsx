@@ -44,13 +44,17 @@ export const BlogFooter: React.FC<BlogFooterProps> = () => (
   <Footer data-fix-width className="montserrat" data-font-weight="500">
     <div>Пишу о чём хочу</div>
     <div className="links">
-      <a href="https://github.com/snelsi">
+      <a href="https://github.com/snelsi" target="_blank" rel="noopener noreferrer">
         <FiGithub />
       </a>
-      <a href="https://dribbble.com/snelsi">
+      <a href="https://dribbble.com/snelsi" target="_blank" rel="noopener noreferrer">
         <FiDribbble />
       </a>
-      <a href="https://www.linkedin.com/in/roman-zhuravlov/">
+      <a
+        href="https://www.linkedin.com/in/roman-zhuravlov/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <FiLinkedin />
       </a>
     </div>
