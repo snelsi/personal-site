@@ -7,11 +7,10 @@ import a11yEmoji from "@fec/remark-a11y-emoji";
 import remarkMark from "remark-mark-plus";
 import remarkSlug from "remark-slug";
 import Link from "next/link";
-import { FiClock } from "react-icons/fi";
 
 import { Post } from "interfaces";
 import { Image, SiteFooter, SiteHeader } from "components";
-import { BlogFooter, ContentTable } from "components/Blog";
+import { BlogFooter, ContentTable, ReadTime } from "components/Blog";
 import { Article } from "components/Article";
 import { getPosts, getPostBySlug } from "scripts/postsApi";
 import { useInView } from "scripts";
@@ -71,7 +70,7 @@ const Header = styled.div`
   }
   & .post-tags {
     align-items: center;
-    color: var(--color-text-header);
+    color: var(--color-blog-text-header);
     font-size: 16px;
     margin-top: 14px;
     margin-bottom: 20px;
@@ -84,21 +83,11 @@ const Header = styled.div`
     }
 
     & .post-date {
-      color: var(--color-text-secondary);
+      color: var(--color-blog-text-secondary);
       margin-right: 1em;
     }
     & .post-category {
       margin-right: 1em;
-    }
-    & .post-read-time {
-      align-items: center;
-      color: var(--color-text-secondary);
-      display: inline-flex;
-      flex-wrap: nowrap;
-      font-size: 0.94em;
-      & svg {
-        margin-right: 0.4em;
-      }
     }
   }
   & .post-title {
@@ -182,12 +171,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ source, post, slug }) => {
                       {category}
                     </span>
                   )}
-                  {readTime && (
-                    <span className="post-read-time" title={`${readTime} minutes read`}>
-                      <FiClock />
-                      {readTime}m
-                    </span>
-                  )}
+                  <ReadTime readTime={readTime} />
                 </div>
                 {thumbnail && (
                   <div className="post-thumbnail">

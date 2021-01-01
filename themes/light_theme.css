@@ -25,4 +25,8 @@
 
   --color-text-main: #1f1f1f;
   --color-text-secondary: #393939;
+
+  --color-blog-text-header: #1f1f1f;
+  --color-blog-text-main: #292926;
+  --color-blog-text-secondary: #6f6f79;
 }

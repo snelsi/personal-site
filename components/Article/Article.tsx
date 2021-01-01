@@ -1,10 +1,6 @@
 import styled from "styled-components";
 
 export const Article = styled.article`
-  --color-text-header: #1f1f1f;
-  --color-text-main: #292926;
-  --color-text-secondary: #6f6f79;
-
   vertical-align: baseline;
   font-weight: 400;
   font-variation-settings: "wght" 400;

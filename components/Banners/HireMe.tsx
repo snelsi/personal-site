@@ -45,6 +45,7 @@ const Banner = styled.a`
   & p {
     color: #222;
     margin: 0.75em auto 1em;
+    font-family: Inter, var(--sans-family);
     line-height: 1.45;
     max-width: 520px;
     width: fit-content;
