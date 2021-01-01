@@ -113,8 +113,8 @@ export const HireMeBanner: React.FC<HireMeBannerProps> = () => (
           <Image
             src="blog/ginger-cat-help-center.png"
             alt="Ginger cat sitting on a computer by Icons8"
-            width={1216}
-            height={912}
+            width={400}
+            height={300}
             bgColor="transparent"
             noShadow
           />
