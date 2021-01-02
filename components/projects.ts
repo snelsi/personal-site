@@ -17,6 +17,13 @@ export const projects: Project[] = [
     bgColor: "#fff",
   },
   {
+    url: "https://smart-canvas.now.sh/",
+    img: "cards/smartCanvas.jpg",
+    title: "Smart Canvas - Online Interactive Three.js Demo",
+    tags: ["New", "Fun"],
+    bgColor: "#000",
+  },
+  {
     url: "https://medspravki.snelsi.vercel.app/",
     img: "cards/Medspravki.jpg",
     title: "Medspravki UA - Nextgen of Medical Certificates",
