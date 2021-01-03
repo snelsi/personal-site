@@ -28,7 +28,10 @@ const Wrapper = styled.div`
     & p {
       margin-top: 0.5em;
       margin-left: auto;
-      padding-left: 2em;
+
+      & > span {
+        white-space: nowrap;
+      }
     }
   }
 `;
@@ -66,11 +69,13 @@ export const HoursWorked: React.FC<HoursWorkedProps> = ({
         </div>
 
         <p data-font-size="XL">
-          of coding, designing and creating
+          <span>of coding, designing and creating</span>
           <br />
-          <Link href="/#projects">real world products</Link>.{" "}
-          <span role="img" aria-label="star">
-            🌟
+          <span>
+            <Link href="/#projects">real world products</Link>.{" "}
+            <span role="img" aria-label="star">
+              🌟
+            </span>
           </span>
         </p>
       </div>
