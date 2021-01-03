@@ -120,23 +120,47 @@ const Wrapper = styled.div`
         position: relative;
         grid-area: image;
 
-        & img {
+        & button {
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+          overflow: hidden;
           position: absolute;
           left: 0;
           top: 0;
           width: 100%;
           height: 100%;
-
-          object-fit: cover;
-
-          opacity: 0;
           transition: all 0.35s ease-out;
 
-          height: 100%;
-          width: 100%;
-
+          &:not([data-selected="true"]) {
+            user-select: none;
+            pointer-events: none;
+            opacity: 0;
+          }
           &[data-selected="true"] {
             opacity: 1;
+          }
+
+          & img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: all 0.35s ease-out;
+
+            height: 100%;
+            width: 100%;
+          }
+
+          &:hover,
+          &:focus {
+            & img {
+              transform: scale(1.01);
+            }
           }
         }
       }
@@ -160,7 +184,7 @@ const skills = [
   { skill: "SEO Marketing", img: "images/about/SEO.svg", alt: "SEO" },
   { skill: "System Engineering", img: "images/about/System.svg", alt: "System Engineering" },
   { skill: "Database Engineering", img: "images/about/DB.svg", alt: "Database Engineering" },
-  { skill: "Team managment", img: "images/about/Friendship.svg", alt: "Team managment" },
+  { skill: "Team management", img: "images/about/Friendship.svg", alt: "Team management" },
 ];
 interface ProfessionalSkillsProps {}
 
@@ -198,12 +222,15 @@ export const ProfessionalSkills: React.FC<ProfessionalSkillsProps> = () => {
           <div className="images-wrapper">
             <div className="images">
               {skills.map((skill, i) => (
-                <img
-                  src={skill.img}
-                  alt={skill.alt}
-                  data-selected={state === i}
+                <button
+                  onClick={() =>
+                    setState((curState) => (curState + 1 >= skills.length ? 0 : curState + 1))
+                  }
                   key={skill.skill}
-                />
+                  data-selected={state === i}
+                >
+                  <img src={skill.img} alt={skill.alt} />
+                </button>
               ))}
             </div>
           </div>
