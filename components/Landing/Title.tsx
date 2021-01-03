@@ -9,7 +9,7 @@ const animationDuration = oneAnimationDuration * slogans.length;
 export const Title: React.FC = () => (
   <H1 className="montserrat">
     {slogans.map(({ top, bottom, emoji }, index) => (
-      <FadingTitle key={top} delay={oneAnimationDuration * index}>
+      <FadingTitle key={top} className="fading-title" delay={oneAnimationDuration * index}>
         <div>{top}</div>
         <div>
           {bottom} <span role="img">{emoji}</span>
@@ -65,28 +65,31 @@ const H1 = styled.h1`
   @media (max-width: 340px) {
     font-size: 24px;
   }
+
+  & .fading-title {
+    animation: ${textFade} ${animationDuration}s ease-in-out 0s infinite;
+    animation-fill-mode: both;
+    display: block;
+    text-align: left;
+
+    grid-column: 1;
+    grid-row: 1;
+
+    font-size: inherit;
+
+    & > div {
+      white-space: nowrap;
+
+      & > span {
+        font-size: clamp(28px, 1em - 6px, 60px);
+      }
+    }
+  }
 `;
 
 interface FadingTitleProps {
   delay: number;
 }
 const FadingTitle = styled.span<FadingTitleProps>`
-  animation: ${textFade} ${animationDuration}s ease-in-out 0s infinite;
-  animation-fill-mode: both;
-  display: block;
-  text-align: left;
-  animation-delay: ${({ delay = 0 }) => delay}s;
-
-  grid-column: 1;
-  grid-row: 1;
-
-  font-size: inherit;
-
-  & > div {
-    white-space: nowrap;
-
-    & > span {
-      font-size: calc(1em - 6px);
-    }
-  }
+  animation-delay: ${({ delay = 0 }) => delay}s !important;
 `;

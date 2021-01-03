@@ -84,7 +84,7 @@ export const CardsCatalog: React.FC<CatalogProps> = () => {
   const { visible, ref } = useInView();
 
   return (
-    <Wrapper data-fix-width id="projects" ref={ref} data-visible={visible}>
+    <Wrapper data-fix-width id="projects" ref={ref} data-visible={visible || isMobile}>
       <Header>
         <h3 className="montserrat">My Projects</h3>
         <ul>

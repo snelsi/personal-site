@@ -58,12 +58,13 @@ const Container = styled.div`
       & p {
         margin: 32px 0;
         max-width: 480px;
+        line-height: 1.5;
       }
     }
 
     @media (max-width: 720px) {
       & > .content > p {
-        margin-bottom: 48px;
+        margin-bottom: 40px;
       }
     }
   }

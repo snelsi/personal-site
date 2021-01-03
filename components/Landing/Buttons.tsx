@@ -45,22 +45,32 @@ const Container = styled.ul`
 
   & button,
   & a {
-    width: 180px;
     border-radius: 4px;
     font-size: 18px;
+    max-width: 100%;
     padding: 0.5em 0;
+    width: 180px;
   }
 
   @media (max-width: 720px) {
-    grid-auto-flow: row;
     gap: 12px;
+    grid-auto-flow: row;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     justify-content: center;
-    margin: auto;
 
     & button,
     & a {
-      --base-color: var(--colot-magenta-500);
-      width: 260px;
+      --base-color: var(--color-magenta-500);
+      width: 250px;
+    }
+  }
+  @media (max-width: 420px) {
+    grid-template-columns: minmax(0, 1fr);
+    margin: unset;
+    width: 100%;
+    & button,
+    & a {
+      width: 100%;
     }
   }
 `;
