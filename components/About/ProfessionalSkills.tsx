@@ -130,16 +130,6 @@ const Wrapper = styled.div`
           top: 0;
           width: 100%;
           height: 100%;
-          transition: all 0.35s ease-out;
-
-          &:not([data-selected="true"]) {
-            user-select: none;
-            pointer-events: none;
-            opacity: 0;
-          }
-          &[data-selected="true"] {
-            opacity: 1;
-          }
 
           & img {
             position: absolute;
@@ -154,12 +144,23 @@ const Wrapper = styled.div`
 
             height: 100%;
             width: 100%;
+
+            &:not([data-selected="true"]) {
+              user-select: none;
+              pointer-events: none;
+              opacity: 0;
+            }
+            &[data-selected="true"] {
+              opacity: 1;
+            }
           }
 
           &:hover,
           &:focus {
             & img {
-              transform: scale(1.01);
+              &[data-selected="true"] {
+                transform: scale(1.01);
+              }
             }
           }
         }
@@ -221,17 +222,21 @@ export const ProfessionalSkills: React.FC<ProfessionalSkillsProps> = () => {
 
           <div className="images-wrapper">
             <div className="images">
-              {skills.map((skill, i) => (
-                <button
-                  onClick={() =>
-                    setState((curState) => (curState + 1 >= skills.length ? 0 : curState + 1))
-                  }
-                  key={skill.skill}
-                  data-selected={state === i}
-                >
-                  <img src={skill.img} alt={skill.alt} />
-                </button>
-              ))}
+              <button
+                onClick={() =>
+                  setState((curState) => (curState + 1 >= skills.length ? 0 : curState + 1))
+                }
+                aria-label="Next Slide"
+              >
+                {skills.map((skill, i) => (
+                  <img
+                    src={skill.img}
+                    alt={skill.alt}
+                    data-selected={state === i}
+                    key={skill.skill}
+                  />
+                ))}
+              </button>
             </div>
           </div>
         </div>
