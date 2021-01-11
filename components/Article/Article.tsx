@@ -93,12 +93,25 @@ export const Article = styled.article`
     box-shadow: 0 5px 0 #ffffa1, 0 -1px 0 #ffffa1;
   }
   & .article-body {
-    & > *:not([data-full-width]) {
-      color: var(--color-text-main);
+    color: var(--color-text-main);
+    & > *:not([data-width]),
+    & > *[data-width="normal"] {
       margin-left: auto;
       margin-right: auto;
       max-width: 680px;
       width: 88%;
+    }
+    & > *[data-width="wide"] {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1120px;
+      width: 88%;
+    }
+    & > *[data-width="fullscreen"] {
+      margin-left: 0;
+      margin-right: 0;
+      max-width: none;
+      width: 100%;
     }
 
     & .image-container {

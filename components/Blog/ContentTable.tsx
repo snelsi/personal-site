@@ -32,6 +32,12 @@ const Wrapper = styled.nav`
         & .MuiAccordionSummary-expandIcon {
           color: var(--color-text-secondary);
         }
+        &.Mui-focused {
+          background-color: transparent;
+          & .MuiAccordionSummary-expandIcon {
+            background-color: rgba(0, 0, 0, 0.05);
+          }
+        }
       }
       & .MuiAccordionDetails-root {
         padding: 0 var(--padding) 24px;
