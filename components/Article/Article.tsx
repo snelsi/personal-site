@@ -20,15 +20,9 @@ export const Article = styled.article`
     font-family: "Montserrat", var(--sans-family);
   }
 
-  & > * {
+  & > *,
+  & .article-body > * {
     display: block;
-  }
-  & > *:not([data-full-width]) {
-    color: var(--color-text-main);
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 680px;
-    width: 88%;
   }
 
   & .article-header {
@@ -98,9 +92,18 @@ export const Article = styled.article`
     background-color: #ffffa1;
     box-shadow: 0 5px 0 #ffffa1, 0 -1px 0 #ffffa1;
   }
+  & .article-body {
+    & > *:not([data-full-width]) {
+      color: var(--color-text-main);
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 680px;
+      width: 88%;
+    }
 
-  & .image-container {
-    margin-bottom: 24px;
+    & .image-container {
+      margin-bottom: 24px;
+    }
   }
 
   transition: opacity 1.5s ease-out;

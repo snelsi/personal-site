@@ -160,7 +160,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ source, post, slug }) => {
         </ArticleHeader>
         {post && (
           <Article ref={ref} data-visible={visible}>
-            <Header data-full-width className="article-header">
+            <Header className="article-header">
               <div data-fix-width>
                 <h1 className="post-title">{title}</h1>
                 {subTitle && <h2 className="post-sub-title">{subTitle}</h2>}
@@ -180,7 +180,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ source, post, slug }) => {
                 )}
               </div>
             </Header>
-            {content}
+            <div className="article-body">{content}</div>
           </Article>
         )}
         <BlogFooter />
