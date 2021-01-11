@@ -10,6 +10,7 @@ const Wrapper = styled.a`
   color: var(--color-blog-text-header);
   display: block;
   font-family: Inter, var(--sans-family);
+  outline: none;
 
   & .post-thumbnail {
     border-radius: 4px;
@@ -67,13 +68,22 @@ const Wrapper = styled.a`
     }
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: var(--color-blog-text-header);
     & .post-title {
       color: var(--color-red-400);
     }
     & .post-thumbnail > .image-container {
       transform: scale(1.005);
+    }
+  }
+  &:active {
+    & .post-title {
+      color: var(--color-red-500);
+    }
+    & .post-thumbnail > .image-container {
+      transform: scale(0.998);
     }
   }
 `;
@@ -93,29 +103,28 @@ export const RowPost: React.FC<RowPostProps> = ({
     category,
     readTime,
   },
-}) => {
-  return (
-    <Link href={link}>
-      <Wrapper className="post-article" href={link}>
-        <article>
-          <div className="post-thumbnail">
-            <Image src={thumbnail} alt={thumbnailAlt} width={340} height={225} />
-          </div>
-          <h3 className="post-title" data-font-weight="700">
-            {title}
-          </h3>
-          <div className="post-description">{description}</div>
-          <div className="post-tags">
-            <span className="post-date">{date}</span>
-            {category && (
-              <span className="post-category" data-font-weight={500}>
-                {category}
-              </span>
-            )}
-            <ReadTime readTime={readTime} />
-          </div>
-        </article>
-      </Wrapper>
-    </Link>
-  );
-};
+  ...props
+}) => (
+  <Link href={link} {...props}>
+    <Wrapper className="post-article" href={link}>
+      <article>
+        <div className="post-thumbnail">
+          <Image src={thumbnail} alt={thumbnailAlt} width={340} height={225} />
+        </div>
+        <h3 className="post-title" data-font-weight="700">
+          {title}
+        </h3>
+        <div className="post-description">{description}</div>
+        <div className="post-tags">
+          <span className="post-date">{date}</span>
+          {category && (
+            <span className="post-category" data-font-weight={500}>
+              {category}
+            </span>
+          )}
+          <ReadTime readTime={readTime} />
+        </div>
+      </article>
+    </Wrapper>
+  </Link>
+);

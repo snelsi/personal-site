@@ -84,6 +84,14 @@ const Wrapper = styled.a`
       transform: scale(1.005);
     }
   }
+  &:active {
+    & .hero-title {
+      color: var(--color-red-500);
+    }
+    & .hero-thumbnail > .image-container {
+      transform: scale(0.998);
+    }
+  }
 `;
 
 const Tag = styled.div`
