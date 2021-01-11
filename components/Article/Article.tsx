@@ -99,6 +99,10 @@ export const Article = styled.article`
     box-shadow: 0 5px 0 #ffffa1, 0 -1px 0 #ffffa1;
   }
 
+  & .image-container {
+    margin-bottom: 24px;
+  }
+
   transition: opacity 1.5s ease-out;
 
   &[data-visible="false"] {
