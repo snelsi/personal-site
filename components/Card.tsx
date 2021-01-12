@@ -43,6 +43,7 @@ const Tags: React.FC<TagsProps> = ({ tags }) => {
 
 interface InnerContentProps extends Project {
   priority?: boolean;
+  sharp?: boolean;
 }
 const InnerContent: React.FC<InnerContentProps> = ({
   img,
@@ -50,6 +51,7 @@ const InnerContent: React.FC<InnerContentProps> = ({
   tags,
   bgColor,
   priority = false,
+  sharp = true,
 }) => (
   <>
     <div className="imageContainer">
@@ -60,6 +62,7 @@ const InnerContent: React.FC<InnerContentProps> = ({
         height={1442}
         bgColor={bgColor}
         priority={priority}
+        sharp={sharp}
       />
       <Tags tags={tags} />
     </div>
@@ -90,6 +93,7 @@ const InnerContent: React.FC<InnerContentProps> = ({
 interface CardProps extends Project {
   disabled?: boolean;
   priority?: boolean;
+  sharp?: boolean;
 }
 export const Card: React.FC<CardProps> = ({ disabled = false, ...props }) => {
   if (props.url)
@@ -132,7 +136,6 @@ const CardBase = styled.a`
     border-radius: 6px;
     overflow: hidden;
     position: relative;
-    image-rendering: -webkit-optimize-contrast;
 
     &::after {
       content: "";
