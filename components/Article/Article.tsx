@@ -51,6 +51,11 @@ export const Article = styled.article`
     margin-bottom: 24px;
     letter-spacing: -0.003em;
     word-break: break-word;
+    & a {
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-color: var(--color-blue-400);
+    }
   }
 
   & ol,
