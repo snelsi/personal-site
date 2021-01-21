@@ -83,7 +83,7 @@ const Block: React.FC<BlockProps> = ({ block, level = 0, ...props }) => {
     return (
       <ul data-level={level} {...props}>
         {block.map((b) => (
-          <li key={b.link}>
+          <li key={b.link || String(b.title)}>
             <Block block={b} level={level + 1} />
           </li>
         ))}
