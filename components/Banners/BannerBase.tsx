@@ -13,7 +13,7 @@ const Banner = styled.div`
   min-height: 180px;
   text-decoration: none;
   overflow: hidden;
-  padding: 12px 24px;
+  padding: 12px clamp(20px, 3vw, 40px);
   position: relative;
 
   & .main {
@@ -40,7 +40,9 @@ interface BunnerBaseProps {
 export const BannerBase: React.FC<BunnerBaseProps> = ({ children, title, label }) => (
   <Banner className="banner">
     <div className="main">
-      <h5 data-font-size="XL">{title}</h5>
+      <h5 data-font-size="XL" className="montserrat">
+        {title}
+      </h5>
       {label && (
         <p data-font-size="Focus" className="text-secondary">
           {label}
