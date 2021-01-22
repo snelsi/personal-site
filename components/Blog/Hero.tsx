@@ -133,7 +133,7 @@ export const Hero: React.FC<HeroProps> = ({
 }) => {
   return (
     <Link href={link}>
-      <Wrapper className="hero-article" href={link}>
+      <Wrapper className="hero-article" href={link} aria-label={title}>
         <article>
           <div className="hero-thumbnail">
             <Image

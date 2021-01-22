@@ -50,7 +50,7 @@ export const Post: React.FC<PostProps> = ({
   return (
     <div>
       <Link href={link}>
-        <Wrapper className="post-article" href={link}>
+        <Wrapper className="post-article" href={link} aria-label={title}>
           <article>
             <div className="post-thumbnail">
               <Image src={thumbnail} alt={thumbnailAlt} width={340} height={225} />
