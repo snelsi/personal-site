@@ -66,7 +66,7 @@ const Wrapper = styled.a`
     }
 
     & .hero-date {
-      color: #888;
+      color: var(--color-blog-text-secondary);
       margin-right: 1em;
     }
     & .hero-category {
