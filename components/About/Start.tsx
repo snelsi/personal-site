@@ -33,10 +33,28 @@ export const Start: React.FC<StartProps> = () => {
       <div className="text-block">
         <h3>The Long Journey</h3>
         <p>
-          I&apos;m a web developer since 2019. After a couple of years of writing C++ console
-          programs, making a real interface in the browser was a miracle. When I learned React and
+          I&apos;m a web developer since 2019. After a couple of years of writing C++{" "}
+          <a
+            href="https://github.com/snelsi/Numerical-analysis-labs"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            console
+          </a>{" "}
+          <a href="https://github.com/snelsi/2048" target="_blank" rel="noopener noreferrer">
+            programs
+          </a>
+          , making a real interface in the browser was a miracle. When I learned React and
           Typescript it was the moment I knew: I will never come back to desktop development. Now I
-          create beautiful cross-platform web-programs, modern sites, landings, and games online.
+          create{" "}
+          <a href="https://tulpan.snelsi.now.sh/" target="_blank" rel="noopener noreferrer">
+            beautiful
+          </a>{" "}
+          cross-platform web-programs,{" "}
+          <a href="https://medspravki.snelsi.vercel.app/" target="_blank" rel="noopener noreferrer">
+            modern sites
+          </a>
+          , landings, and games online.
         </p>
       </div>
       <Wrapper>

@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled, { createGlobalStyle } from "styled-components";
+import Link from "next/link";
 
 import AwesomeSlider from "react-awesome-slider";
 import { useInView } from "scripts";
@@ -65,10 +66,17 @@ export const Expirience: React.FC<ExpirienceProps> = () => {
         <p>
           I am freelancing in web-development since 2019. I have worked in every stage of projects
           life-cycle. Was conducting interviews with the customers and drafting the terms of
-          reference. Developed a technical systems and UI designs. Designed databases and endpoints.
-          Wrote a tonn of front-end code. Participated in the development of the
-          &lsquo;Scalpio&lsquo; crypto-currency bot as a UI/UX designer and project manager. Created
-          the PWA for car rental company as a full-stack developer.
+          reference. Developed a technical systems and{" "}
+          <a href="https://dribbble.com/snelsi" target="_blank" rel="noopener noreferrer">
+            UI designs
+          </a>
+          . Designed databases and endpoints. Wrote{" "}
+          <a href="https://github.com/snelsi" target="_blank" rel="noopener noreferrer">
+            tons of front-end code
+          </a>
+          . Participated in the development of the &lsquo;Scalpio&lsquo; crypto-currency bot as a
+          UI/UX designer and project manager. Created the{" "}
+          <Link href="/#projects">PWA for car rental company</Link> as a full-stack developer.
         </p>
       </div>
     </Wrapper>
