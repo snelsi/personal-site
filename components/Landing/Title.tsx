@@ -1,48 +1,36 @@
 import * as React from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 import { slogans } from "./slogans";
 
-const oneAnimationDuration = 3;
-const animationDuration = oneAnimationDuration * slogans.length;
+export const Title: React.FC = () => {
+  const [current, setCurrent] = React.useState(0);
 
-export const Title: React.FC = () => (
-  <H1 className="montserrat">
-    {slogans.map(({ top, bottom, emoji }, index) => (
-      <FadingTitle key={top} className="fading-title" delay={oneAnimationDuration * index}>
-        <div>{top}</div>
-        <div>
-          {bottom} <span role="img">{emoji}</span>
+  React.useEffect(() => {
+    const t = setInterval(() => {
+      setCurrent((curValue) => (curValue + 1 < slogans.length ? curValue + 1 : 0));
+    }, 3400);
+    return () => clearInterval(t);
+  });
+
+  return (
+    <H1 className="montserrat">
+      {slogans.map(({ top, bottom, emoji }, index) => (
+        <div
+          key={top}
+          className="fading-title"
+          data-current={index === current}
+          data-next={(index + 1) % slogans.length === current}
+        >
+          <div>{top}</div>
+          <div>
+            {bottom} <span role="img">{emoji}</span>
+          </div>
         </div>
-      </FadingTitle>
-    ))}
-  </H1>
-);
-
-const textFade = keyframes`
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-
-  ${(oneAnimationDuration / animationDuration) * 25}% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  ${(oneAnimationDuration / animationDuration) * 100}% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  ${(oneAnimationDuration / animationDuration) * 125}% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  to {
-    opacity: 0;
-  }
-`;
+      ))}
+    </H1>
+  );
+};
 
 const H1 = styled.h1`
   color: var(--color-text-main);
@@ -60,15 +48,13 @@ const H1 = styled.h1`
     font-size: 6.5vw;
   }
   @media (max-width: 640px) {
-    font-size: 8vw;
+    font-size: 8.5vw;
   }
   @media (max-width: 340px) {
     font-size: 24px;
   }
 
   & .fading-title {
-    animation: ${textFade} ${animationDuration}s ease-in-out 0s infinite;
-    animation-fill-mode: both;
     display: block;
     text-align: left;
 
@@ -84,12 +70,19 @@ const H1 = styled.h1`
         font-size: clamp(28px, 1em - 6px, 60px);
       }
     }
-  }
-`;
 
-interface FadingTitleProps {
-  delay: number;
-}
-const FadingTitle = styled.span<FadingTitleProps>`
-  animation-delay: ${({ delay = 0 }) => delay}s !important;
+    transition: opacity 0.75s ease-in-out,
+      transform 0.75s ease-in-out;
+    &[data-current="true"] {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    &[data-current="false"] {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    &[data-next="true"] {
+      transform: translateY(20px);
+    }
+  }
 `;
