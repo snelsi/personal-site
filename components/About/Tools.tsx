@@ -22,6 +22,7 @@ const Text = styled.div`
   & > .text-block {
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 0em;
     & > h4 {
       margin-bottom: 0.75em;
     }
