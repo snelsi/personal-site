@@ -19,18 +19,22 @@ const Text = styled.div`
   text-align: center;
   margin-bottom: 2em;
 
-  & > h4 {
-    margin-bottom: 0.75em;
-  }
+  & > .text-block {
+    margin-left: auto;
+    margin-right: auto;
+    & > h4 {
+      margin-bottom: 0.75em;
+    }
 
-  & > p {
-    max-width: 500px;
-    margin: auto;
-    line-height: 1.5;
-  }
+    & > p {
+      max-width: 500px;
+      margin: auto;
+      line-height: 1.5;
+    }
 
-  @media (max-width: 1020px) {
-    text-align: left;
+    @media (max-width: 1020px) {
+      text-align: left;
+    }
   }
 `;
 
@@ -72,13 +76,15 @@ export const Tools: React.FC<ToolsProps> = () => {
   return (
     <Wrapper ref={ref} data-visible={visible}>
       <Text data-fix-width>
-        <h4 data-font-size="XL" className="montserrat">
-          My Tools
-        </h4>
-        <p data-font-size="Focus">
-          Time and patience are the key to everything. But sometimes right tool does half of the
-          job.
-        </p>
+        <div className="text-block">
+          <h4 data-font-size="XL" className="montserrat">
+            My Tools
+          </h4>
+          <p data-font-size="Focus">
+            Time and patience are the key to everything. But sometimes right tool does half of the
+            job.
+          </p>
+        </div>
       </Text>
 
       <Container>

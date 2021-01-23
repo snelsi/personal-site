@@ -82,7 +82,7 @@ const Wrapper = styled.div`
     display: grid;
     gap: 2em;
     margin: 0 auto;
-    width: 95%;
+    width: var(--page-width);
 
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "list image";

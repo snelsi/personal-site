@@ -55,7 +55,7 @@ const Container = styled.div`
     white-space: nowrap;
   }
   & > .text-wrapper {
-    width: 95%;
+    width: var(--page-width);
     margin: auto;
 
     & > .text-block {

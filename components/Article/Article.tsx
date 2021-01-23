@@ -105,13 +105,13 @@ export const Article = styled.article`
       margin-left: auto;
       margin-right: auto;
       max-width: 680px;
-      width: 92%;
+      width: var(--page-width);
     }
     & > *[data-width="wide"] {
       margin-left: auto;
       margin-right: auto;
       max-width: 1120px;
-      width: 92%;
+      width: var(--page-width);
     }
     & > *[data-width="fullscreen"] {
       margin-left: 0;

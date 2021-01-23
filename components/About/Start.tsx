@@ -16,7 +16,10 @@ const Block = styled.div`
 
 const Wrapper = styled.div`
   margin-right: auto;
-  max-width: 80%;
+  max-width: min(88%, 1200px);
+  @media (max-width: 800px) {
+    padding: 0 4vw;
+  }
 `;
 
 interface StartProps {}

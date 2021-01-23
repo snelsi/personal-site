@@ -17,10 +17,11 @@ import {
 } from "components/About";
 
 const Wrapper = styled.div`
+  --page-width: min(95%, 100% - 12px * 2);
   & .block {
     padding: 0;
     margin: 10vw auto;
-    width: 95%;
+    width: var(--page-width);
 
     &:first-child {
       margin-top: 5vw;
@@ -59,7 +60,7 @@ const Wrapper = styled.div`
     padding: 0 2.325vw;
 
     @media (max-width: 800px) {
-      padding: 0 5vw;
+      padding: 0 4vw;
     }
 
     @media (min-width: 600px) {
