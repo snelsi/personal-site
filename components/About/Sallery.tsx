@@ -29,7 +29,7 @@ export const Sallery: React.FC<SalleryProps> = () => {
           <ToolTip arrow placement="top" title="Take-home">
             <Underlined tabIndex={0}>net</Underlined>
           </ToolTip>
-          : <span className="sallary">1500$ / Month</span>
+          : <span className="sallary">1750$ / Month</span>
         </h5>
       </div>
     </Block>
