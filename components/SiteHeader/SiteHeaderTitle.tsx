@@ -17,6 +17,7 @@ export const SiteHeaderTitle: React.FC<SiteHeaderTitleProps> = () => (
 );
 
 const Title = styled.h6`
+  margin-left: -0.25em;
   white-space: nowrap;
   & a {
     padding: 0.25em 0.5em;

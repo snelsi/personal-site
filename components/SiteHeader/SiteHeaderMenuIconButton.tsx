@@ -18,10 +18,10 @@ const MenuIcon = () => (
 
 export interface SiteHeaderMenuIconButtonProps extends ButtonBaseProps {}
 
-export const SiteHeaderMenuIconButton: React.FC<SiteHeaderMenuIconButtonProps> = React.forwardRef<
-  HTMLButtonElement
->((props, ref) => (
-  <IconButton {...props} ref={ref} aria-label="Open Menu">
-    <MenuIcon />
-  </IconButton>
-));
+export const SiteHeaderMenuIconButton: React.FC<SiteHeaderMenuIconButtonProps> = React.forwardRef<HTMLButtonElement>(
+  (props, ref) => (
+    <IconButton className="site-header-menu-button" {...props} ref={ref} aria-label="Open Menu">
+      <MenuIcon />
+    </IconButton>
+  ),
+);

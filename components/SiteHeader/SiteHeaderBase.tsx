@@ -21,14 +21,13 @@ const Nav = styled.nav`
   overflow: hidden;
 
   height: 64px;
-  padding: 0 48px;
+  padding: 0 clamp(12px, 4vw, 48px);
+  transition: padding 0.15s ease;
 
   @media (max-width: 1020px) {
     height: 60px;
   }
   @media (max-width: 720px) {
-    padding: 0 20px;
-
     & .site-header-links {
       display: none;
     }
@@ -44,6 +43,10 @@ const Nav = styled.nav`
   & button {
     --base-color: var(--color-button-gray);
     --text-color: var(--color-text-main);
+  }
+
+  & .site-header-menu-button {
+    margin-right: -0.2em;
   }
 `;
 

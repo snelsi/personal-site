@@ -50,6 +50,7 @@ export const Article = styled.article`
   & p {
     margin-bottom: 24px;
     letter-spacing: -0.003em;
+    hyphens: auto;
     word-break: break-word;
     & a {
       color: inherit;
@@ -104,13 +105,13 @@ export const Article = styled.article`
       margin-left: auto;
       margin-right: auto;
       max-width: 680px;
-      width: 88%;
+      width: 92%;
     }
     & > *[data-width="wide"] {
       margin-left: auto;
       margin-right: auto;
       max-width: 1120px;
-      width: 88%;
+      width: 92%;
     }
     & > *[data-width="fullscreen"] {
       margin-left: 0;
