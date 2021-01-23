@@ -79,9 +79,8 @@ const Container = styled.div`
   & > button {
     background-color: #ff7ec3;
     border-radius: 12px;
-    height: 60px;
-    font-size: 22px;
-    padding: 0 32px;
+    font-size: clamp(20px, 5vw, 22px);
+    padding: 0.6em 1.25em;
     z-index: 1;
     white-space: nowrap;
   }
