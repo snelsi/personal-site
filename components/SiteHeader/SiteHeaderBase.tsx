@@ -11,7 +11,7 @@ const wrapperStyle = {
 
 const Header = styled(StickyHeader)`
   & .headroom--unpinned:focus-within {
-    transform: translate3d(0px, 0, 0px) !important;
+    transform: translate3d(0, 0, 0) !important;
   }
 `;
 
