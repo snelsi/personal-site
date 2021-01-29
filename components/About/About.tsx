@@ -76,10 +76,13 @@ const Wrapper = styled.div`
     }
   }
 
+  & h2,
+  & h3 {
+    font-family: Montserrat, var(--sans-family);
+  }
   & h3 {
     color: #111;
     margin-bottom: 0.75em;
-    font-family: Montserrat, var(--sans-family);
   }
   & li,
   & p {

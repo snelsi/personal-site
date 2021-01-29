@@ -53,7 +53,7 @@ const Block = styled.div`
         font-size: 6.5vw;
       }
     }
-    & > h3 {
+    & > h2 {
       margin-bottom: 1.4em;
       max-width: 14em;
     }
@@ -88,7 +88,7 @@ export const Intro: React.FC<IntroProps> = () => {
     <Block className="block" ref={ref} data-visible={visible}>
       <div className="text-block">
         <h1 className="montserrat">Roman Zhuravlov</h1>
-        <h3>Frontend web developer and UI/UX designer</h3>
+        <h2 data-font-size="XL">Frontend web developer and UI/UX designer</h2>
         <p>
           Hey! I am {calculateYearSince(new Date("April 22 2000"))} years old web developer from
           Ukraine. I specialize in client interfaces, functional components and their internal

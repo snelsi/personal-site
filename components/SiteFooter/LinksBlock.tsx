@@ -29,7 +29,9 @@ interface LinksBlockProps {
 
 export const LinksBlock: React.FC<LinksBlockProps> = ({ title, children }) => (
   <Block>
-    <h6 className="montserrat">{title}</h6>
+    <h3 className="montserrat" data-font-size="M">
+      {title}
+    </h3>
     <ul data-font-size="Focus">{children}</ul>
   </Block>
 );

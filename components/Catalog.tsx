@@ -22,7 +22,7 @@ const Header = styled.div`
   border-bottom: 1px solid #e7e7e9;
   height: 80px;
 
-  & > h3 {
+  & > h2 {
     white-space: nowrap;
   }
   & > ul {
@@ -86,7 +86,9 @@ export const CardsCatalog: React.FC<CatalogProps> = () => {
   return (
     <Wrapper data-fix-width id="projects" ref={ref} data-visible={visible || isMobile}>
       <Header>
-        <h3 className="montserrat">My Projects</h3>
+        <h2 className="montserrat" data-font-size="XL">
+          My Projects
+        </h2>
         <ul>
           <li>
             <ButtonText
