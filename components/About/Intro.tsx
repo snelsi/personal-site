@@ -43,7 +43,7 @@ const Block = styled.div`
 
     & > h1 {
       white-space: nowrap;
-      margin-bottom: 0.5em;
+      margin-bottom: 0.6em;
 
       @media (min-width: 1021px) and (max-width: 1440px) {
         font-size: 4.5vw;
@@ -54,7 +54,7 @@ const Block = styled.div`
       }
     }
     & > h2 {
-      margin-bottom: 1em;
+      margin-bottom: 1.15em;
       max-width: 14em;
     }
     & > p {
