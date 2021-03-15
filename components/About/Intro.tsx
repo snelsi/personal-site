@@ -54,7 +54,7 @@ const Block = styled.div`
       }
     }
     & > h2 {
-      margin-bottom: 1.4em;
+      margin-bottom: 1em;
       max-width: 14em;
     }
     & > p {
@@ -62,7 +62,7 @@ const Block = styled.div`
     }
 
     & > .aside {
-      margin: 1.5em 0;
+      margin: 1.5em 0 2em;
       max-width: 360px;
     }
 
