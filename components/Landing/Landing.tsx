@@ -30,8 +30,7 @@ export const Landing: React.FC<LandingProps> = () => {
 
 const Container = styled.div`
   background: linear-gradient(108.43deg, #f9f8fd 0%, #f1edff 100%), #f9f8fd;
-  height: 50vh;
-  min-height: 400px;
+  height: clamp(400px, 50vh, 520px);
   overflow: hidden;
   position: relative;
 
@@ -44,6 +43,10 @@ const Container = styled.div`
     max-width: 1440px;
     padding: 24px 0;
     width: 90%;
+
+    @media (min-width: 2000px) {
+      position: relative;
+    }
 
     transition: opacity 1.5s ease;
 

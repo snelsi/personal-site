@@ -18,6 +18,7 @@ const GlobalStyles = createGlobalStyle`div.headroom--unfixed > .headroomContaine
 }`;
 
 const Main = styled.main`
+  min-height: calc(100vh - 800px);
   padding: 40px 0;
 `;
 

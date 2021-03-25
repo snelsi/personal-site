@@ -44,6 +44,12 @@ const Container = styled.div`
     opacity: 0;
   }
 
+  @media (min-width: 2000px) {
+    top: unset;
+    right: -12%;
+    height: auto;
+    width: clamp(800px, 42vw, 920px);
+  }
   @media (max-width: 1500px) {
     width: 45vw;
     height: 500px;
