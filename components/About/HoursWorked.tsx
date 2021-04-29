@@ -2,7 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import { useCountUp } from "react-countup";
 import Link from "next/link";
-import { useInView } from "scripts";
+import { calculateWorkedHoursSince, useInView } from "scripts";
 
 const Wrapper = styled.div`
   margin-top: 12vw;
@@ -36,13 +36,9 @@ const Wrapper = styled.div`
   }
 `;
 
-interface HoursWorkedProps {
-  hours?: number;
-}
-
-export const HoursWorked: React.FC<HoursWorkedProps> = ({
-  hours = Number(process.env.HOURS_WORKED),
-}) => {
+interface HoursWorkedProps {}
+export const HoursWorked: React.FC<HoursWorkedProps> = () => {
+  const hours = calculateWorkedHoursSince(new Date("August 1 2019"));
   const { visible, ref } = useInView({ rootMargin: "-240px 0px" });
   const { countUp, start, reset } = useCountUp({
     start: 0,
