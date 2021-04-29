@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import { BubblesBackground } from "components";
 import { Buttons, HeroImage, Title } from "components/Landing";
-import { useInView } from "scripts";
+import { calculateYearSince, useInView } from "scripts";
 
 interface LandingProps {}
 
@@ -17,8 +17,8 @@ export const Landing: React.FC<LandingProps> = () => {
         <div className="content">
           <Title />
           <p data-font-size="Focus">
-            I’m a 20 years old React / Typescript Front-end developer and UI / UX designer from
-            Ukraine
+            I’m a {calculateYearSince(new Date("April 22 2000"))} years old React / Typescript
+            Front-end developer and UI / UX designer from Ukraine
           </p>
           <Buttons />
         </div>
