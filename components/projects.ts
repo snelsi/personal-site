@@ -10,17 +10,24 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    url: "https://orbit.snelsi.vercel.app/",
+    img: "cards/orbit.jpg",
+    title: "Orbit - Lightweight SVG/CSS orbits generator",
+    tags: ["New", "Fun"],
+    bgColor: "#000",
+  },
+  {
     url: "https://tulpan.snelsi.now.sh/",
     img: "cards/Tulpan.jpg",
     title: "Tyulpan - Gorgeous Landing page for the Car Service",
-    tags: ["New", "Project"],
+    tags: ["Project"],
     bgColor: "#fff",
   },
   {
     url: "https://smart-canvas.now.sh/",
     img: "cards/smartCanvas.jpg",
     title: "Smart Canvas - Online Interactive Three.js Demo",
-    tags: ["New", "Fun"],
+    tags: ["Fun"],
     bgColor: "#000",
   },
   {
