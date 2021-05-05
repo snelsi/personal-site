@@ -105,7 +105,7 @@ const Header = styled.div`
 `;
 
 interface BlogPostProps {
-  source: MDXRemoteSerializeResult<Record<string, unknown>>;
+  source: MDXRemoteSerializeResult;
   post: Post;
   slug: string;
 }
