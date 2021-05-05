@@ -1,8 +1,8 @@
 import * as React from "react";
 import { NextSeo } from "next-seo";
 import styled from "styled-components";
-import renderToString from "next-mdx-remote/render-to-string";
-import hydrate from "next-mdx-remote/hydrate";
+import { serialize } from "next-mdx-remote/serialize";
+import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import a11yEmoji from "@fec/remark-a11y-emoji";
 import remarkMark from "remark-mark-plus";
 import remarkSlug from "remark-slug";
@@ -105,12 +105,11 @@ const Header = styled.div`
 `;
 
 interface BlogPostProps {
-  source: any;
+  source: MDXRemoteSerializeResult<Record<string, unknown>>;
   post: Post;
   slug: string;
 }
 const BlogPost: React.FC<BlogPostProps> = ({ source, post, slug }) => {
-  const content = hydrate(source, { components });
   const {
     title,
     subTitle,
@@ -180,7 +179,9 @@ const BlogPost: React.FC<BlogPostProps> = ({ source, post, slug }) => {
                 )}
               </div>
             </Header>
-            <div className="article-body">{content}</div>
+            <div className="article-body">
+              <MDXRemote {...source} components={components} />
+            </div>
           </Article>
         )}
         <BlogFooter />
@@ -195,13 +196,11 @@ export async function getStaticPaths() {
   const posts = getPosts(["slug"]);
 
   return {
-    paths: posts.map((posts) => {
-      return {
-        params: {
-          slug: posts.slug,
-        },
-      };
-    }),
+    paths: posts.map((posts) => ({
+      params: {
+        slug: posts.slug,
+      },
+    })),
     fallback: false,
   };
 }
@@ -225,8 +224,7 @@ export async function getStaticProps({ params: { slug } }) {
   ]);
   if (!post) return null;
 
-  const mdxSource = await renderToString(post.content, {
-    components,
+  const mdxSource = await serialize(post.content, {
     mdxOptions: { remarkPlugins: [remarkSlug, remarkMark, a11yEmoji] },
   });
   return { props: { source: mdxSource, post, slug } };
