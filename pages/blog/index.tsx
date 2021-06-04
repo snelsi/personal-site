@@ -70,7 +70,11 @@ const BlogPage: NextPage<BlogPageProps> = ({ posts }) => {
     });
 
     if (postsArray.length > 0) {
-      blocks.push({ type: "row", children: <Row posts={postsArray.slice(0, 3)} />, wide: true });
+      blocks.push({
+        type: "row",
+        children: <Row posts={postsArray.slice(0, 3)} />,
+        wide: true,
+      });
       postsArray = postsArray.slice(3);
     }
 

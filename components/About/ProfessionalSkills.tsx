@@ -180,12 +180,32 @@ const Wrapper = styled.div`
 // https://www.freepik.com/free-photos-vectors/idea
 
 const skills = [
-  { skill: "Web development", img: "images/about/Working.svg", alt: "Web development" },
-  { skill: "UI/UX design", img: "images/about/Creativity.svg", alt: "Creativity" },
+  {
+    skill: "Web development",
+    img: "images/about/Working.svg",
+    alt: "Web development",
+  },
+  {
+    skill: "UI/UX design",
+    img: "images/about/Creativity.svg",
+    alt: "Creativity",
+  },
   { skill: "SEO Marketing", img: "images/about/SEO.svg", alt: "SEO" },
-  { skill: "System Engineering", img: "images/about/System.svg", alt: "System Engineering" },
-  { skill: "Database Engineering", img: "images/about/DB.svg", alt: "Database Engineering" },
-  { skill: "Team management", img: "images/about/Friendship.svg", alt: "Team management" },
+  {
+    skill: "System Engineering",
+    img: "images/about/System.svg",
+    alt: "System Engineering",
+  },
+  {
+    skill: "Database Engineering",
+    img: "images/about/DB.svg",
+    alt: "Database Engineering",
+  },
+  {
+    skill: "Team management",
+    img: "images/about/Friendship.svg",
+    alt: "Team management",
+  },
 ];
 interface ProfessionalSkillsProps {}
 

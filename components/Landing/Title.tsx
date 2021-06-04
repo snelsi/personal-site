@@ -71,8 +71,7 @@ const H1 = styled.h1`
       }
     }
 
-    transition: opacity 0.75s ease-in-out,
-      transform 0.75s ease-in-out;
+    transition: opacity 0.75s ease-in-out, transform 0.75s ease-in-out;
     &[data-current="true"] {
       opacity: 1;
       transform: translateY(0);
