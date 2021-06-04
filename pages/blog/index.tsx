@@ -1,7 +1,7 @@
 import * as React from "react";
 import { NextPage } from "next";
 import { NextSeo } from "next-seo";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 import { ContactButton, SiteFooter, SiteHeader } from "components";
 import { getPosts } from "scripts/postsApi";

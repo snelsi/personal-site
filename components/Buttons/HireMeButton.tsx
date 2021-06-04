@@ -1,20 +1,18 @@
 import * as React from "react";
 
+import styled from "@emotion/styled";
 import { Button } from "components/Buttons";
-import { withStyles } from "@material-ui/core";
 
-const HireButton = withStyles({
-  root: {
-    backgroundColor: "var(--color-magenta-500)",
-    color: "white",
-    fontSize: "1em",
-    paddingRight: "2.5em",
+const HireButton = styled(Button)`
+  background-color: var(--color-magenta-500);
+  color: white;
+  font-size: 1em;
+  padding-right: 2.5em;
 
-    "& > svg": {
-      marginRight: "8px",
-    },
-  },
-})(Button);
+  & > svg {
+    margin-right: 8px;
+  }
+`;
 
 interface HireMeButtonProps {}
 

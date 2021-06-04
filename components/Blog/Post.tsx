@@ -1,5 +1,5 @@
 import * as React from "react";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import Link from "next/link";
 
 import { Post as IPost } from "interfaces";

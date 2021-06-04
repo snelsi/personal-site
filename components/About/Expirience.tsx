@@ -1,29 +1,27 @@
 import * as React from "react";
-import styled, { createGlobalStyle } from "styled-components";
+import styled from "@emotion/styled";
 import Link from "next/link";
 
 import AwesomeSlider from "react-awesome-slider";
 import { useInView } from "scripts";
 
-const SliderStyles = createGlobalStyle`
-  .awssld {
-    --slider-height-percentage: 75%;
-    --slider-transition-duration: 250ms;
-    --loader-bar-color: var(--color-blue-500);
+const StyledAwesomeSlider = styled(AwesomeSlider)`
+  --slider-height-percentage: 75%;
+  --slider-transition-duration: 250ms;
+  --loader-bar-color: var(--color-blue-500);
 
-    --control-bullet-color: var(--color-gray-5);
-    --control-bullet-active-color: var(--color-gray-8);
+  --control-bullet-color: var(--color-gray-5);
+  --control-bullet-active-color: var(--color-gray-8);
 
-    --loader-bar-height: 4px;
+  --loader-bar-height: 4px;
 
-    & .awssld__bullets button {
-      width: 12px;
-      height: 12px;
-    }
+  & .awssld__bullets button {
+    width: 12px;
+    height: 12px;
+  }
 
-    & .awssld__bullets .awssld__bullets--active {
-      transform: scale(1);
-    }
+  & .awssld__bullets .awssld__bullets--active {
+    transform: scale(1);
   }
 `;
 
@@ -52,14 +50,13 @@ export const Expirience: React.FC<ExpirienceProps> = () => {
   return (
     <Wrapper className="block" ref={ref} data-visible={visible}>
       <div>
-        <SliderStyles />
-        <AwesomeSlider>
+        <StyledAwesomeSlider>
           <div data-src="images/about/App1.jpg" data-alt="Desktop Dark Music Player" />
           <div data-src="images/about/App2.jpg" data-alt="Daily Progress Flash Screen" />
           <div data-src="images/about/App3.jpg" data-alt="Landing Page to Time Management App" />
           <div data-src="images/about/App4.jpg" data-alt="Social Profile and Portfolio UI" />
           <div data-src="images/about/App5.jpg" data-alt="Direct Messaging Screen" />
-        </AwesomeSlider>
+        </StyledAwesomeSlider>
       </div>
       <div className="text-block" data-right>
         <h3>Experience</h3>

@@ -3,11 +3,15 @@ import confetti from "canvas-confetti";
 const count = 200;
 const defaults = {
   origin: { y: 0.7 },
+  zIndex: 10000,
 };
 
-function fire(particleRatio, opts) {
-  confetti({ ...defaults, ...opts, particleCount: Math.floor(count * particleRatio) });
-}
+const fire = (particleRatio: number, opts) =>
+  confetti({
+    ...defaults,
+    ...opts,
+    particleCount: Math.floor(count * particleRatio),
+  });
 
 export function realisticConfetti() {
   fire(0.25, {

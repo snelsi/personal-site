@@ -1,5 +1,5 @@
 import * as React from "react";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { ButtonText } from "components";
@@ -46,9 +46,7 @@ export const SiteHeaderLink: React.FC<HeaderLinkProps> = ({ href, children }) =>
     <li>
       <HeaderLinkContainer data-matched={href === router.route} className="HeaderLinkContainer">
         <Link href={href}>
-          <ButtonText component="a" href={href}>
-            {children}
-          </ButtonText>
+          <ButtonText href={href}>{children}</ButtonText>
         </Link>
       </HeaderLinkContainer>
     </li>

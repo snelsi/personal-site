@@ -1,6 +1,6 @@
 import * as React from "react";
 import { NextSeo } from "next-seo";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import a11yEmoji from "@fec/remark-a11y-emoji";

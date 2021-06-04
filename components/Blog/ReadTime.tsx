@@ -1,5 +1,5 @@
 import * as React from "react";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import { FiClock } from "react-icons/fi";
 
 const Tag = styled.span`

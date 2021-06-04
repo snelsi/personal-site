@@ -1,6 +1,6 @@
 import * as React from "react";
 import { NextPage } from "next";
-import styled, { createGlobalStyle } from "styled-components";
+import styled from "@emotion/styled";
 
 import { Landing } from "components/Landing";
 
@@ -12,10 +12,6 @@ import {
   SiteHeader,
   NewsLine,
 } from "components";
-
-const GlobalStyles = createGlobalStyle`div.headroom--unfixed > .headroomContainer {
-  border-bottom: none;
-}`;
 
 const Main = styled.main`
   min-height: calc(100vh - 800px);
@@ -31,7 +27,6 @@ const IndexPage: NextPage = () => (
     <Landing />
 
     <Main>
-      <GlobalStyles />
       <CardsCatalog />
       <GitHubBanner />
     </Main>

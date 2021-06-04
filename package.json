@@ -7,7 +7,7 @@
     "email": "contact@snelsi.com",
     "url": "https://snelsi.com"
   },
-  "license": "apache-2.0",
+  "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/snelsi/personal-site"
@@ -19,8 +19,10 @@
     "lint": "eslint . --ext js,jsx,ts,tsx --max-warnings=0"
   },
   "dependencies": {
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
     "@fec/remark-a11y-emoji": "^3.1.0",
-    "@material-ui/core": "^4.11.4",
+    "@material-ui/core": "^5.0.0-alpha.35",
     "@mdx-js/loader": "^1.6.22",
     "@next/mdx": "^10.2.3",
     "canvas-confetti": "^1.4.0",
@@ -37,18 +39,15 @@
     "react-icons": "^4.2.0",
     "react-intersection-observer": "^8.32.0",
     "remark-mark-plus": "^1.0.21",
-    "remark-slug": "^6.0.0",
-    "styled-components": "^5.3.0"
+    "remark-slug": "^6.0.0"
   },
   "devDependencies": {
     "@types/node": "^15.12.1",
     "@types/react": "^17.0.9",
     "@types/react-dom": "^17.0.6",
     "@types/react-headroom": "^2.2.1",
-    "@types/styled-components": "^5.1.9",
     "@typescript-eslint/eslint-plugin": "^4.26.0",
     "@typescript-eslint/parser": "^4.26.0",
-    "babel-plugin-styled-components": "^1.12.0",
     "eslint": "^7.27.0",
     "eslint-config-alloy": "^4.1.0",
     "eslint-plugin-jsx-a11y": "^6.4.1",

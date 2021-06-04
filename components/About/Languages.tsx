@@ -1,5 +1,6 @@
 import * as React from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "@emotion/styled";
+import { keyframes } from "@emotion/react";
 import { useInView } from "scripts";
 
 const greetings = ["Hello!", "Привiт!", "Русские тут?", "こんにちは"];

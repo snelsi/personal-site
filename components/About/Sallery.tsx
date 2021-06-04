@@ -1,20 +1,19 @@
 import * as React from "react";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
-import { withStyles } from "@material-ui/core/styles";
 import MUiTooltip from "@material-ui/core/Tooltip";
 
 import { useInView } from "scripts";
 
-const ToolTip = withStyles({
-  arrow: {
-    color: "var(--color-gray-8)",
-  },
-  tooltip: {
-    backgroundColor: "var(--color-gray-8)",
-    fontSize: "15px",
-  },
-})(MUiTooltip);
+const ToolTip = styled(MUiTooltip)`
+  & .MuiTooltip-arrow {
+    color: var(--color-gray-8);
+  }
+  & .MuiTooltip-tooltip {
+    background-color: var(--color-gray-8);
+    font-size: 15px;
+  }
+`;
 
 interface SalleryProps {}
 

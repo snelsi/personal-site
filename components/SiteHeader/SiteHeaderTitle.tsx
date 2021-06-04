@@ -1,5 +1,5 @@
 import * as React from "react";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import Link from "next/link";
 
 import { ButtonText } from "components";
@@ -9,9 +9,7 @@ interface SiteHeaderTitleProps {}
 export const SiteHeaderTitle: React.FC<SiteHeaderTitleProps> = () => (
   <Title className="name" data-font-size="X" data-font-weight="Bold">
     <Link href="/">
-      <ButtonText component="a" href="/">
-        Roman Zhuravlov
-      </ButtonText>
+      <ButtonText href="/">Roman Zhuravlov</ButtonText>
     </Link>
   </Title>
 );

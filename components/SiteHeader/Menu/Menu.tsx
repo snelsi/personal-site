@@ -1,13 +1,10 @@
 import * as React from "react";
-import styled from "styled-components";
-
+import styled from "@emotion/styled";
 import { useMediaQuery } from "@material-ui/core";
+import { FiBook, FiGithub, FiHome, FiLinkedin, FiUser, FiMail } from "react-icons/fi";
+import { FaDribbble } from "react-icons/fa";
 
 import { MennuButton, MenuHeader, Modal, SurpriseMenuButton } from "components/SiteHeader/Menu";
-
-import { FiBook, FiGithub, FiHome, FiLinkedin, FiUser, FiMail } from "react-icons/fi";
-
-import { FaDribbble } from "react-icons/fa";
 
 interface MenuProps {
   open: boolean;

@@ -1,5 +1,4 @@
 import * as React from "react";
-import { createGlobalStyle } from "styled-components";
 
 import { Snackbar } from "@material-ui/core";
 import IconButton from "@material-ui/core/IconButton";
@@ -7,13 +6,7 @@ import { MdClose } from "react-icons/md";
 import { FiHeart } from "react-icons/fi";
 
 import { realisticConfetti } from "scripts";
-import { MennuButtonWrapper } from "./";
-
-const FixZIndex = createGlobalStyle`
-  body > canvas {
-    z-index: 10000 !important;
-  }
-`;
+import { MenuButtonWrapper } from "./";
 
 interface SurpriseMenuButtonProps {}
 
@@ -23,7 +16,7 @@ export const SurpriseMenuButton: React.FC<SurpriseMenuButtonProps> = () => {
   const closeSnackbar = () => setOpen(false);
   return (
     <>
-      <MennuButtonWrapper
+      <MenuButtonWrapper
         onClick={() => {
           realisticConfetti();
           setOpen(true);
@@ -33,8 +26,7 @@ export const SurpriseMenuButton: React.FC<SurpriseMenuButtonProps> = () => {
           <FiHeart color="var(--color-red-500)" />
         </div>
         <div className="menu_button_title">Support</div>
-      </MennuButtonWrapper>
-      <FixZIndex />
+      </MenuButtonWrapper>
       <Snackbar
         anchorOrigin={{
           vertical: "bottom",

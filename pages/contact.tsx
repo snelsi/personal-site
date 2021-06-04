@@ -1,11 +1,10 @@
 import * as React from "react";
-import type { NextPage } from "next";
 import { NextSeo } from "next-seo";
-
+import type { NextPage } from "next";
+import styled from "@emotion/styled";
 import { FaTelegramPlane } from "react-icons/fa";
 import { GoMail } from "react-icons/go";
 
-import styled from "styled-components";
 import { Email, SiteFooter, SiteHeader } from "components";
 import { useInView } from "scripts";
 

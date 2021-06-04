@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { styled } from "@material-ui/core/styles";
+import styled from "@emotion/styled";
 import { Button } from "components/Buttons";
 import Link from "next/link";
 
