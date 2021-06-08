@@ -23,7 +23,7 @@
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
     "@fec/remark-a11y-emoji": "^3.1.0",
-    "@material-ui/core": "^5.0.0-alpha.35",
+    "@material-ui/core": "^5.0.0-alpha.36",
     "@mdx-js/loader": "^1.6.22",
     "@next/mdx": "^10.2.3",
     "canvas-confetti": "^1.4.0",
@@ -43,18 +43,18 @@
     "remark-slug": "^6.0.0"
   },
   "devDependencies": {
-    "@types/node": "^15.12.1",
+    "@types/node": "^15.12.2",
     "@types/react": "^17.0.9",
     "@types/react-dom": "^17.0.6",
     "@types/react-headroom": "^2.2.1",
-    "@typescript-eslint/eslint-plugin": "^4.26.0",
-    "@typescript-eslint/parser": "^4.26.0",
-    "eslint": "^7.27.0",
+    "@typescript-eslint/eslint-plugin": "^4.26.1",
+    "@typescript-eslint/parser": "^4.26.1",
+    "eslint": "^7.28.0",
     "eslint-config-alloy": "^4.1.0",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.24.0",
     "next-compose-plugins": "^2.2.1",
-    "prettier": "^2.3.0",
+    "prettier": "^2.3.1",
     "typescript": "4.3.2"
   },
   "keywords": [
