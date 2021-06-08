@@ -23,14 +23,14 @@ const Wrapper = styled.div`
     margin: 10vw auto;
     width: var(--page-width);
 
-    &:first-child {
+    &:first-of-type {
       margin-top: 5vw;
     }
 
     @media (max-width: 800px) {
       margin: 120px auto;
 
-      &:first-child {
+      &:first-of-type {
         margin-top: 0;
       }
     }
