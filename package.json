@@ -1,7 +1,7 @@
 {
   "name": "snelsi.com",
   "description": "My personal website.",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "author": {
     "name": "Roman Zhuravlov",
     "email": "contact@snelsi.com",
@@ -44,8 +44,8 @@
   },
   "devDependencies": {
     "@types/node": "^15.12.2",
-    "@types/react": "^17.0.9",
-    "@types/react-dom": "^17.0.6",
+    "@types/react": "^17.0.11",
+    "@types/react-dom": "^17.0.7",
     "@types/react-headroom": "^2.2.1",
     "@typescript-eslint/eslint-plugin": "^4.26.1",
     "@typescript-eslint/parser": "^4.26.1",
