@@ -12,7 +12,7 @@ export const projects: Project[] = [
   {
     url: "https://affin.vercel.app/",
     img: "cards/affin.jpg",
-    title: "Affin - Modular scientific papers Search Engine",
+    title: "Affin - Modular Search Engine for scientific papers",
     tags: ["New", "Project"],
     bgColor:
       "linear-gradient(94.56deg, #00083A 3.91%, #12379C 42.26%, #1732CD 60%, #393DB8 84%, #181F63 97.78%)",
