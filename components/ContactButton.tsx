@@ -14,7 +14,7 @@ const FixedButton = styled(Button)({
 interface ContactButtonProps {}
 
 export const ContactButton: React.FC<ContactButtonProps> = () => (
-  <Link href="/contact">
-    <FixedButton>Contact me</FixedButton>
+  <Link href="/contact" passHref>
+    <FixedButton className="button">Contact me</FixedButton>
   </Link>
 );

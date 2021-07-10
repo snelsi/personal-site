@@ -1,8 +1,26 @@
+import Affin from "public/images/cards/affin.jpg";
+import Orbit from "public/images/cards/orbit.jpg";
+import Tulpan from "public/images/cards/Tulpan.jpg";
+import SmartCanvas from "public/images/cards/smartCanvas.jpg";
+import Medspravki from "public/images/cards/Medspravki.jpg";
+import Poker from "public/images/cards/Poker.jpg";
+import Tyson from "public/images/cards/Tyson.jpg";
+import DailyUI from "public/images/cards/DailyUI.jpg";
+import Dashboard from "public/images/cards/Dashboard.jpg";
+import MementoMori from "public/images/cards/mementoMori.jpg";
+import Hangman from "public/images/cards/hangman.jpg";
+import GameOfLife from "public/images/cards/gameOfLife.jpg";
+import Hexagons from "public/images/cards/hexagons.jpg";
+import ReactParty from "public/images/cards/reactParty.jpg";
+import Carshift from "public/images/cards/Carshift.jpg";
+import COCOMO from "public/images/cards/COCOMO.jpg";
+import Checkwave from "public/images/cards/checkwave.jpg";
+
 export type Tag = "New" | "Ongoing" | "Project" | "Game" | "Fun";
 
 export interface Project {
   url?: string;
-  img: string;
+  img: any;
   title: string;
   tags: Tag[];
   bgColor?: string;
@@ -11,122 +29,104 @@ export interface Project {
 export const projects: Project[] = [
   {
     url: "https://affin.vercel.app/",
-    img: "cards/affin.jpg",
+    img: Affin,
     title: "Affin - Modular Search Engine for scientific papers",
     tags: ["New", "Project"],
-    bgColor:
-      "linear-gradient(94.56deg, #00083A 3.91%, #12379C 42.26%, #1732CD 60%, #393DB8 84%, #181F63 97.78%)",
   },
   {
     url: "https://orbit.snelsi.vercel.app/",
-    img: "cards/orbit.jpg",
+    img: Orbit,
     title: "Orbit - Lightweight SVG/CSS orbits generator",
     tags: ["New", "Fun"],
-    bgColor: "#000",
   },
   {
     url: "https://tulpan.snelsi.now.sh/",
-    img: "cards/Tulpan.jpg",
+    img: Tulpan,
     title: "Tyulpan - Gorgeous Landing page for the Car Service",
     tags: ["Project"],
-    bgColor: "#fff",
   },
   {
     url: "https://smart-canvas.now.sh/",
-    img: "cards/smartCanvas.jpg",
+    img: SmartCanvas,
     title: "Smart Canvas - Online Interactive Three.js Demo",
     tags: ["Fun"],
-    bgColor: "#000",
   },
   {
     url: "https://medspravki.snelsi.vercel.app/",
-    img: "cards/Medspravki.jpg",
+    img: Medspravki,
     title: "Medspravki UA - Nextgen of Medical Certificates",
     tags: ["Project"],
-    bgColor: "#fff",
   },
   {
     url: "https://poker.snelsi.now.sh/",
-    img: "cards/Poker.jpg",
+    img: Poker,
     title: "Poker game - My Interview Assignment for Artkai",
     tags: ["Game", "Fun"],
-    bgColor: "linear-gradient(332.15deg, #0F613C 13.52%, #349963 89.23%)",
   },
   {
     url: "https://tyson-language.now.sh/",
-    img: "cards/Tyson.jpg",
+    img: Tyson,
     title: "Tyson - Modern and Simple Programming Language",
     tags: ["Project"],
-    bgColor: "#000",
   },
   {
     url: "https://dribbble.com/snelsi/collections/2371607-DailyUI",
-    img: "cards/DailyUI.jpg",
+    img: DailyUI,
     title: "Daily UI Dribbble shots pack",
     tags: ["Ongoing"],
-    bgColor: "#01142C",
   },
   {
     url: "http://my-dashboard.now.sh/",
-    img: "cards/Dashboard.jpg",
+    img: Dashboard,
     title: "Cool and Basic Project Management Dashboard",
     tags: ["Project"],
-    bgColor: "#FAFAFA",
   },
   {
     url: "https://timestamp.snelsi.now.sh/",
-    img: "cards/mementoMori.jpg",
+    img: MementoMori,
     title: "Timestamp - Motivational calendar for procrastinators",
     tags: ["Project"],
-    bgColor: "#fff",
   },
   {
     url: "https://hangman.snelsi.now.sh/",
-    img: "cards/hangman.jpg",
+    img: Hangman,
     title: "Hangman - Can you guess a word?",
     tags: ["Game", "Fun"],
-    bgColor: "#5253C6",
   },
   {
     url: "https://gameoflife.snelsi.now.sh/",
-    img: "cards/gameOfLife.jpg",
+    img: GameOfLife,
     title: "My implementation of Conway's Game of Life",
     tags: ["Game", "Fun"],
-    bgColor: "linear-gradient(60.6deg, #E6E9FA 0.01%, #FFFFFF 49.49%, #EEF1FF 100%)",
   },
 
   {
     url: "https://hexagons.snelsi.now.sh/",
-    img: "cards/hexagons.jpg",
+    img: Hexagons,
     title: "Dancing Canvas Hexagons",
     tags: ["Fun"],
-    bgColor: "#9F8FD6",
   },
   {
     url: "https://party.snelsi.now.sh/",
-    img: "cards/reactParty.jpg",
+    img: ReactParty,
     title: "React Web Sockets Party",
     tags: ["Fun"],
-    bgColor: "#000",
   },
   {
-    img: "cards/Carshift.jpg",
+    img: Carshift,
     title: "Mobile Web App for a Car Rent Company",
     tags: ["Project"],
-    bgColor: "#000",
   },
   {
     url: "https://cocomo.now.sh/",
-    img: "cards/COCOMO.jpg",
+    img: COCOMO,
     title: "COCOMO Calculator, made with Ant Design",
     tags: [],
-    bgColor: "#E0E0E0",
   },
   {
     url: "https://checkwave.now.sh/",
-    img: "cards/checkwave.jpg",
+    img: Checkwave,
     title: "Checkwave 🌊",
     tags: ["Fun"],
-    bgColor: "#fff",
   },
 ];

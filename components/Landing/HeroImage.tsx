@@ -2,6 +2,7 @@ import * as React from "react";
 import styled from "@emotion/styled";
 import { Image } from "components";
 import { useInView } from "scripts";
+import AppImage from "public/images/App.jpg";
 
 interface HeroImageProps {}
 
@@ -11,7 +12,7 @@ export const HeroImage: React.FC<HeroImageProps> = () => {
   return (
     <Container ref={ref} data-visible={visible}>
       <Image
-        src="App.jpg"
+        src={AppImage}
         alt="Hero Illustration"
         width={2880}
         height={1900}

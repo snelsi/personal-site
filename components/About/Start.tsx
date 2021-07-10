@@ -1,9 +1,10 @@
 import * as React from "react";
 import styled from "@emotion/styled";
 import { useMediaQuery } from "@material-ui/core";
-
 import { Image } from "components";
 import { useInView } from "scripts";
+
+import Programming from "public/images/about/programming.jpg";
 
 const Block = styled.div`
   transition: opacity 1s ease;
@@ -58,12 +59,7 @@ export const Start: React.FC<StartProps> = () => {
         </p>
       </div>
       <Wrapper>
-        <Image
-          src="about/programming.jpg"
-          alt="Web programming"
-          width={mobile ? 900 : 1636}
-          height={1080}
-        />
+        <Image src={Programming} alt="Web programming" width={mobile ? 900 : 1636} height={1080} />
       </Wrapper>
     </Block>
   );

@@ -24,3 +24,5 @@ export const SiteHeaderMenuIconButton: React.FC<SiteHeaderMenuIconButtonProps> =
       <MenuIcon />
     </IconButton>
   ));
+
+SiteHeaderMenuIconButton.displayName = "SiteHeaderMenuIconButton";

@@ -1,16 +1,17 @@
 import * as React from "react";
 import styled from "@emotion/styled";
+import { ButtonBase } from "components/Buttons/ButtonBase";
 
 import {
   Summary,
   Contact,
   Degree,
-  Expirience,
+  Experience,
   Intro,
   Languages,
   ProfessionalSkills,
   HoursWorked,
-  Sallery,
+  Salary,
   Start,
   Technologies,
   Tools,
@@ -36,7 +37,7 @@ const Wrapper = styled.div`
     }
   }
 
-  & a {
+  & a:not(.button) {
     color: inherit;
     border-bottom: 1px solid rgba(31, 31, 31, 0.4);
 
@@ -108,13 +109,13 @@ export const About: React.FC<AboutProps> = () => (
     <Degree />
     <Start />
     <ProfessionalSkills />
-    <Expirience />
+    <Experience />
     <HoursWorked />
     <Technologies />
     <Languages />
     <Tools />
     <Summary />
-    <Sallery />
+    <Salary />
     <Contact />
   </Wrapper>
 );

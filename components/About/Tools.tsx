@@ -4,6 +4,11 @@ import styled from "@emotion/styled";
 import { useInView } from "scripts";
 import { Tool } from "./Tool";
 
+import VSCode from "public/images/about/tools/VSCode.svg";
+import Figma from "public/images/about/tools/Figma.svg";
+import Photoshop from "public/images/about/tools/Photoshop.svg";
+import Illustrator from "public/images/about/tools/Illustrator.svg";
+
 const Wrapper = styled.div`
   margin: 10vw 0;
 
@@ -91,10 +96,10 @@ export const Tools: React.FC<ToolsProps> = () => {
       <Container>
         <div>
           <Grid>
-            <Tool src="images/about/tools/VSCode.svg" alt="VSCode" title="VS Code" />
-            <Tool src="images/about/tools/Figma.svg" alt="Figma" title="Figma" />
-            <Tool src="images/about/tools/Photoshop.svg" alt="Photoshop" title="Photoshop" />
-            <Tool src="images/about/tools/Illustrator.svg" alt="Illustrator" title="Illustrator" />
+            <Tool src={VSCode} alt="VSCode" title="VS Code" />
+            <Tool src={Figma} alt="Figma" title="Figma" />
+            <Tool src={Photoshop} alt="Photoshop" title="Photoshop" />
+            <Tool src={Illustrator} alt="Illustrator" title="Illustrator" />
           </Grid>
         </div>
       </Container>

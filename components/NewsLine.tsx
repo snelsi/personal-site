@@ -61,9 +61,7 @@ export const NewsLine: React.FC<NewsLineProps> = () => {
         📣🐢
       </span>
       <div className="optional"> Contact me if you are interested.</div>{" "}
-      <Link href="/contact">
-        <a href="/contact">Contact</a>
-      </Link>
+      <Link href="/contact">Contact</Link>
     </Wrapper>
   );
 };

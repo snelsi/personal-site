@@ -11,3 +11,5 @@ export const CloseButton: React.FC<CloseButtonProps> = React.forwardRef((props, 
     <FiX color="var(--color-text-main)" />
   </IconButton>
 ));
+
+CloseButton.displayName = "CloseButton";

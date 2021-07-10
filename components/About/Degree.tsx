@@ -1,9 +1,11 @@
 import * as React from "react";
 import styled from "@emotion/styled";
 import { useMediaQuery } from "@material-ui/core";
-
 import { Image } from "components";
 import { useInView } from "scripts";
+
+import KPIMobile from "public/images/about/kpi-mobile.jpg";
+import KPIDesktop from "public/images/about/kpi.jpg";
 
 interface DegreeProps {}
 
@@ -24,7 +26,7 @@ export const Degree: React.FC<DegreeProps> = () => {
         </p>
       </div>
       <Image
-        src={mobile ? "about/kpi-mobile.jpg" : "about/kpi.jpg"}
+        src={mobile ? KPIMobile : KPIDesktop}
         alt="Kiev Politechnical Institute"
         width={mobile ? 1041 : 2000}
         height={mobile ? 1331 : 1332}

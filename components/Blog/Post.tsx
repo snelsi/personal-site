@@ -44,13 +44,13 @@ interface PostProps {
   post: IPost;
 }
 
-export const Post: React.FC<PostProps> = ({
-  post: { link, title, description, thumbnail, thumbnailAlt = "Article thumbnail" },
-}) => {
+export const Post: React.FC<PostProps> = ({ post }) => {
+  if (!post) return null;
+  const { link, title, description, thumbnail, thumbnailAlt = "Article thumbnail" } = post;
   return (
     <div>
-      <Link href={link}>
-        <Wrapper className="post-article" href={link} aria-label={title}>
+      <Link href={link} passHref>
+        <Wrapper className="post-article" aria-label={title}>
           <article>
             <div className="post-thumbnail">
               <Image src={thumbnail} alt={thumbnailAlt} width={340} height={225} />

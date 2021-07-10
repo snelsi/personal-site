@@ -8,13 +8,13 @@ interface ButtonsProps {}
 export const Buttons: React.FC<ButtonsProps> = () => (
   <Container aria-label="actions">
     <li>
-      <Link href="/contact">
-        <Button className="contact">Contact me</Button>
+      <Link href="/contact" passHref>
+        <Button className="contact button">Contact me</Button>
       </Link>
     </li>
     <li>
-      <Link href="/about">
-        <ButtonOutlined className="about">My Resume</ButtonOutlined>
+      <Link href="/about" passHref>
+        <ButtonOutlined className="about button">My Resume</ButtonOutlined>
       </Link>
     </li>
   </Container>

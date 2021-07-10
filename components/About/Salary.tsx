@@ -15,9 +15,9 @@ const ToolTip = styled(MUiTooltip)`
   }
 `;
 
-interface SalleryProps {}
+interface SalaryProps {}
 
-export const Sallery: React.FC<SalleryProps> = () => {
+export const Salary: React.FC<SalaryProps> = () => {
   const { visible, ref } = useInView();
 
   return (
@@ -28,7 +28,7 @@ export const Sallery: React.FC<SalleryProps> = () => {
           <ToolTip arrow placement="top" title="Take-home">
             <Underlined tabIndex={0}>net</Underlined>
           </ToolTip>
-          : <span className="sallary">1750$ / Month</span>
+          : <span className="salary">2000$ / Month</span>
         </h5>
       </div>
     </Block>
@@ -63,7 +63,7 @@ const Block = styled.div`
     width: fit-content;
     text-align: center;
 
-    & .sallary {
+    & .salary {
       line-height: 1.5;
       white-space: nowrap;
     }

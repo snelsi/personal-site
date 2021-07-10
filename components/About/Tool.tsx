@@ -1,38 +1,50 @@
 import * as React from "react";
+import Image from "next/image";
 import styled from "@emotion/styled";
 
 const ToolComponent = styled.div`
   font-size: 20px;
   text-align: center;
   width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-  & > img {
+  & > div {
     --size: 100px;
     width: var(--size);
     height: var(--size);
-    margin-bottom: 20px;
+
     transition: var(--transition-ease);
-    object-fit: fit;
+
     user-select: none;
+
+    & img {
+      object-fit: fit;
+    }
+  }
+  & > span {
+    margin-top: 20px;
   }
 
   &:hover {
-    & > img {
+    & > div {
       transform: scale(1.05);
     }
   }
   &:active {
-    & > img {
+    & > div {
       transform: scale(0.95);
     }
   }
 
   @media (max-width: 600px) {
-    & > img {
+    & > div {
       --size: 80px;
     }
 
-    & > div {
+    & > span {
       font-size: 16px;
     }
   }
@@ -40,14 +52,14 @@ const ToolComponent = styled.div`
 
 interface ToolProps {
   title: string;
-  src: string;
+  src: any;
   alt: string;
 }
 export const Tool: React.FC<ToolProps> = ({ title, src, alt }) => (
   <li>
     <ToolComponent>
-      <img src={src} alt={alt} draggable="false" />
-      <div className="montserrat">{title}</div>
+      <Image src={src} alt={alt} draggable="false" />
+      <span className="montserrat">{title}</span>
     </ToolComponent>
   </li>
 );

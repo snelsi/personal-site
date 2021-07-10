@@ -1,13 +1,16 @@
 import * as React from "react";
+import Image from "next/image";
 import styled from "@emotion/styled";
 
 import { realisticConfetti } from "scripts";
 
 const Wrapper = styled.li`
-  display: inline-block;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
   margin: 20px;
 
-  & > img {
+  & > div {
     --size: 100px;
     border-radius: 4px;
     cursor: pointer;
@@ -35,11 +38,12 @@ const Wrapper = styled.li`
   }
 `;
 
-interface TechnologieProps {
-  src: string;
+interface TechnologyProps {
+  title: string;
+  src: any;
   big?: boolean;
 }
-export const Technologie: React.FC<TechnologieProps> = ({ src }) => {
+export const Technology: React.FC<TechnologyProps> = ({ title, src }) => {
   const [highlighted, setHighlighted] = React.useState(false);
 
   const toggle = async () => {
@@ -53,13 +57,8 @@ export const Technologie: React.FC<TechnologieProps> = ({ src }) => {
   };
 
   return (
-    <Wrapper onClick={toggle} className={`technologie ${highlighted ? "highlighted" : "gray"}`}>
-      <img
-        src={`images/technologies/${src}.svg`}
-        draggable="false"
-        aria-label={src}
-        data-highlighted={highlighted}
-      />
+    <Wrapper onClick={toggle} className={`technology ${highlighted ? "highlighted" : "gray"}`}>
+      <Image src={src} draggable="false" aria-label={title} data-highlighted={highlighted} />
     </Wrapper>
   );
 };

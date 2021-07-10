@@ -33,11 +33,11 @@ const Banner = styled.div`
   }
 `;
 
-interface BunnerBaseProps {
+interface BannerBaseProps {
   title: string;
   label?: string;
 }
-export const BannerBase: React.FC<BunnerBaseProps> = ({ children, title, label }) => (
+export const BannerBase: React.FC<BannerBaseProps> = ({ children, title, label }) => (
   <Banner className="banner">
     <div className="main">
       <h5 data-font-size="XL" className="montserrat">

@@ -17,7 +17,7 @@ export const IconButton = styled(ButtonText)`
   &[data-size="medium" i] {
     font-size: 1.25rem;
   }
-  &[data-size="normall" i] {
+  &[data-size="normal" i] {
     font-size: 1.5rem;
   }
   &[data-size="big" i] {

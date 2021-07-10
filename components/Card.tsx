@@ -51,18 +51,19 @@ const InnerContent: React.FC<InnerContentProps> = ({
   tags,
   bgColor,
   priority = false,
-  sharp = true,
+  sharp = false,
 }) => (
   <>
     <div className="imageContainer">
       <Image
         src={img}
         alt="Card preview"
-        width={1920}
-        height={1442}
+        width={960}
+        height={720}
         bgColor={bgColor}
         priority={priority}
         sharp={sharp}
+        placeholder="blur"
       />
       <Tags tags={tags} />
     </div>
@@ -96,25 +97,21 @@ interface CardProps extends Project {
   sharp?: boolean;
 }
 export const Card: React.FC<CardProps> = ({ disabled = false, ...props }) => {
-  if (props.url)
+  const wrapperProps = {
+    disabled,
+    className: `content-card ${props.tags.join(" ")}`,
+  };
+
+  if (props.url) {
     return (
-      <CardBase
-        data-disabled={disabled}
-        className={`content-card ${props.tags.join(" ")}`}
-        href={props.url}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <CardBase {...wrapperProps} href={props.url} target="_blank" rel="noopener noreferrer">
         <InnerContent {...props} />
       </CardBase>
     );
+  }
 
   return (
-    <CardBase
-      data-disabled={disabled}
-      className={`content-card private ${props.tags.join(" ")}`}
-      as="div"
-    >
+    <CardBase {...wrapperProps} data-private as="div">
       <InnerContent {...props} />
     </CardBase>
   );
@@ -159,7 +156,7 @@ const CardBase = styled.a`
     }
   }
 
-  &:not(.private) {
+  &:not([data-private="true"]) {
     &:hover,
     &:focus {
       & img {

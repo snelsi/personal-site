@@ -10,7 +10,6 @@ interface ImageProps {
   sharp?: boolean;
 }
 export const Image: React.FC<ImageProps & NextImageProps> = ({
-  src,
   bgColor,
   noShadow = false,
   layout = "normal",
@@ -26,7 +25,7 @@ export const Image: React.FC<ImageProps & NextImageProps> = ({
     minHeight={minHeight}
     data-sharp={sharp}
   >
-    <Img src={`/images/${src}`} {...props} />
+    <Img {...props} />
   </Wrapper>
 );
 

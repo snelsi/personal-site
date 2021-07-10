@@ -1,6 +1,14 @@
 import * as React from "react";
+import Image from "next/image";
 import styled from "@emotion/styled";
 import { useInView } from "scripts";
+
+import Working from "public/images/about/Working.svg";
+import Creativity from "public/images/about/Creativity.svg";
+import SEO from "public/images/about/SEO.svg";
+import System from "public/images/about/System.svg";
+import DB from "public/images/about/DB.svg";
+import Friendship from "public/images/about/Friendship.svg";
 
 const Container = styled.div`
   width: 100% !important;
@@ -22,37 +30,39 @@ const Container = styled.div`
 `;
 
 const Button = styled.button`
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: inherit;
-  font-size: 40px;
-  height: 1.6em;
+  && {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+    font-size: 40px;
+    height: 1.6em;
 
-  outline: none;
-  position: relative;
-  transition: var(--transition-ease);
-  white-space: nowrap;
+    outline: none;
+    position: relative;
+    transition: var(--transition-ease);
+    white-space: nowrap;
 
-  @media (max-width: 1020px) {
-    font-size: 22px;
-  }
+    @media (max-width: 1020px) {
+      font-size: 22px;
+    }
 
-  &::after {
-    content: "";
-    position: absolute;
-    height: 4px;
-    background-color: currentColor;
-    bottom: 0;
-    left: 0;
-    right: 100%;
-    transition: all 0.5s cubic-bezier(0.694, 0, 0.335, 1);
-  }
-
-  &:hover,
-  &[data-selected="true"] {
     &::after {
-      right: 0;
+      content: "";
+      position: absolute;
+      height: 4px;
+      background-color: currentColor;
+      bottom: 0;
+      left: 0;
+      right: 100%;
+      transition: all 0.5s cubic-bezier(0.694, 0, 0.335, 1);
+    }
+
+    &:hover,
+    &[data-selected="true"] {
+      &::after {
+        right: 0;
+      }
     }
   }
 `;
@@ -131,36 +141,30 @@ const Wrapper = styled.div`
           width: 100%;
           height: 100%;
 
-          & img {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-
-            object-fit: cover;
-
-            transition: all 0.35s ease-out;
-
+          & > div {
             height: 100%;
             width: 100%;
 
-            &:not([data-selected="true"]) {
-              user-select: none;
-              pointer-events: none;
-              opacity: 0;
-            }
-            &[data-selected="true"] {
-              opacity: 1;
+            & img {
+              object-fit: cover;
+              transition: opacity 0.35s ease-out;
+
+              &:not([data-selected="true"]) {
+                user-select: none;
+                pointer-events: none;
+                opacity: 0;
+              }
+
+              &[data-selected="true"] {
+                opacity: 1;
+              }
             }
           }
 
           &:hover,
           &:focus {
-            & img {
-              &[data-selected="true"] {
-                transform: scale(1.01);
-              }
+            & img[data-selected="true"] {
+              transform: scale(1.01);
             }
           }
         }
@@ -182,31 +186,32 @@ const Wrapper = styled.div`
 const skills = [
   {
     skill: "Web development",
-    img: "images/about/Working.svg",
+    img: Working,
     alt: "Web development",
   },
   {
     skill: "UI/UX design",
-    img: "images/about/Creativity.svg",
+    img: Creativity,
     alt: "Creativity",
   },
-  { skill: "SEO Marketing", img: "images/about/SEO.svg", alt: "SEO" },
+  { skill: "SEO Marketing", img: SEO, alt: "SEO" },
   {
     skill: "System Engineering",
-    img: "images/about/System.svg",
+    img: System,
     alt: "System Engineering",
   },
   {
     skill: "Database Engineering",
-    img: "images/about/DB.svg",
+    img: DB,
     alt: "Database Engineering",
   },
   {
     skill: "Team management",
-    img: "images/about/Friendship.svg",
+    img: Friendship,
     alt: "Team management",
   },
 ];
+
 interface ProfessionalSkillsProps {}
 
 export const ProfessionalSkills: React.FC<ProfessionalSkillsProps> = () => {
@@ -249,10 +254,11 @@ export const ProfessionalSkills: React.FC<ProfessionalSkillsProps> = () => {
                 aria-label="Next Slide"
               >
                 {skills.map((skill, i) => (
-                  <img
+                  <Image
                     src={skill.img}
                     alt={skill.alt}
                     data-selected={state === i}
+                    layout="fill"
                     key={skill.skill}
                   />
                 ))}

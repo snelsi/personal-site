@@ -3,11 +3,13 @@ import Link from "next/link";
 import styled from "@emotion/styled";
 
 const StyledLink = styled.a`
-  color: var(--color-text-secondary);
+  && {
+    color: var(--color-text-secondary);
 
-  &:hover,
-  &:focus {
-    color: var(--color-text-secondary-hover);
+    &:hover,
+    &:focus {
+      color: var(--color-text-secondary-hover);
+    }
   }
 `;
 
@@ -20,8 +22,8 @@ export const FooterLink: React.FC<FooterLinkProps> = ({ href, inner = false, chi
   if (inner) {
     return (
       <li>
-        <Link href={href}>
-          <StyledLink href={href}>{children}</StyledLink>
+        <Link href={href} passHref>
+          <StyledLink>{children}</StyledLink>
         </Link>
       </li>
     );

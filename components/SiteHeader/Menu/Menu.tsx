@@ -4,7 +4,7 @@ import { useMediaQuery } from "@material-ui/core";
 import { FiBook, FiGithub, FiHome, FiLinkedin, FiUser, FiMail } from "react-icons/fi";
 import { FaDribbble } from "react-icons/fa";
 
-import { MennuButton, MenuHeader, Modal, SurpriseMenuButton } from "components/SiteHeader/Menu";
+import { MenuButton, MenuHeader, Modal, SurpriseMenuButton } from "components/SiteHeader/Menu";
 
 interface MenuProps {
   open: boolean;
@@ -24,34 +24,34 @@ export const Menu: React.FC<MenuProps> = ({ open, closeDialog }) => {
       {isMobile && <MenuHeader closeDialog={closeDialog} />}
       <Grid>
         <Buttons>
-          <MennuButton href="/" title="Home">
+          <MenuButton href="/" title="Home">
             <FiHome color="var(--color-grey-10)" />
-          </MennuButton>
-          <MennuButton href="/contact" title="Contact">
+          </MenuButton>
+          <MenuButton href="/contact" title="Contact">
             <FiMail color="var(--color-magenta-500)" />
-          </MennuButton>
-          <MennuButton href="/about" title="About me">
+          </MenuButton>
+          <MenuButton href="/about" title="About me">
             <FiUser color="var(--color-blue-500)" />
-          </MennuButton>
+          </MenuButton>
 
-          <MennuButton href="/blog" title="Blog">
+          <MenuButton href="/blog" title="Blog">
             <FiBook color="var(--color-green-500)" />
-          </MennuButton>
+          </MenuButton>
           <SurpriseMenuButton />
         </Buttons>
 
         <hr />
 
         <Buttons>
-          <MennuButton href="https://github.com/snelsi" title="GitHub" outside>
+          <MenuButton href="https://github.com/snelsi" title="GitHub" outside>
             <FiGithub color="var(--color-text-main)" />
-          </MennuButton>
-          <MennuButton href="https://dribbble.com/snelsi" title="Dribbble" outside>
+          </MenuButton>
+          <MenuButton href="https://dribbble.com/snelsi" title="Dribbble" outside>
             <FaDribbble color="#EA4C89" />
-          </MennuButton>
-          <MennuButton href="https://www.linkedin.com/in/snelsi/" title="LinkedIn" outside>
+          </MenuButton>
+          <MenuButton href="https://www.linkedin.com/in/snelsi/" title="LinkedIn" outside>
             <FiLinkedin color="#2176A6" />
-          </MennuButton>
+          </MenuButton>
         </Buttons>
       </Grid>
     </Modal>

@@ -1,4 +1,4 @@
-export * from "./hooks/сheerExplorers";
+export * from "./hooks/cheerExplorers";
 export * from "./hooks/useInterval";
 export * from "./hooks/useInView";
 export * from "./hooks/useTime";

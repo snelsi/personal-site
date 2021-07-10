@@ -26,8 +26,8 @@ export const Contact: React.FC<ContactProps> = () => {
             professional help.
           </div>
         </div>
-        <Link href="/contact">
-          <Button>Contact me</Button>
+        <Link href="/contact" passHref>
+          <Button className="button">Contact me</Button>
         </Link>
       </Container>
     </Wrapper>
@@ -76,6 +76,7 @@ const Container = styled.div`
       max-width: 450px;
     }
   }
+  & > a,
   & > button {
     background-color: #ff7ec3;
     border-radius: 12px;
@@ -92,6 +93,7 @@ const Container = styled.div`
       text-align: center;
       padding-right: 0;
     }
+    & > a,
     & > button {
       margin-top: 1.25em;
     }

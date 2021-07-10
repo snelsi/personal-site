@@ -1,4 +1,4 @@
-export default {
+const config = {
   title: "Roman Zhuravlov - Web developer",
   description: "Personal site, blog and portfolio of Roman Zhuravlov.",
   canonical: "https://snelsi.com/",
@@ -29,3 +29,5 @@ export default {
     cardType: "summary_large_image",
   },
 };
+
+export default config;

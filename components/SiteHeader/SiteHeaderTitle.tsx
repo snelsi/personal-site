@@ -8,22 +8,30 @@ interface SiteHeaderTitleProps {}
 
 export const SiteHeaderTitle: React.FC<SiteHeaderTitleProps> = () => (
   <Title className="name" data-font-size="X" data-font-weight="Bold">
-    <Link href="/">
-      <ButtonText href="/">Roman Zhuravlov</ButtonText>
+    <Link href="/" passHref>
+      <ButtonText>Roman Zhuravlov</ButtonText>
     </Link>
   </Title>
 );
 
 const Title = styled.h6`
-  margin-left: -0.25em;
-  white-space: nowrap;
-  & a {
-    padding: 0.25em 0.5em;
+  && {
+    margin-left: -0.25em;
+    white-space: nowrap;
+    & a {
+      color: var(--color-text-main);
+      padding: 0.25em 0.5em;
 
-    & > svg {
-      margin-right: 4px;
-      height: 24px;
-      width: 24px;
+      &:hover,
+      &:focus {
+        color: var(--color-text-main);
+      }
+
+      & > svg {
+        margin-right: 4px;
+        height: 24px;
+        width: 24px;
+      }
     }
   }
 `;

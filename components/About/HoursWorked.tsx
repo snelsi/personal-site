@@ -49,12 +49,14 @@ export const HoursWorked: React.FC<HoursWorkedProps> = () => {
 
   React.useEffect(() => {
     reset();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hours]);
 
   React.useEffect(() => {
     if (visible) {
       start();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [visible]);
 
   return (

@@ -5,6 +5,9 @@ import Link from "next/link";
 
 import { Image } from "components";
 
+// Illustration from 'Ginger cat' by Icons8: https://icons8.ru/illustrations/illustration/ginger-cat-721
+import GingerCat from "public/images/blog/ginger-cat-help-center.png";
+
 const bounceX = keyframes` from { left: 0; } to { left: calc(100% - 112px); }`;
 const bounceY = keyframes`from { top: 0; } to { top: calc(100% - 61.06px); }`;
 const bounceXMobile = keyframes` from { left: 0; } to { left: calc(100% - 80px); }`;
@@ -104,16 +107,15 @@ const DvdLogo = () => (
 interface HireMeBannerProps {}
 
 export const HireMeBanner: React.FC<HireMeBannerProps> = () => (
-  <Link href="/contact">
-    <Banner href="/contact">
+  <Link href="/contact" passHref>
+    <Banner>
       <span className="bouncer">
         <DvdLogo />
       </span>
       <div>
         <div className="hire-me-image">
-          {/* Illustration from 'Ginger cat' by Icons8: https://icons8.ru/illustrations/illustration/ginger-cat-721 */}
           <Image
-            src="blog/ginger-cat-help-center.png"
+            src={GingerCat}
             alt="Ginger cat sitting on a computer by Icons8"
             width={400}
             height={300}

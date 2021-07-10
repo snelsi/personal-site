@@ -1,10 +1,10 @@
 import * as React from "react";
 import styled from "@emotion/styled";
-
 import Link from "next/link";
-
 import { Button, Image } from "components";
 import { calculateYearSince, useInView } from "scripts";
+
+import Me from "public/images/about/me.jpg";
 
 const Block = styled.div`
   align-items: flex-start;
@@ -66,9 +66,12 @@ const Block = styled.div`
       max-width: 360px;
     }
 
-    & button {
+    & .contactButton {
       margin-top: 1.5em;
       background-color: var(--color-gray-9);
+      color: var(--color-white);
+      letter-spacing: normal;
+      width: fit-content;
     }
   }
 
@@ -99,12 +102,12 @@ export const Intro: React.FC<IntroProps> = () => {
         <p className="aside">
           Let&apos;s work together! I&apos;m always happy to provide you my professional help.
         </p>
-        <Link href="/contact">
-          <Button>Contact me</Button>
+        <Link href="/contact" passHref>
+          <Button className="contactButton">Contact me</Button>
         </Link>
       </div>
       <div className="imageWrapper">
-        <Image src="about/me.jpg" alt="Me" width={575} height={690} bgColor="#1A1A1A" priority />
+        <Image src={Me} alt="Me" width={575} height={690} priority />
       </div>
     </Block>
   );

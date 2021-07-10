@@ -6,22 +6,24 @@ import AwesomeSlider from "react-awesome-slider";
 import { useInView } from "scripts";
 
 const StyledAwesomeSlider = styled(AwesomeSlider)`
-  --slider-height-percentage: 75%;
-  --slider-transition-duration: 250ms;
-  --loader-bar-color: var(--color-blue-500);
+  && {
+    --slider-height-percentage: 75%;
+    --slider-transition-duration: 250ms;
+    --loader-bar-color: var(--color-blue-500);
 
-  --control-bullet-color: var(--color-gray-5);
-  --control-bullet-active-color: var(--color-gray-8);
+    --control-bullet-color: var(--color-gray-5);
+    --control-bullet-active-color: var(--color-gray-8);
 
-  --loader-bar-height: 4px;
+    --loader-bar-height: 4px;
 
-  & .awssld__bullets button {
-    width: 12px;
-    height: 12px;
-  }
+    & .awssld__bullets button {
+      width: 12px;
+      height: 12px;
+    }
 
-  & .awssld__bullets .awssld__bullets--active {
-    transform: scale(1);
+    & .awssld__bullets .awssld__bullets--active {
+      transform: scale(1);
+    }
   }
 `;
 
@@ -42,9 +44,9 @@ const Wrapper = styled.div`
   }
 `;
 
-interface ExpirienceProps {}
+interface ExperienceProps {}
 
-export const Expirience: React.FC<ExpirienceProps> = () => {
+export const Experience: React.FC<ExperienceProps> = () => {
   const { visible, ref } = useInView();
 
   return (

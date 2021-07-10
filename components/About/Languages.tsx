@@ -104,27 +104,29 @@ interface FadingTitleProps {
   delay: number;
 }
 const FadingTitle = styled.span<FadingTitleProps>`
-  animation: ${textFade} ${animationDuration}s ease-in-out 0s infinite;
-  animation-fill-mode: both;
-  display: block;
-  text-align: center;
-  animation-delay: ${({ delay = 0 }) => delay}s;
+  && {
+    animation: ${textFade} ${animationDuration}s ease-in-out 0s infinite;
+    animation-fill-mode: both;
+    display: block;
+    text-align: center;
+    animation-delay: ${({ delay = 0 }) => delay}s;
 
-  grid-column: 1;
-  grid-row: 1;
+    grid-column: 1;
+    grid-row: 1;
 
-  font-size: 60px;
+    font-size: 60px;
 
-  @media (max-width: 1440px) {
-    font-size: 4.5vw;
-  }
-  @media (max-width: 1020px) {
-    font-size: 6.5vw;
-  }
-  @media (max-width: 640px) {
-    font-size: 32px;
-  }
-  @media (max-width: 340px) {
-    font-size: 24px;
+    @media (max-width: 1440px) {
+      font-size: 4.5vw;
+    }
+    @media (max-width: 1020px) {
+      font-size: 6.5vw;
+    }
+    @media (max-width: 640px) {
+      font-size: 32px;
+    }
+    @media (max-width: 340px) {
+      font-size: 24px;
+    }
   }
 `;

@@ -14,9 +14,4 @@ module.exports = withPlugins([
       pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
     },
   ],
-  {
-    future: {
-      webpack5: true,
-    },
-  },
 ]);

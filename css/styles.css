@@ -43,13 +43,12 @@ main {
 }
 
 a {
-  color: var(--color-primary);
   text-decoration: none;
 }
-a:hover {
+a:not(.button):hover {
   color: var(--color-primary-lighter);
 }
-a:active {
+a:not(.button):active {
   color: var(--color-primary-darker);
 }
 

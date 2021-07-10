@@ -153,8 +153,8 @@ const BlogPost: React.FC<BlogPostProps> = ({ source, post, slug }) => {
 
       <Main>
         <ArticleHeader data-fix-width data-visible={visible}>
-          <Link href="/blog">
-            <a href="/blog">{`<`} Back to catalog</a>
+          <Link href="/blog" passHref>
+            <a className="button">{`< Back to catalog`}</a>
           </Link>
         </ArticleHeader>
         {post && (

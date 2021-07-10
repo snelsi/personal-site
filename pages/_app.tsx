@@ -11,7 +11,7 @@ import "css/colors.css";
 import "themes/light_theme.css";
 import "react-awesome-slider/dist/styles.css";
 
-import { useCheerExplorers } from "scripts/hooks/сheerExplorers";
+import { useCheerExplorers } from "scripts/hooks/cheerExplorers";
 
 export default function MyApp({ Component, pageProps }) {
   React.useEffect(() => {
