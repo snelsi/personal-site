@@ -45,7 +45,8 @@ main {
 a {
   text-decoration: none;
 }
-a:not(.button):hover {
+a:not(.button):hover,
+a:not(.button):focus {
   color: var(--color-primary-lighter);
 }
 a:not(.button):active {
