@@ -40,11 +40,12 @@ interface HoursWorkedProps {}
 export const HoursWorked: React.FC<HoursWorkedProps> = () => {
   const hours = calculateWorkedHoursSince(new Date("August 1 2019"));
   const { visible, ref } = useInView({ rootMargin: "-240px 0px" });
-  const { countUp, start, reset } = useCountUp({
+  const { start, reset } = useCountUp({
     start: 0,
     end: hours,
     duration: Math.min((hours / 1000) * 1.1, 4000),
     startOnMount: false,
+    ref: "workHours",
   });
 
   React.useEffect(() => {
@@ -63,7 +64,7 @@ export const HoursWorked: React.FC<HoursWorkedProps> = () => {
     <Wrapper className="block" ref={ref} data-visible={visible}>
       <div className="text-block">
         <div className="hours montserrat" data-font-weight="700">
-          <span className="hours-number">{countUp}</span> Hours
+          <span className="hours-number" id="workHours" /> Hours
         </div>
 
         <p data-font-size="XL">

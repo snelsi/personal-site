@@ -15,6 +15,7 @@ export const Image: React.FC<ImageProps & NextImageProps> = ({
   layout = "normal",
   minHeight = 0,
   sharp = false,
+  lazyBoundary = "800px",
   ...props
 }) => (
   <Wrapper
@@ -25,7 +26,7 @@ export const Image: React.FC<ImageProps & NextImageProps> = ({
     minHeight={minHeight}
     data-sharp={sharp}
   >
-    <Img {...props} />
+    <Img lazyBoundary={lazyBoundary} {...props} />
   </Wrapper>
 );
 
