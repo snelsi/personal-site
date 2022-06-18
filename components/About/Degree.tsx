@@ -20,9 +20,9 @@ export const Degree: React.FC<DegreeProps> = () => {
           In 2017 I entered the{" "}
           <a href="https://kpi.ua/en" target="_blank" rel="noopener noreferrer">
             Kyiv National Polytechnic Institute of Igor Sikorsky
-          </a>
-          . Now I am a fourth-year student of the Department of Automation of Power Processes and
-          Systems Engineering on ’Computer Sciences’ specialty.
+          </a>{" "}
+          Department of Automation of Power Processes and Systems Engineering. I am now a certified
+          specialist and a Bachelor of Computer Science.
         </p>
       </div>
       <Image
