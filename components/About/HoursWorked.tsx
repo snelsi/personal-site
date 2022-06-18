@@ -43,7 +43,7 @@ export const HoursWorked: React.FC<HoursWorkedProps> = () => {
   const { start, reset } = useCountUp({
     start: 0,
     end: hours,
-    duration: Math.min((hours / 1000) * 1.1, 4000),
+    duration: 4,
     startOnMount: false,
     ref: "workHours",
   });
