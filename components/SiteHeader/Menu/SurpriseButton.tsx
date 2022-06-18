@@ -1,7 +1,7 @@
 import * as React from "react";
 
-import { Snackbar } from "@material-ui/core";
-import IconButton from "@material-ui/core/IconButton";
+import { Snackbar } from "@mui/material";
+import IconButton from "@mui/material/IconButton";
 import { MdClose } from "react-icons/md";
 import { FiHeart } from "react-icons/fi";
 

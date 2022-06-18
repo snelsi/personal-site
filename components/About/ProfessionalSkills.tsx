@@ -70,6 +70,7 @@ const Button = styled.button`
 interface SkillProps {
   onClick: () => void;
   isSelected: boolean;
+  children: React.ReactNode;
 }
 const Skill: React.FC<SkillProps> = ({ onClick, isSelected = false, children }) => (
   <li>

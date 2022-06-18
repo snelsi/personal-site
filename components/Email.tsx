@@ -1,8 +1,8 @@
 import * as React from "react";
 import styled from "@emotion/styled";
 
-import Snackbar from "@material-ui/core/Snackbar";
-import IconButton from "@material-ui/core/IconButton";
+import Snackbar from "@mui/material/Snackbar";
+import IconButton from "@mui/material/IconButton";
 import { MdClose } from "react-icons/md";
 
 import { CopyToClipboard } from "react-copy-to-clipboard";

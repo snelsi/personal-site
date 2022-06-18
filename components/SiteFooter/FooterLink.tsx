@@ -16,6 +16,7 @@ const StyledLink = styled.a`
 interface FooterLinkProps {
   href: string;
   inner?: boolean;
+  children: React.ReactNode;
 }
 
 export const FooterLink: React.FC<FooterLinkProps> = ({ href, inner = false, children }) => {

@@ -43,6 +43,7 @@ interface MenuButtonProps {
   href: string;
   title: string;
   outside?: boolean;
+  children: React.ReactNode;
 }
 
 export const MenuButton: React.FC<MenuButtonProps> = ({

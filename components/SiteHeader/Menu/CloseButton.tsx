@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import { IconButton } from "components";
-import { IconButtonProps } from "@material-ui/core/IconButton";
+import { IconButtonProps } from "@mui/material/IconButton";
 import { FiX } from "react-icons/fi";
 
 interface CloseButtonProps extends IconButtonProps {}

@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "@emotion/styled";
-import MUIButtonBase, { ButtonBaseProps as MuiButtonBaseProps } from "@material-ui/core/ButtonBase";
+import MUIButtonBase, { ButtonBaseProps as MuiButtonBaseProps } from "@mui/material/ButtonBase";
 
 export interface ButtonBaseProps extends MuiButtonBaseProps {
   href?: string;

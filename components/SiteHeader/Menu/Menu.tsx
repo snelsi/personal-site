@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "@emotion/styled";
-import { useMediaQuery } from "@material-ui/core";
+import { useMediaQuery } from "@mui/material";
 import { FiBook, FiGithub, FiHome, FiLinkedin, FiUser, FiMail } from "react-icons/fi";
 import { FaDribbble } from "react-icons/fa";
 

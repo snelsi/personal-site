@@ -36,6 +36,7 @@ const Banner = styled.div`
 interface BannerBaseProps {
   title: string;
   label?: string;
+  children: React.ReactNode;
 }
 export const BannerBase: React.FC<BannerBaseProps> = ({ children, title, label }) => (
   <Banner className="banner">

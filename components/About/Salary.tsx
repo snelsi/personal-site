@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "@emotion/styled";
 
-import MUiTooltip from "@material-ui/core/Tooltip";
+import MUiTooltip from "@mui/material/Tooltip";
 
 import { useInView } from "scripts";
 

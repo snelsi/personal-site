@@ -50,7 +50,9 @@ const Nav = styled.nav`
   }
 `;
 
-interface SiteHeaderBaseProps {}
+interface SiteHeaderBaseProps {
+  children: React.ReactNode;
+}
 
 export const SiteHeaderBase: React.FC<SiteHeaderBaseProps> = ({ children }) => (
   <Header

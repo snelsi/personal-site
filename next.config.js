@@ -7,11 +7,18 @@ const withMDX = require("@next/mdx")({
   },
 });
 
-module.exports = withPlugins([
+module.exports = withPlugins(
   [
-    withMDX,
-    {
-      pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
-    },
+    [
+      withMDX,
+      {
+        pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
+      },
+    ],
   ],
-]);
+  {
+    compiler: {
+      emotion: true,
+    },
+  },
+);

@@ -25,6 +25,7 @@ const Block = styled.div`
 
 interface LinksBlockProps {
   title: string;
+  children: React.ReactNode;
 }
 
 export const LinksBlock: React.FC<LinksBlockProps> = ({ title, children }) => (

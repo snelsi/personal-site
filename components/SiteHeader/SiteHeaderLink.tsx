@@ -46,6 +46,7 @@ const HeaderLinkContainer = styled.div`
 
 interface HeaderLinkProps {
   href: string;
+  children: React.ReactNode;
 }
 export const SiteHeaderLink: React.FC<HeaderLinkProps> = ({ href, children }) => {
   const router = useRouter();

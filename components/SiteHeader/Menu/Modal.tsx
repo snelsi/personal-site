@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import Dialog from "@material-ui/core/Dialog";
+import Dialog from "@mui/material/Dialog";
 
 export const Modal = styled(Dialog)`
   & .MuiBackdrop-root {
