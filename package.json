@@ -31,7 +31,6 @@
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
-    "@fec/remark-a11y-emoji": "^3.1.0",
     "@mdx-js/loader": "^2.1.1",
     "@mui/material": "^5.8.4",
     "@mui/styles": "^5.8.4",
@@ -49,8 +48,8 @@
     "react-headroom": "^3.2.0",
     "react-icons": "^4.4.0",
     "react-intersection-observer": "^9.3.3",
-    "remark-mark-plus": "^1.0.21",
-    "remark-slug": "^7.0.1"
+    "rehype-accessible-emojis": "^0.3.2",
+    "rehype-slug": "^5.0.1"
   },
   "devDependencies": {
     "@mdx-js/react": "^2.1.1",

@@ -28,7 +28,7 @@ export const Salary: React.FC<SalaryProps> = () => {
           <ToolTip arrow placement="top" title="Take-home">
             <Underlined tabIndex={0}>net</Underlined>
           </ToolTip>
-          : <span className="salary">2000$ / Month</span>
+          : <span className="salary">4000$ / Month</span>
         </h5>
       </div>
     </Block>

@@ -3,9 +3,8 @@ import { NextSeo } from "next-seo";
 import styled from "@emotion/styled";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
-import a11yEmoji from "@fec/remark-a11y-emoji";
-import remarkMark from "remark-mark-plus";
-import remarkSlug from "remark-slug";
+import { rehypeAccessibleEmojis } from "rehype-accessible-emojis";
+import rehypeSlug from "rehype-slug";
 import Link from "next/link";
 
 import { Post } from "interfaces";
@@ -225,7 +224,7 @@ export async function getStaticProps({ params: { slug } }) {
   if (!post) return null;
 
   const mdxSource = await serialize(post.content, {
-    mdxOptions: { remarkPlugins: [remarkSlug, remarkMark, a11yEmoji] },
+    mdxOptions: { rehypePlugins: [rehypeSlug, rehypeAccessibleEmojis] },
   });
   return { props: { source: mdxSource, post, slug } };
 }

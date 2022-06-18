@@ -40,7 +40,7 @@ const Wrapper = styled.div<ImageProps>`
     box-shadow: var(--shadow-hover);
   }
 
-  & > div {
+  & > * {
     display: block !important;
   }
 

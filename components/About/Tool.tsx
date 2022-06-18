@@ -2,6 +2,23 @@ import * as React from "react";
 import Image from "next/image";
 import styled from "@emotion/styled";
 
+const ImageWrapper = styled.div`
+  --size: 100px;
+  height: var(--size);
+  width: var(--size);
+
+  transition: var(--transition-ease);
+  position: relative;
+
+  & img {
+    object-fit: fit;
+  }
+
+  @media (max-width: 600px) {
+    --size: 80px;
+  }
+`;
+
 const ToolComponent = styled.div`
   font-size: 20px;
   text-align: center;
@@ -10,41 +27,17 @@ const ToolComponent = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 20px;
 
-  & > div {
-    --size: 100px;
-    width: var(--size);
-    height: var(--size);
-
-    transition: var(--transition-ease);
-
-    user-select: none;
-
-    & img {
-      object-fit: fit;
-    }
+  &:hover > .logo {
+    transform: scale(1.05);
   }
-  & > span {
-    margin-top: 20px;
-  }
-
-  &:hover {
-    & > div {
-      transform: scale(1.05);
-    }
-  }
-  &:active {
-    & > div {
-      transform: scale(0.95);
-    }
+  &:active > .logo {
+    transform: scale(0.95);
   }
 
   @media (max-width: 600px) {
-    & > div {
-      --size: 80px;
-    }
-
-    & > span {
+    & > p {
       font-size: 16px;
     }
   }
@@ -58,8 +51,10 @@ interface ToolProps {
 export const Tool: React.FC<ToolProps> = ({ title, src, alt }) => (
   <li>
     <ToolComponent>
-      <Image src={src} alt={alt} draggable="false" />
-      <span className="montserrat">{title}</span>
+      <ImageWrapper className="logo">
+        <Image src={src} alt={alt} draggable="false" layout="fill" />
+      </ImageWrapper>
+      <p className="montserrat">{title}</p>
     </ToolComponent>
   </li>
 );

@@ -6,35 +6,36 @@ import { realisticConfetti } from "scripts";
 
 const Wrapper = styled.li`
   align-items: center;
+  border-radius: 4px;
+  cursor: pointer;
   display: inline-flex;
   justify-content: center;
   margin: 20px;
+  height: 100px;
+  width: 100px;
+  overflow: hidden;
+  transition: var(--transition-ease);
 
-  & > div {
+  &[data-highlighted="false"] {
+    filter: grayscale(100%);
+    opacity: 0.6;
+  }
+
+  &[data-highlighted="true"],
+  &:hover,
+  &:focus-visible {
+    filter: none;
+    opacity: 1;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  & > * {
     --size: 100px;
-    border-radius: 4px;
-    cursor: pointer;
-
-    transition: var(--transition-ease);
-    width: var(--size);
-    height: var(--size);
-    user-select: none;
-    overflow: hidden;
-
-    &[data-highlighted="false"],
-    &:not(:hover) {
-      filter: grayscale(100%);
-      opacity: 0.6;
-    }
-
-    &[data-highlighted="true"] {
-      filter: none;
-      opacity: 1;
-    }
-
-    &:active {
-      transform: scale(0.95);
-    }
+    width: var(--size) !important;
+    height: var(--size) !important;
   }
 `;
 
@@ -57,8 +58,12 @@ export const Technology: React.FC<TechnologyProps> = ({ title, src }) => {
   };
 
   return (
-    <Wrapper onClick={toggle} className={`technology ${highlighted ? "highlighted" : "gray"}`}>
-      <Image src={src} draggable="false" aria-label={title} data-highlighted={highlighted} />
+    <Wrapper
+      onClick={toggle}
+      className={`technology ${highlighted ? "highlighted" : "gray"}`}
+      data-highlighted={highlighted}
+    >
+      <Image src={src} draggable="false" aria-label={title} layout="responsive" />
     </Wrapper>
   );
 };
